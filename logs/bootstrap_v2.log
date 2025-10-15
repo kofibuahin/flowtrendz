@@ -1,0 +1,89 @@
+2025-10-14 15:34:53,613 | INFO | Loaded 15 artists from artists.yaml
+2025-10-14 15:34:53,613 | INFO | [Spotify] Top tracks for: Jay-Z
+2025-10-14 15:34:55,220 | INFO | [Spotify] Top tracks for: Nas
+2025-10-14 15:34:56,020 | INFO | [Spotify] Top tracks for: Kanye West
+2025-10-14 15:34:56,781 | INFO | [Spotify] Top tracks for: Drake
+2025-10-14 15:34:57,685 | INFO | [Spotify] Top tracks for: Kendrick Lamar
+2025-10-14 15:34:58,405 | INFO | [Spotify] Top tracks for: Nicki Minaj
+2025-10-14 15:34:59,666 | INFO | [Spotify] Top tracks for: J. Cole
+2025-10-14 15:35:00,371 | INFO | [Spotify] Top tracks for: Lil Wayne
+2025-10-14 15:35:01,045 | INFO | [Spotify] Top tracks for: Outkast
+2025-10-14 15:35:01,742 | INFO | [Spotify] Top tracks for: Travis Scott
+2025-10-14 15:35:02,710 | INFO | [Spotify] Top tracks for: A Tribe Called Quest
+2025-10-14 15:35:03,473 | INFO | [Spotify] Top tracks for: The Notorious B.I.G.
+2025-10-14 15:35:04,301 | INFO | [Spotify] Top tracks for: Tupac Shakur
+2025-10-14 15:35:04,982 | INFO | [Spotify] Top tracks for: Future
+2025-10-14 15:35:05,838 | INFO | [Spotify] Top tracks for: Doja Cat
+2025-10-14 15:35:06,594 | INFO | Collected 136 unique tracks across 15 artists.
+2025-10-14 15:35:06,596 | INFO | [Spotify] Skipping audio features (--skip-audio).
+2025-10-14 15:35:42,442 | INFO | [Genius] No acceptable lyrics for: JAY-Z - Love All (with JAY-Z) (query='Love All (with JAY')
+2025-10-14 15:38:24,727 | INFO | [Genius] No acceptable lyrics for: Kendrick Lamar - LOVE. FEAT. ZACARI. (query='LOVE. FEAT. ZACARI.')
+2025-10-14 15:41:05,550 | INFO | [Genius] No acceptable lyrics for: Outkast - Da Art of Storytellin' (Pt. 1) (query='Da Art of Storytellin' (Pt. 1)')
+2025-10-14 15:43:11,876 | INFO | [Genius] No acceptable lyrics for: The Notorious B.I.G. - Mo Money Mo Problems (feat. Puff Daddy & Mase) - 2014 Remaster (query='Mo Money Mo Problems')
+2025-10-14 15:43:36,952 | INFO | [Genius] No acceptable lyrics for: The Notorious B.I.G. - Get Money (feat. Junior M.A.F.I.A.) - 2007 Remaster (query='Get Money')
+2025-10-14 15:43:38,786 | INFO | [Genius] No acceptable lyrics for: Tupac - Going Live - Tupac Remix (query='Going Live')
+2025-10-14 15:45:58,966 | INFO | Use pytorch device_name: cpu
+2025-10-14 15:45:58,968 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-14 15:46:35,881 | INFO | Saved curated parquet -> C:\Users\kkbua\OneDrive\Documents\GitHub\flowtrendz\data\curated\songs_curated.parquet
+2025-10-14 21:29:47,654 | INFO | Loaded 15 artists from artists.yaml
+2025-10-14 21:29:47,676 | INFO | [Spotify] Top tracks for: Jay-Z
+2025-10-14 21:29:48,734 | INFO | [Spotify] Top tracks for: Nas
+2025-10-14 21:29:49,415 | INFO | [Spotify] Top tracks for: Kanye West
+2025-10-14 21:29:50,221 | INFO | [Spotify] Top tracks for: Drake
+2025-10-14 21:29:50,933 | INFO | [Spotify] Top tracks for: Kendrick Lamar
+2025-10-14 21:29:51,754 | INFO | [Spotify] Top tracks for: Nicki Minaj
+2025-10-14 21:29:52,409 | INFO | [Spotify] Top tracks for: J. Cole
+2025-10-14 21:29:53,075 | INFO | [Spotify] Top tracks for: Lil Wayne
+2025-10-14 21:29:53,739 | INFO | [Spotify] Top tracks for: Outkast
+2025-10-14 21:29:54,469 | INFO | [Spotify] Top tracks for: Travis Scott
+2025-10-14 21:29:55,454 | INFO | [Spotify] Top tracks for: A Tribe Called Quest
+2025-10-14 21:29:56,177 | INFO | [Spotify] Top tracks for: The Notorious B.I.G.
+2025-10-14 21:29:56,976 | INFO | [Spotify] Top tracks for: Tupac Shakur
+2025-10-14 21:29:57,708 | INFO | [Spotify] Top tracks for: Future
+2025-10-14 21:29:58,448 | INFO | [Spotify] Top tracks for: Doja Cat
+2025-10-14 21:29:59,281 | INFO | Collected 136 unique tracks across 15 artists.
+2025-10-14 21:29:59,282 | INFO | [Spotify] Skipping audio features (--skip-audio).
+2025-10-14 21:34:32,269 | INFO | Loaded 25 artists from artists.yaml
+2025-10-14 21:34:32,269 | INFO | [Spotify] Top tracks for: Jay-Z
+2025-10-14 21:34:33,348 | INFO | [Spotify] Top tracks for: Nas
+2025-10-14 21:34:33,992 | INFO | [Spotify] Top tracks for: Kanye West
+2025-10-14 21:34:34,702 | INFO | [Spotify] Top tracks for: Drake
+2025-10-14 21:34:35,416 | INFO | [Spotify] Top tracks for: Kendrick Lamar
+2025-10-14 21:34:36,057 | INFO | [Spotify] Top tracks for: Nicki Minaj
+2025-10-14 21:34:36,913 | INFO | [Spotify] Top tracks for: J. Cole
+2025-10-14 21:34:37,630 | INFO | [Spotify] Top tracks for: Lil Wayne
+2025-10-14 21:34:38,845 | INFO | [Spotify] Top tracks for: Outkast
+2025-10-14 21:34:39,753 | INFO | [Spotify] Top tracks for: Travis Scott
+2025-10-14 21:34:40,596 | INFO | [Spotify] Top tracks for: A Tribe Called Quest
+2025-10-14 21:34:41,344 | INFO | [Spotify] Top tracks for: The Notorious B.I.G.
+2025-10-14 21:34:42,122 | INFO | [Spotify] Top tracks for: Tupac Shakur
+2025-10-14 21:34:42,850 | INFO | [Spotify] Top tracks for: Future
+2025-10-14 21:34:43,549 | INFO | [Spotify] Top tracks for: Doja Cat
+2025-10-14 21:34:44,314 | INFO | [Spotify] Top tracks for: Yeat
+2025-10-14 21:34:45,224 | INFO | [Spotify] Top tracks for: Juice WRLD
+2025-10-14 21:34:45,967 | INFO | [Spotify] Top tracks for: Gunna
+2025-10-14 21:34:46,605 | INFO | [Spotify] Top tracks for: Cardi B
+2025-10-14 21:34:47,432 | INFO | [Spotify] Top tracks for: Rapsody
+2025-10-14 21:34:48,142 | INFO | [Spotify] Top tracks for: Latto
+2025-10-14 21:34:48,882 | INFO | [Spotify] Top tracks for: Megan Thee Stallion
+2025-10-14 21:34:49,611 | INFO | [Spotify] Top tracks for: Rick Ross
+2025-10-14 21:34:50,353 | INFO | [Spotify] Top tracks for: Wale
+2025-10-14 21:34:51,285 | INFO | [Spotify] Top tracks for: Meek Mill
+2025-10-14 21:34:52,062 | INFO | Collected 235 unique tracks across 25 artists.
+2025-10-14 21:34:52,063 | INFO | [Spotify] Skipping audio features (--skip-audio).
+2025-10-14 21:35:24,450 | INFO | [Genius] No acceptable lyrics for: JAY-Z - Love All (with JAY-Z) (query='Love All (with JAY')
+2025-10-14 21:38:02,257 | INFO | [Genius] No acceptable lyrics for: Kendrick Lamar - LOVE. FEAT. ZACARI. (query='LOVE. FEAT. ZACARI.')
+2025-10-14 21:40:44,301 | INFO | [Genius] No acceptable lyrics for: Outkast - Da Art of Storytellin' (Pt. 1) (query='Da Art of Storytellin' (Pt. 1)')
+2025-10-14 21:42:59,907 | INFO | [Genius] No acceptable lyrics for: The Notorious B.I.G. - Mo Money Mo Problems (feat. Puff Daddy & Mase) - 2014 Remaster (query='Mo Money Mo Problems')
+2025-10-14 21:43:19,861 | INFO | [Genius] No acceptable lyrics for: The Notorious B.I.G. - Get Money (feat. Junior M.A.F.I.A.) - 2007 Remaster (query='Get Money')
+2025-10-14 21:43:21,214 | INFO | [Genius] No acceptable lyrics for: Tupac - Going Live - Tupac Remix (query='Going Live')
+2025-10-14 21:45:34,813 | INFO | [Genius] No acceptable lyrics for: Gunna - Drip Too Hard (Lil Baby & Gunna) (query='Drip Too Hard (Lil Baby & Gunna)')
+2025-10-14 21:46:28,909 | INFO | [Genius] No acceptable lyrics for: Cardi B - Finesse - Remix; feat. Cardi B (query='Finesse')
+2025-10-14 21:47:04,370 | INFO | [Genius] No acceptable lyrics for: Latto - ErrTime (feat. Latto) [Remix] (query='ErrTime')
+2025-10-14 21:47:37,334 | INFO | [Genius] No acceptable lyrics for: Megan Thee Stallion - On Me - Remix (query='On Me')
+2025-10-14 21:47:53,779 | INFO | [Genius] No acceptable lyrics for: Rick Ross - Money In The Grave (Drake ft. Rick Ross) (query='Money In The Grave (Drake ft. Rick Ross)')
+2025-10-14 21:48:07,681 | INFO | [Genius] No acceptable lyrics for: Rick Ross - Hustlin' (query='Hustlin'')
+2025-10-14 21:48:17,686 | INFO | [Genius] No acceptable lyrics for: Rick Ross - You Only Live Twice (with Lil Wayne & Rick Ross) (query='You Only Live Twice')
+2025-10-14 21:54:22,073 | INFO | Use pytorch device_name: cpu
+2025-10-14 21:54:22,073 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-14 21:54:43,650 | INFO | Saved curated parquet -> C:\Users\kkbua\OneDrive\Documents\GitHub\flowtrendz\data\curated\songs_curated.parquet
