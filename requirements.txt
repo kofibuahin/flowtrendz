@@ -5,6 +5,7 @@ pyarrow
 tqdm
 PyYAML
 spotipy
+openai
 lyricsgenius
 nltk
 plotly
