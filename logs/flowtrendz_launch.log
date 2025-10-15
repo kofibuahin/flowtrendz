@@ -1,0 +1,1054 @@
+2025-10-14 00:36:03,404 | INFO | [Spotify] Top tracks for: Jay-Z
+2025-10-14 00:36:04,943 | INFO | [Spotify] Top tracks for: Nas
+2025-10-14 00:36:05,701 | INFO | [Spotify] Top tracks for: Kanye West
+2025-10-14 00:36:06,456 | INFO | [Spotify] Top tracks for: Drake
+2025-10-14 00:36:07,239 | INFO | [Spotify] Top tracks for: Kendrick Lamar
+2025-10-14 00:36:08,001 | INFO | [Spotify] Top tracks for: Nicki Minaj
+2025-10-14 00:36:08,833 | INFO | [Spotify] Top tracks for: J. Cole
+2025-10-14 00:36:09,507 | INFO | [Spotify] Top tracks for: Lil Wayne
+2025-10-14 00:36:10,275 | INFO | [Spotify] Top tracks for: Outkast
+2025-10-14 00:36:11,031 | INFO | [Spotify] Top tracks for: Travis Scott
+2025-10-14 00:36:11,739 | INFO | [Spotify] Top tracks for: A Tribe Called Quest
+2025-10-14 00:36:12,470 | INFO | [Spotify] Top tracks for: The Notorious B.I.G.
+2025-10-14 00:36:13,316 | INFO | [Spotify] Top tracks for: 2Pac
+2025-10-14 00:36:13,997 | INFO | [Spotify] Top tracks for: Future
+2025-10-14 00:36:14,707 | INFO | [Spotify] Top tracks for: Doja Cat
+2025-10-14 00:36:15,553 | INFO | Collected 145 unique tracks across 15 artists.
+2025-10-14 00:36:15,629 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2igwFfvr1OAGX9SKDCPBwO,1auxYwYrFRqZP7t3s7w4um,5sNESr6pQfIhL3krM8CtZn,7LR85XLWw2yXqKBSI5brbG,7r6PigmGzlB3YPB7wvBBbi,5ljCWsDlSyJ41kwqym2ORw,1gT5TGwbkkkUliNzHRIGi1,14I61w6cyYUHiV2n28IYdP,4VCbgIdr8ptegWeJpqLVHH,4bDPr2VAjcfgUDmN9dGOC3,3joBAxXdN3HFkvvbkxJEwl,5WsE374LpBomAkCRSOcjWo,0b1kU7KgZSnH7n7TBy921o,4srUSbTEbA2aJhEgcw0rqx,6ziKNQ7vKSpbt25yU1GjFS,79ntN2kMAg1JFyYh8Uq2Oa,6XkLdAGky28Ju6Rmr1gZBA,2M4lp7MTlaoGryo8rr5lsY,4n3kD4h1k57h0obdRBChZL,29KC2wCnYtZRLKbdplpx0B,5TRPicyLGbAF2LGBFbHGvO,4EWCNWgDS8707fNSZ1oaA5,3DK6m7It6Pw857FcQftMds,5SkRLpaGtvYPhw02vZhQQ9,7rbECVPkY5UODxoOUVKZnA,0mEdbdeRFQwBhN4xfyIeUM,0j2T0R9dR9qdJYsB7ciXhf,3sNVsP50132BTNlImLx70i,4iz9lGMjU1lXS51oPmUmTe,1zi7xx7UVEFkmKfv06H8x0,2u9S9JJ6hTZS3Vf22HOZKg,6LxSe8YmdPxy095Ux6znaQ,5mCPDVBb16L4XQwDdbRUpz,5FMyXeZ0reYloRTiCkPprT,6DCZcSspjsKoFjzjrWoCdn,3Q4gttWQ6hxqWOa3tHoTNi,0b4M7hd7mzLTm99MrMeZsp,59nOXPmaKlBfGMDeOVGrIK,0NUqi0ps17YpLUC3kgsZq0,3GCdLUSnKSMJhs4Tj6CV3s,2CGNAOSuO1MEFCbBRgUzjd,6AI3ezQ4o3HUoP6Dhudph3,2HbKqm4o0w5wEeEFXm2sD4,0aB0v4027ukVziUGwVGYpG,7KXjTSCq5nL1LoYtL7XAwS,6REbwUNlppTfcnV4d4ZoZi,6PGoSes0D9eUDeeAafB2As,2tudvzsrR56uom6smgOcSf,6IZvVAP7VPPnsGX6bvgkqg,1oHNvJVbFkexQc0BpQp7Y4 with Params: {} returned 403 due to None
+2025-10-14 00:36:15,631 | ERROR | [Spotify] audio_features batch error (0:50): http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2igwFfvr1OAGX9SKDCPBwO,1auxYwYrFRqZP7t3s7w4um,5sNESr6pQfIhL3krM8CtZn,7LR85XLWw2yXqKBSI5brbG,7r6PigmGzlB3YPB7wvBBbi,5ljCWsDlSyJ41kwqym2ORw,1gT5TGwbkkkUliNzHRIGi1,14I61w6cyYUHiV2n28IYdP,4VCbgIdr8ptegWeJpqLVHH,4bDPr2VAjcfgUDmN9dGOC3,3joBAxXdN3HFkvvbkxJEwl,5WsE374LpBomAkCRSOcjWo,0b1kU7KgZSnH7n7TBy921o,4srUSbTEbA2aJhEgcw0rqx,6ziKNQ7vKSpbt25yU1GjFS,79ntN2kMAg1JFyYh8Uq2Oa,6XkLdAGky28Ju6Rmr1gZBA,2M4lp7MTlaoGryo8rr5lsY,4n3kD4h1k57h0obdRBChZL,29KC2wCnYtZRLKbdplpx0B,5TRPicyLGbAF2LGBFbHGvO,4EWCNWgDS8707fNSZ1oaA5,3DK6m7It6Pw857FcQftMds,5SkRLpaGtvYPhw02vZhQQ9,7rbECVPkY5UODxoOUVKZnA,0mEdbdeRFQwBhN4xfyIeUM,0j2T0R9dR9qdJYsB7ciXhf,3sNVsP50132BTNlImLx70i,4iz9lGMjU1lXS51oPmUmTe,1zi7xx7UVEFkmKfv06H8x0,2u9S9JJ6hTZS3Vf22HOZKg,6LxSe8YmdPxy095Ux6znaQ,5mCPDVBb16L4XQwDdbRUpz,5FMyXeZ0reYloRTiCkPprT,6DCZcSspjsKoFjzjrWoCdn,3Q4gttWQ6hxqWOa3tHoTNi,0b4M7hd7mzLTm99MrMeZsp,59nOXPmaKlBfGMDeOVGrIK,0NUqi0ps17YpLUC3kgsZq0,3GCdLUSnKSMJhs4Tj6CV3s,2CGNAOSuO1MEFCbBRgUzjd,6AI3ezQ4o3HUoP6Dhudph3,2HbKqm4o0w5wEeEFXm2sD4,0aB0v4027ukVziUGwVGYpG,7KXjTSCq5nL1LoYtL7XAwS,6REbwUNlppTfcnV4d4ZoZi,6PGoSes0D9eUDeeAafB2As,2tudvzsrR56uom6smgOcSf,6IZvVAP7VPPnsGX6bvgkqg,1oHNvJVbFkexQc0BpQp7Y4:
+ None, reason: None
+2025-10-14 00:36:15,697 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2igwFfvr1OAGX9SKDCPBwO with Params: {} returned 403 due to None
+2025-10-14 00:36:15,699 | ERROR | [Spotify] audio_features single error for 2igwFfvr1OAGX9SKDCPBwO: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2igwFfvr1OAGX9SKDCPBwO:
+ None, reason: None
+2025-10-14 00:36:15,763 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1auxYwYrFRqZP7t3s7w4um with Params: {} returned 403 due to None
+2025-10-14 00:36:15,763 | ERROR | [Spotify] audio_features single error for 1auxYwYrFRqZP7t3s7w4um: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1auxYwYrFRqZP7t3s7w4um:
+ None, reason: None
+2025-10-14 00:36:15,828 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5sNESr6pQfIhL3krM8CtZn with Params: {} returned 403 due to None
+2025-10-14 00:36:15,828 | ERROR | [Spotify] audio_features single error for 5sNESr6pQfIhL3krM8CtZn: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5sNESr6pQfIhL3krM8CtZn:
+ None, reason: None
+2025-10-14 00:36:15,890 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7LR85XLWw2yXqKBSI5brbG with Params: {} returned 403 due to None
+2025-10-14 00:36:15,890 | ERROR | [Spotify] audio_features single error for 7LR85XLWw2yXqKBSI5brbG: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7LR85XLWw2yXqKBSI5brbG:
+ None, reason: None
+2025-10-14 00:36:15,962 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7r6PigmGzlB3YPB7wvBBbi with Params: {} returned 403 due to None
+2025-10-14 00:36:15,962 | ERROR | [Spotify] audio_features single error for 7r6PigmGzlB3YPB7wvBBbi: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7r6PigmGzlB3YPB7wvBBbi:
+ None, reason: None
+2025-10-14 00:36:16,029 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5ljCWsDlSyJ41kwqym2ORw with Params: {} returned 403 due to None
+2025-10-14 00:36:16,029 | ERROR | [Spotify] audio_features single error for 5ljCWsDlSyJ41kwqym2ORw: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5ljCWsDlSyJ41kwqym2ORw:
+ None, reason: None
+2025-10-14 00:36:16,110 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1gT5TGwbkkkUliNzHRIGi1 with Params: {} returned 403 due to None
+2025-10-14 00:36:16,110 | ERROR | [Spotify] audio_features single error for 1gT5TGwbkkkUliNzHRIGi1: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1gT5TGwbkkkUliNzHRIGi1:
+ None, reason: None
+2025-10-14 00:36:16,169 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=14I61w6cyYUHiV2n28IYdP with Params: {} returned 403 due to None
+2025-10-14 00:36:16,169 | ERROR | [Spotify] audio_features single error for 14I61w6cyYUHiV2n28IYdP: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=14I61w6cyYUHiV2n28IYdP:
+ None, reason: None
+2025-10-14 00:36:16,239 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4VCbgIdr8ptegWeJpqLVHH with Params: {} returned 403 due to None
+2025-10-14 00:36:16,239 | ERROR | [Spotify] audio_features single error for 4VCbgIdr8ptegWeJpqLVHH: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4VCbgIdr8ptegWeJpqLVHH:
+ None, reason: None
+2025-10-14 00:36:16,299 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4bDPr2VAjcfgUDmN9dGOC3 with Params: {} returned 403 due to None
+2025-10-14 00:36:16,299 | ERROR | [Spotify] audio_features single error for 4bDPr2VAjcfgUDmN9dGOC3: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4bDPr2VAjcfgUDmN9dGOC3:
+ None, reason: None
+2025-10-14 00:36:16,367 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3joBAxXdN3HFkvvbkxJEwl with Params: {} returned 403 due to None
+2025-10-14 00:36:16,367 | ERROR | [Spotify] audio_features single error for 3joBAxXdN3HFkvvbkxJEwl: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3joBAxXdN3HFkvvbkxJEwl:
+ None, reason: None
+2025-10-14 00:36:16,431 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5WsE374LpBomAkCRSOcjWo with Params: {} returned 403 due to None
+2025-10-14 00:36:16,436 | ERROR | [Spotify] audio_features single error for 5WsE374LpBomAkCRSOcjWo: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5WsE374LpBomAkCRSOcjWo:
+ None, reason: None
+2025-10-14 00:36:16,505 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0b1kU7KgZSnH7n7TBy921o with Params: {} returned 403 due to None
+2025-10-14 00:36:16,505 | ERROR | [Spotify] audio_features single error for 0b1kU7KgZSnH7n7TBy921o: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0b1kU7KgZSnH7n7TBy921o:
+ None, reason: None
+2025-10-14 00:36:16,573 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4srUSbTEbA2aJhEgcw0rqx with Params: {} returned 403 due to None
+2025-10-14 00:36:16,573 | ERROR | [Spotify] audio_features single error for 4srUSbTEbA2aJhEgcw0rqx: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4srUSbTEbA2aJhEgcw0rqx:
+ None, reason: None
+2025-10-14 00:36:16,642 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6ziKNQ7vKSpbt25yU1GjFS with Params: {} returned 403 due to None
+2025-10-14 00:36:16,642 | ERROR | [Spotify] audio_features single error for 6ziKNQ7vKSpbt25yU1GjFS: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6ziKNQ7vKSpbt25yU1GjFS:
+ None, reason: None
+2025-10-14 00:36:16,709 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=79ntN2kMAg1JFyYh8Uq2Oa with Params: {} returned 403 due to None
+2025-10-14 00:36:16,711 | ERROR | [Spotify] audio_features single error for 79ntN2kMAg1JFyYh8Uq2Oa: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=79ntN2kMAg1JFyYh8Uq2Oa:
+ None, reason: None
+2025-10-14 00:36:16,771 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6XkLdAGky28Ju6Rmr1gZBA with Params: {} returned 403 due to None
+2025-10-14 00:36:16,771 | ERROR | [Spotify] audio_features single error for 6XkLdAGky28Ju6Rmr1gZBA: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6XkLdAGky28Ju6Rmr1gZBA:
+ None, reason: None
+2025-10-14 00:36:16,840 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2M4lp7MTlaoGryo8rr5lsY with Params: {} returned 403 due to None
+2025-10-14 00:36:16,842 | ERROR | [Spotify] audio_features single error for 2M4lp7MTlaoGryo8rr5lsY: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2M4lp7MTlaoGryo8rr5lsY:
+ None, reason: None
+2025-10-14 00:36:16,900 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4n3kD4h1k57h0obdRBChZL with Params: {} returned 403 due to None
+2025-10-14 00:36:16,900 | ERROR | [Spotify] audio_features single error for 4n3kD4h1k57h0obdRBChZL: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4n3kD4h1k57h0obdRBChZL:
+ None, reason: None
+2025-10-14 00:36:16,972 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=29KC2wCnYtZRLKbdplpx0B with Params: {} returned 403 due to None
+2025-10-14 00:36:16,972 | ERROR | [Spotify] audio_features single error for 29KC2wCnYtZRLKbdplpx0B: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=29KC2wCnYtZRLKbdplpx0B:
+ None, reason: None
+2025-10-14 00:36:17,039 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5TRPicyLGbAF2LGBFbHGvO with Params: {} returned 403 due to None
+2025-10-14 00:36:17,039 | ERROR | [Spotify] audio_features single error for 5TRPicyLGbAF2LGBFbHGvO: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5TRPicyLGbAF2LGBFbHGvO:
+ None, reason: None
+2025-10-14 00:36:17,102 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4EWCNWgDS8707fNSZ1oaA5 with Params: {} returned 403 due to None
+2025-10-14 00:36:17,102 | ERROR | [Spotify] audio_features single error for 4EWCNWgDS8707fNSZ1oaA5: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4EWCNWgDS8707fNSZ1oaA5:
+ None, reason: None
+2025-10-14 00:36:17,174 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3DK6m7It6Pw857FcQftMds with Params: {} returned 403 due to None
+2025-10-14 00:36:17,174 | ERROR | [Spotify] audio_features single error for 3DK6m7It6Pw857FcQftMds: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3DK6m7It6Pw857FcQftMds:
+ None, reason: None
+2025-10-14 00:36:17,239 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5SkRLpaGtvYPhw02vZhQQ9 with Params: {} returned 403 due to None
+2025-10-14 00:36:17,239 | ERROR | [Spotify] audio_features single error for 5SkRLpaGtvYPhw02vZhQQ9: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5SkRLpaGtvYPhw02vZhQQ9:
+ None, reason: None
+2025-10-14 00:36:17,309 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7rbECVPkY5UODxoOUVKZnA with Params: {} returned 403 due to None
+2025-10-14 00:36:17,309 | ERROR | [Spotify] audio_features single error for 7rbECVPkY5UODxoOUVKZnA: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7rbECVPkY5UODxoOUVKZnA:
+ None, reason: None
+2025-10-14 00:36:17,379 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0mEdbdeRFQwBhN4xfyIeUM with Params: {} returned 403 due to None
+2025-10-14 00:36:17,379 | ERROR | [Spotify] audio_features single error for 0mEdbdeRFQwBhN4xfyIeUM: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0mEdbdeRFQwBhN4xfyIeUM:
+ None, reason: None
+2025-10-14 00:36:17,447 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0j2T0R9dR9qdJYsB7ciXhf with Params: {} returned 403 due to None
+2025-10-14 00:36:17,447 | ERROR | [Spotify] audio_features single error for 0j2T0R9dR9qdJYsB7ciXhf: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0j2T0R9dR9qdJYsB7ciXhf:
+ None, reason: None
+2025-10-14 00:36:17,509 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3sNVsP50132BTNlImLx70i with Params: {} returned 403 due to None
+2025-10-14 00:36:17,509 | ERROR | [Spotify] audio_features single error for 3sNVsP50132BTNlImLx70i: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3sNVsP50132BTNlImLx70i:
+ None, reason: None
+2025-10-14 00:36:17,584 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4iz9lGMjU1lXS51oPmUmTe with Params: {} returned 403 due to None
+2025-10-14 00:36:17,584 | ERROR | [Spotify] audio_features single error for 4iz9lGMjU1lXS51oPmUmTe: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4iz9lGMjU1lXS51oPmUmTe:
+ None, reason: None
+2025-10-14 00:36:17,649 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1zi7xx7UVEFkmKfv06H8x0 with Params: {} returned 403 due to None
+2025-10-14 00:36:17,649 | ERROR | [Spotify] audio_features single error for 1zi7xx7UVEFkmKfv06H8x0: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1zi7xx7UVEFkmKfv06H8x0:
+ None, reason: None
+2025-10-14 00:36:17,727 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2u9S9JJ6hTZS3Vf22HOZKg with Params: {} returned 403 due to None
+2025-10-14 00:36:17,729 | ERROR | [Spotify] audio_features single error for 2u9S9JJ6hTZS3Vf22HOZKg: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2u9S9JJ6hTZS3Vf22HOZKg:
+ None, reason: None
+2025-10-14 00:36:17,794 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6LxSe8YmdPxy095Ux6znaQ with Params: {} returned 403 due to None
+2025-10-14 00:36:17,794 | ERROR | [Spotify] audio_features single error for 6LxSe8YmdPxy095Ux6znaQ: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6LxSe8YmdPxy095Ux6znaQ:
+ None, reason: None
+2025-10-14 00:36:17,861 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5mCPDVBb16L4XQwDdbRUpz with Params: {} returned 403 due to None
+2025-10-14 00:36:17,861 | ERROR | [Spotify] audio_features single error for 5mCPDVBb16L4XQwDdbRUpz: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5mCPDVBb16L4XQwDdbRUpz:
+ None, reason: None
+2025-10-14 00:36:17,929 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5FMyXeZ0reYloRTiCkPprT with Params: {} returned 403 due to None
+2025-10-14 00:36:17,929 | ERROR | [Spotify] audio_features single error for 5FMyXeZ0reYloRTiCkPprT: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5FMyXeZ0reYloRTiCkPprT:
+ None, reason: None
+2025-10-14 00:36:17,991 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6DCZcSspjsKoFjzjrWoCdn with Params: {} returned 403 due to None
+2025-10-14 00:36:17,999 | ERROR | [Spotify] audio_features single error for 6DCZcSspjsKoFjzjrWoCdn: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6DCZcSspjsKoFjzjrWoCdn:
+ None, reason: None
+2025-10-14 00:36:18,061 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3Q4gttWQ6hxqWOa3tHoTNi with Params: {} returned 403 due to None
+2025-10-14 00:36:18,061 | ERROR | [Spotify] audio_features single error for 3Q4gttWQ6hxqWOa3tHoTNi: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3Q4gttWQ6hxqWOa3tHoTNi:
+ None, reason: None
+2025-10-14 00:36:18,133 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0b4M7hd7mzLTm99MrMeZsp with Params: {} returned 403 due to None
+2025-10-14 00:36:18,140 | ERROR | [Spotify] audio_features single error for 0b4M7hd7mzLTm99MrMeZsp: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0b4M7hd7mzLTm99MrMeZsp:
+ None, reason: None
+2025-10-14 00:36:18,209 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=59nOXPmaKlBfGMDeOVGrIK with Params: {} returned 403 due to None
+2025-10-14 00:36:18,209 | ERROR | [Spotify] audio_features single error for 59nOXPmaKlBfGMDeOVGrIK: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=59nOXPmaKlBfGMDeOVGrIK:
+ None, reason: None
+2025-10-14 00:36:18,279 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0NUqi0ps17YpLUC3kgsZq0 with Params: {} returned 403 due to None
+2025-10-14 00:36:18,279 | ERROR | [Spotify] audio_features single error for 0NUqi0ps17YpLUC3kgsZq0: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0NUqi0ps17YpLUC3kgsZq0:
+ None, reason: None
+2025-10-14 00:36:18,349 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3GCdLUSnKSMJhs4Tj6CV3s with Params: {} returned 403 due to None
+2025-10-14 00:36:18,349 | ERROR | [Spotify] audio_features single error for 3GCdLUSnKSMJhs4Tj6CV3s: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3GCdLUSnKSMJhs4Tj6CV3s:
+ None, reason: None
+2025-10-14 00:36:18,410 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2CGNAOSuO1MEFCbBRgUzjd with Params: {} returned 403 due to None
+2025-10-14 00:36:18,410 | ERROR | [Spotify] audio_features single error for 2CGNAOSuO1MEFCbBRgUzjd: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2CGNAOSuO1MEFCbBRgUzjd:
+ None, reason: None
+2025-10-14 00:36:18,481 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6AI3ezQ4o3HUoP6Dhudph3 with Params: {} returned 403 due to None
+2025-10-14 00:36:18,481 | ERROR | [Spotify] audio_features single error for 6AI3ezQ4o3HUoP6Dhudph3: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6AI3ezQ4o3HUoP6Dhudph3:
+ None, reason: None
+2025-10-14 00:36:18,551 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2HbKqm4o0w5wEeEFXm2sD4 with Params: {} returned 403 due to None
+2025-10-14 00:36:18,551 | ERROR | [Spotify] audio_features single error for 2HbKqm4o0w5wEeEFXm2sD4: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2HbKqm4o0w5wEeEFXm2sD4:
+ None, reason: None
+2025-10-14 00:36:18,625 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0aB0v4027ukVziUGwVGYpG with Params: {} returned 403 due to None
+2025-10-14 00:36:18,625 | ERROR | [Spotify] audio_features single error for 0aB0v4027ukVziUGwVGYpG: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0aB0v4027ukVziUGwVGYpG:
+ None, reason: None
+2025-10-14 00:36:18,697 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7KXjTSCq5nL1LoYtL7XAwS with Params: {} returned 403 due to None
+2025-10-14 00:36:18,697 | ERROR | [Spotify] audio_features single error for 7KXjTSCq5nL1LoYtL7XAwS: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7KXjTSCq5nL1LoYtL7XAwS:
+ None, reason: None
+2025-10-14 00:36:18,762 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6REbwUNlppTfcnV4d4ZoZi with Params: {} returned 403 due to None
+2025-10-14 00:36:18,762 | ERROR | [Spotify] audio_features single error for 6REbwUNlppTfcnV4d4ZoZi: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6REbwUNlppTfcnV4d4ZoZi:
+ None, reason: None
+2025-10-14 00:36:18,826 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6PGoSes0D9eUDeeAafB2As with Params: {} returned 403 due to None
+2025-10-14 00:36:18,829 | ERROR | [Spotify] audio_features single error for 6PGoSes0D9eUDeeAafB2As: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6PGoSes0D9eUDeeAafB2As:
+ None, reason: None
+2025-10-14 00:36:18,890 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2tudvzsrR56uom6smgOcSf with Params: {} returned 403 due to None
+2025-10-14 00:36:18,895 | ERROR | [Spotify] audio_features single error for 2tudvzsrR56uom6smgOcSf: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2tudvzsrR56uom6smgOcSf:
+ None, reason: None
+2025-10-14 00:36:18,959 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6IZvVAP7VPPnsGX6bvgkqg with Params: {} returned 403 due to None
+2025-10-14 00:36:18,962 | ERROR | [Spotify] audio_features single error for 6IZvVAP7VPPnsGX6bvgkqg: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6IZvVAP7VPPnsGX6bvgkqg:
+ None, reason: None
+2025-10-14 00:36:19,027 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1oHNvJVbFkexQc0BpQp7Y4 with Params: {} returned 403 due to None
+2025-10-14 00:36:19,027 | ERROR | [Spotify] audio_features single error for 1oHNvJVbFkexQc0BpQp7Y4: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1oHNvJVbFkexQc0BpQp7Y4:
+ None, reason: None
+2025-10-14 00:36:19,095 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0puf9yIluy9W0vpMEUoAnN,3hlksXnvbKogFdPbpO9vel,0dKg2vGC1hFqcK5LGTaKzX,58w5J5yNWeGZ7a4cM1rO7Y,3idU3rXoFCEFhAAbPGbwht,2yjlYDiNiQkdxVqTlaSrlX,4M7aciOBSbGnh1bN3YbuS0,2jATUzETZL49e6SywauZKE,1ia019RqDK2o4QiANR1Dyn,68Dni7IE4VyPkTOH9mRWHr,2wAJTrFhCnQyNSD3oUgTZO,4tqcoej1zPvwePZCzuAjJd,2uwnP6tZVVmTovzX5ELooy,2JvzF1RMd7lE3KmFlsyZD8,2e3Ea0o24lReQFR4FA7yXH,7aqfrAY2p9BUSiupwk3svU,3s4mrPrEFFPF0LmAfutW0n,6T7FXSuXykeGktMLGp8WgE,0Fs9cdPDhptWEDJmiCbkEW,2XHzzp1j4IfTNp1FTn7YFg,3tFed7YsjGnIfxeLEQwx3R,3BUWNzPWz2mDbptZmGEXpB,1pm7lQGl6mvKWDxesZTVFp,1xPW9rS8dkuJP46WBTqU2C,5hUYsaOyMY32yjRXeuQwGj,2sQuds8s3EVbhXJpgVWpO4,4dASQiO1Eoo3RJvt74FtXB,3qjKqmA2YeH0a8DRoKj8iy,2PpruBYCo4H7WOBJ7Q2EwM,0I3q5fE6wg7LIfHGngUTnV,6glsMWIMIxQ4BedzLqGVi4,5z7mYFfhw6N6f23VwrokJD,6bUNEbXT7HovLW6BgPCBsb,2vfvGlqCB7oertO5VLE0sz,0shK5iZQppbHPQYiy60xs9,3WibbMr6canxRJXhNtAvLU,1KQymTxNJfWk6vCD5ywKW2,4GdB5M7GbwLZLouktYocFC,6gBFPUFcJLzWGx4lenP6h2,42VsgItocQwOQC3XWZ8JNA,3eekarcy7kvN4yt5ZFzltW,6koKhrBBcExADvWuOgceNZ,2xLMifQCjDGFmkHkpNLD9h,2cYqizR4lgvp4Qu6IQ3qGN,5wG3HvLhF6Y5KTGlK0IW3J,51EC3I1nQXpec4gDk0mQyP,28drn6tQo95MRvO0jQEo5C,4kjI1gwQZRKNDkw1nI475M,1gSDTZHemEViEBiXysrlo0,0eEXcw3JLVXcRxYrVYMy68 with Params: {} returned 403 due to None
+2025-10-14 00:36:19,095 | ERROR | [Spotify] audio_features batch error (50:100): http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0puf9yIluy9W0vpMEUoAnN,3hlksXnvbKogFdPbpO9vel,0dKg2vGC1hFqcK5LGTaKzX,58w5J5yNWeGZ7a4cM1rO7Y,3idU3rXoFCEFhAAbPGbwht,2yjlYDiNiQkdxVqTlaSrlX,4M7aciOBSbGnh1bN3YbuS0,2jATUzETZL49e6SywauZKE,1ia019RqDK2o4QiANR1Dyn,68Dni7IE4VyPkTOH9mRWHr,2wAJTrFhCnQyNSD3oUgTZO,4tqcoej1zPvwePZCzuAjJd,2uwnP6tZVVmTovzX5ELooy,2JvzF1RMd7lE3KmFlsyZD8,2e3Ea0o24lReQFR4FA7yXH,7aqfrAY2p9BUSiupwk3svU,3s4mrPrEFFPF0LmAfutW0n,6T7FXSuXykeGktMLGp8WgE,0Fs9cdPDhptWEDJmiCbkEW,2XHzzp1j4IfTNp1FTn7YFg,3tFed7YsjGnIfxeLEQwx3R,3BUWNzPWz2mDbptZmGEXpB,1pm7lQGl6mvKWDxesZTVFp,1xPW9rS8dkuJP46WBTqU2C,5hUYsaOyMY32yjRXeuQwGj,2sQuds8s3EVbhXJpgVWpO4,4dASQiO1Eoo3RJvt74FtXB,3qjKqmA2YeH0a8DRoKj8iy,2PpruBYCo4H7WOBJ7Q2EwM,0I3q5fE6wg7LIfHGngUTnV,6glsMWIMIxQ4BedzLqGVi4,5z7mYFfhw6N6f23VwrokJD,6bUNEbXT7HovLW6BgPCBsb,2vfvGlqCB7oertO5VLE0sz,0shK5iZQppbHPQYiy60xs9,3WibbMr6canxRJXhNtAvLU,1KQymTxNJfWk6vCD5ywKW2,4GdB5M7GbwLZLouktYocFC,6gBFPUFcJLzWGx4lenP6h2,42VsgItocQwOQC3XWZ8JNA,3eekarcy7kvN4yt5ZFzltW,6koKhrBBcExADvWuOgceNZ,2xLMifQCjDGFmkHkpNLD9h,2cYqizR4lgvp4Qu6IQ3qGN,5wG3HvLhF6Y5KTGlK0IW3J,51EC3I1nQXpec4gDk0mQyP,28drn6tQo95MRvO0jQEo5C,4kjI1gwQZRKNDkw1nI475M,1gSDTZHemEViEBiXysrlo0,0eEXcw3JLVXcRxYrVYMy68:
+ None, reason: None
+2025-10-14 00:36:19,159 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0puf9yIluy9W0vpMEUoAnN with Params: {} returned 403 due to None
+2025-10-14 00:36:19,159 | ERROR | [Spotify] audio_features single error for 0puf9yIluy9W0vpMEUoAnN: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0puf9yIluy9W0vpMEUoAnN:
+ None, reason: None
+2025-10-14 00:36:19,224 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3hlksXnvbKogFdPbpO9vel with Params: {} returned 403 due to None
+2025-10-14 00:36:19,224 | ERROR | [Spotify] audio_features single error for 3hlksXnvbKogFdPbpO9vel: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3hlksXnvbKogFdPbpO9vel:
+ None, reason: None
+2025-10-14 00:36:19,295 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0dKg2vGC1hFqcK5LGTaKzX with Params: {} returned 403 due to None
+2025-10-14 00:36:19,295 | ERROR | [Spotify] audio_features single error for 0dKg2vGC1hFqcK5LGTaKzX: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0dKg2vGC1hFqcK5LGTaKzX:
+ None, reason: None
+2025-10-14 00:36:19,363 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=58w5J5yNWeGZ7a4cM1rO7Y with Params: {} returned 403 due to None
+2025-10-14 00:36:19,363 | ERROR | [Spotify] audio_features single error for 58w5J5yNWeGZ7a4cM1rO7Y: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=58w5J5yNWeGZ7a4cM1rO7Y:
+ None, reason: None
+2025-10-14 00:36:19,430 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3idU3rXoFCEFhAAbPGbwht with Params: {} returned 403 due to None
+2025-10-14 00:36:19,430 | ERROR | [Spotify] audio_features single error for 3idU3rXoFCEFhAAbPGbwht: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3idU3rXoFCEFhAAbPGbwht:
+ None, reason: None
+2025-10-14 00:36:19,496 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2yjlYDiNiQkdxVqTlaSrlX with Params: {} returned 403 due to None
+2025-10-14 00:36:19,498 | ERROR | [Spotify] audio_features single error for 2yjlYDiNiQkdxVqTlaSrlX: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2yjlYDiNiQkdxVqTlaSrlX:
+ None, reason: None
+2025-10-14 00:36:19,564 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4M7aciOBSbGnh1bN3YbuS0 with Params: {} returned 403 due to None
+2025-10-14 00:36:19,564 | ERROR | [Spotify] audio_features single error for 4M7aciOBSbGnh1bN3YbuS0: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4M7aciOBSbGnh1bN3YbuS0:
+ None, reason: None
+2025-10-14 00:36:19,629 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2jATUzETZL49e6SywauZKE with Params: {} returned 403 due to None
+2025-10-14 00:36:19,632 | ERROR | [Spotify] audio_features single error for 2jATUzETZL49e6SywauZKE: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2jATUzETZL49e6SywauZKE:
+ None, reason: None
+2025-10-14 00:36:19,699 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1ia019RqDK2o4QiANR1Dyn with Params: {} returned 403 due to None
+2025-10-14 00:36:19,699 | ERROR | [Spotify] audio_features single error for 1ia019RqDK2o4QiANR1Dyn: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1ia019RqDK2o4QiANR1Dyn:
+ None, reason: None
+2025-10-14 00:36:19,759 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=68Dni7IE4VyPkTOH9mRWHr with Params: {} returned 403 due to None
+2025-10-14 00:36:19,765 | ERROR | [Spotify] audio_features single error for 68Dni7IE4VyPkTOH9mRWHr: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=68Dni7IE4VyPkTOH9mRWHr:
+ None, reason: None
+2025-10-14 00:36:19,827 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2wAJTrFhCnQyNSD3oUgTZO with Params: {} returned 403 due to None
+2025-10-14 00:36:19,827 | ERROR | [Spotify] audio_features single error for 2wAJTrFhCnQyNSD3oUgTZO: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2wAJTrFhCnQyNSD3oUgTZO:
+ None, reason: None
+2025-10-14 00:36:19,890 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4tqcoej1zPvwePZCzuAjJd with Params: {} returned 403 due to None
+2025-10-14 00:36:19,890 | ERROR | [Spotify] audio_features single error for 4tqcoej1zPvwePZCzuAjJd: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4tqcoej1zPvwePZCzuAjJd:
+ None, reason: None
+2025-10-14 00:36:19,950 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2uwnP6tZVVmTovzX5ELooy with Params: {} returned 403 due to None
+2025-10-14 00:36:19,969 | ERROR | [Spotify] audio_features single error for 2uwnP6tZVVmTovzX5ELooy: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2uwnP6tZVVmTovzX5ELooy:
+ None, reason: None
+2025-10-14 00:36:20,029 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2JvzF1RMd7lE3KmFlsyZD8 with Params: {} returned 403 due to None
+2025-10-14 00:36:20,029 | ERROR | [Spotify] audio_features single error for 2JvzF1RMd7lE3KmFlsyZD8: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2JvzF1RMd7lE3KmFlsyZD8:
+ None, reason: None
+2025-10-14 00:36:20,100 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2e3Ea0o24lReQFR4FA7yXH with Params: {} returned 403 due to None
+2025-10-14 00:36:20,100 | ERROR | [Spotify] audio_features single error for 2e3Ea0o24lReQFR4FA7yXH: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2e3Ea0o24lReQFR4FA7yXH:
+ None, reason: None
+2025-10-14 00:36:20,170 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7aqfrAY2p9BUSiupwk3svU with Params: {} returned 403 due to None
+2025-10-14 00:36:20,170 | ERROR | [Spotify] audio_features single error for 7aqfrAY2p9BUSiupwk3svU: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7aqfrAY2p9BUSiupwk3svU:
+ None, reason: None
+2025-10-14 00:36:20,240 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3s4mrPrEFFPF0LmAfutW0n with Params: {} returned 403 due to None
+2025-10-14 00:36:20,240 | ERROR | [Spotify] audio_features single error for 3s4mrPrEFFPF0LmAfutW0n: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3s4mrPrEFFPF0LmAfutW0n:
+ None, reason: None
+2025-10-14 00:36:20,299 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6T7FXSuXykeGktMLGp8WgE with Params: {} returned 403 due to None
+2025-10-14 00:36:20,325 | ERROR | [Spotify] audio_features single error for 6T7FXSuXykeGktMLGp8WgE: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6T7FXSuXykeGktMLGp8WgE:
+ None, reason: None
+2025-10-14 00:36:20,389 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0Fs9cdPDhptWEDJmiCbkEW with Params: {} returned 403 due to None
+2025-10-14 00:36:20,389 | ERROR | [Spotify] audio_features single error for 0Fs9cdPDhptWEDJmiCbkEW: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0Fs9cdPDhptWEDJmiCbkEW:
+ None, reason: None
+2025-10-14 00:36:20,459 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2XHzzp1j4IfTNp1FTn7YFg with Params: {} returned 403 due to None
+2025-10-14 00:36:20,459 | ERROR | [Spotify] audio_features single error for 2XHzzp1j4IfTNp1FTn7YFg: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2XHzzp1j4IfTNp1FTn7YFg:
+ None, reason: None
+2025-10-14 00:36:20,523 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3tFed7YsjGnIfxeLEQwx3R with Params: {} returned 403 due to None
+2025-10-14 00:36:20,523 | ERROR | [Spotify] audio_features single error for 3tFed7YsjGnIfxeLEQwx3R: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3tFed7YsjGnIfxeLEQwx3R:
+ None, reason: None
+2025-10-14 00:36:20,585 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3BUWNzPWz2mDbptZmGEXpB with Params: {} returned 403 due to None
+2025-10-14 00:36:20,585 | ERROR | [Spotify] audio_features single error for 3BUWNzPWz2mDbptZmGEXpB: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3BUWNzPWz2mDbptZmGEXpB:
+ None, reason: None
+2025-10-14 00:36:20,649 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1pm7lQGl6mvKWDxesZTVFp with Params: {} returned 403 due to None
+2025-10-14 00:36:20,649 | ERROR | [Spotify] audio_features single error for 1pm7lQGl6mvKWDxesZTVFp: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1pm7lQGl6mvKWDxesZTVFp:
+ None, reason: None
+2025-10-14 00:36:20,709 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1xPW9rS8dkuJP46WBTqU2C with Params: {} returned 403 due to None
+2025-10-14 00:36:20,709 | ERROR | [Spotify] audio_features single error for 1xPW9rS8dkuJP46WBTqU2C: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1xPW9rS8dkuJP46WBTqU2C:
+ None, reason: None
+2025-10-14 00:36:20,769 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5hUYsaOyMY32yjRXeuQwGj with Params: {} returned 403 due to None
+2025-10-14 00:36:20,769 | ERROR | [Spotify] audio_features single error for 5hUYsaOyMY32yjRXeuQwGj: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5hUYsaOyMY32yjRXeuQwGj:
+ None, reason: None
+2025-10-14 00:36:20,834 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2sQuds8s3EVbhXJpgVWpO4 with Params: {} returned 403 due to None
+2025-10-14 00:36:20,840 | ERROR | [Spotify] audio_features single error for 2sQuds8s3EVbhXJpgVWpO4: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2sQuds8s3EVbhXJpgVWpO4:
+ None, reason: None
+2025-10-14 00:36:20,900 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4dASQiO1Eoo3RJvt74FtXB with Params: {} returned 403 due to None
+2025-10-14 00:36:20,900 | ERROR | [Spotify] audio_features single error for 4dASQiO1Eoo3RJvt74FtXB: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4dASQiO1Eoo3RJvt74FtXB:
+ None, reason: None
+2025-10-14 00:36:20,969 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3qjKqmA2YeH0a8DRoKj8iy with Params: {} returned 403 due to None
+2025-10-14 00:36:20,969 | ERROR | [Spotify] audio_features single error for 3qjKqmA2YeH0a8DRoKj8iy: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3qjKqmA2YeH0a8DRoKj8iy:
+ None, reason: None
+2025-10-14 00:36:21,039 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2PpruBYCo4H7WOBJ7Q2EwM with Params: {} returned 403 due to None
+2025-10-14 00:36:21,039 | ERROR | [Spotify] audio_features single error for 2PpruBYCo4H7WOBJ7Q2EwM: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2PpruBYCo4H7WOBJ7Q2EwM:
+ None, reason: None
+2025-10-14 00:36:21,099 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0I3q5fE6wg7LIfHGngUTnV with Params: {} returned 403 due to None
+2025-10-14 00:36:21,099 | ERROR | [Spotify] audio_features single error for 0I3q5fE6wg7LIfHGngUTnV: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0I3q5fE6wg7LIfHGngUTnV:
+ None, reason: None
+2025-10-14 00:36:21,170 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6glsMWIMIxQ4BedzLqGVi4 with Params: {} returned 403 due to None
+2025-10-14 00:36:21,170 | ERROR | [Spotify] audio_features single error for 6glsMWIMIxQ4BedzLqGVi4: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6glsMWIMIxQ4BedzLqGVi4:
+ None, reason: None
+2025-10-14 00:36:21,239 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5z7mYFfhw6N6f23VwrokJD with Params: {} returned 403 due to None
+2025-10-14 00:36:21,239 | ERROR | [Spotify] audio_features single error for 5z7mYFfhw6N6f23VwrokJD: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5z7mYFfhw6N6f23VwrokJD:
+ None, reason: None
+2025-10-14 00:36:21,300 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6bUNEbXT7HovLW6BgPCBsb with Params: {} returned 403 due to None
+2025-10-14 00:36:21,300 | ERROR | [Spotify] audio_features single error for 6bUNEbXT7HovLW6BgPCBsb: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6bUNEbXT7HovLW6BgPCBsb:
+ None, reason: None
+2025-10-14 00:36:21,369 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2vfvGlqCB7oertO5VLE0sz with Params: {} returned 403 due to None
+2025-10-14 00:36:21,369 | ERROR | [Spotify] audio_features single error for 2vfvGlqCB7oertO5VLE0sz: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2vfvGlqCB7oertO5VLE0sz:
+ None, reason: None
+2025-10-14 00:36:21,439 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0shK5iZQppbHPQYiy60xs9 with Params: {} returned 403 due to None
+2025-10-14 00:36:21,439 | ERROR | [Spotify] audio_features single error for 0shK5iZQppbHPQYiy60xs9: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0shK5iZQppbHPQYiy60xs9:
+ None, reason: None
+2025-10-14 00:36:21,506 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3WibbMr6canxRJXhNtAvLU with Params: {} returned 403 due to None
+2025-10-14 00:36:21,506 | ERROR | [Spotify] audio_features single error for 3WibbMr6canxRJXhNtAvLU: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3WibbMr6canxRJXhNtAvLU:
+ None, reason: None
+2025-10-14 00:36:21,571 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1KQymTxNJfWk6vCD5ywKW2 with Params: {} returned 403 due to None
+2025-10-14 00:36:21,571 | ERROR | [Spotify] audio_features single error for 1KQymTxNJfWk6vCD5ywKW2: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1KQymTxNJfWk6vCD5ywKW2:
+ None, reason: None
+2025-10-14 00:36:21,631 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4GdB5M7GbwLZLouktYocFC with Params: {} returned 403 due to None
+2025-10-14 00:36:21,639 | ERROR | [Spotify] audio_features single error for 4GdB5M7GbwLZLouktYocFC: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4GdB5M7GbwLZLouktYocFC:
+ None, reason: None
+2025-10-14 00:36:21,701 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6gBFPUFcJLzWGx4lenP6h2 with Params: {} returned 403 due to None
+2025-10-14 00:36:21,701 | ERROR | [Spotify] audio_features single error for 6gBFPUFcJLzWGx4lenP6h2: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6gBFPUFcJLzWGx4lenP6h2:
+ None, reason: None
+2025-10-14 00:36:21,771 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=42VsgItocQwOQC3XWZ8JNA with Params: {} returned 403 due to None
+2025-10-14 00:36:21,774 | ERROR | [Spotify] audio_features single error for 42VsgItocQwOQC3XWZ8JNA: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=42VsgItocQwOQC3XWZ8JNA:
+ None, reason: None
+2025-10-14 00:36:21,839 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3eekarcy7kvN4yt5ZFzltW with Params: {} returned 403 due to None
+2025-10-14 00:36:21,839 | ERROR | [Spotify] audio_features single error for 3eekarcy7kvN4yt5ZFzltW: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3eekarcy7kvN4yt5ZFzltW:
+ None, reason: None
+2025-10-14 00:36:21,906 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6koKhrBBcExADvWuOgceNZ with Params: {} returned 403 due to None
+2025-10-14 00:36:21,908 | ERROR | [Spotify] audio_features single error for 6koKhrBBcExADvWuOgceNZ: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6koKhrBBcExADvWuOgceNZ:
+ None, reason: None
+2025-10-14 00:36:21,969 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2xLMifQCjDGFmkHkpNLD9h with Params: {} returned 403 due to None
+2025-10-14 00:36:21,974 | ERROR | [Spotify] audio_features single error for 2xLMifQCjDGFmkHkpNLD9h: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2xLMifQCjDGFmkHkpNLD9h:
+ None, reason: None
+2025-10-14 00:36:22,029 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2cYqizR4lgvp4Qu6IQ3qGN with Params: {} returned 403 due to None
+2025-10-14 00:36:22,029 | ERROR | [Spotify] audio_features single error for 2cYqizR4lgvp4Qu6IQ3qGN: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2cYqizR4lgvp4Qu6IQ3qGN:
+ None, reason: None
+2025-10-14 00:36:22,102 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5wG3HvLhF6Y5KTGlK0IW3J with Params: {} returned 403 due to None
+2025-10-14 00:36:22,102 | ERROR | [Spotify] audio_features single error for 5wG3HvLhF6Y5KTGlK0IW3J: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5wG3HvLhF6Y5KTGlK0IW3J:
+ None, reason: None
+2025-10-14 00:36:22,173 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=51EC3I1nQXpec4gDk0mQyP with Params: {} returned 403 due to None
+2025-10-14 00:36:22,173 | ERROR | [Spotify] audio_features single error for 51EC3I1nQXpec4gDk0mQyP: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=51EC3I1nQXpec4gDk0mQyP:
+ None, reason: None
+2025-10-14 00:36:22,242 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=28drn6tQo95MRvO0jQEo5C with Params: {} returned 403 due to None
+2025-10-14 00:36:22,242 | ERROR | [Spotify] audio_features single error for 28drn6tQo95MRvO0jQEo5C: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=28drn6tQo95MRvO0jQEo5C:
+ None, reason: None
+2025-10-14 00:36:22,304 | WARNING | Your application has reached a rate/request limit. Retry will occur after: 2
+2025-10-14 00:36:24,367 | WARNING | Your application has reached a rate/request limit. Retry will occur after: 1
+2025-10-14 00:36:25,432 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4kjI1gwQZRKNDkw1nI475M with Params: {} returned 403 due to None
+2025-10-14 00:36:25,432 | ERROR | [Spotify] audio_features single error for 4kjI1gwQZRKNDkw1nI475M: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4kjI1gwQZRKNDkw1nI475M:
+ None, reason: None
+2025-10-14 00:36:25,502 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1gSDTZHemEViEBiXysrlo0 with Params: {} returned 403 due to None
+2025-10-14 00:36:25,502 | ERROR | [Spotify] audio_features single error for 1gSDTZHemEViEBiXysrlo0: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1gSDTZHemEViEBiXysrlo0:
+ None, reason: None
+2025-10-14 00:36:25,575 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0eEXcw3JLVXcRxYrVYMy68 with Params: {} returned 403 due to None
+2025-10-14 00:36:25,575 | ERROR | [Spotify] audio_features single error for 0eEXcw3JLVXcRxYrVYMy68: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0eEXcw3JLVXcRxYrVYMy68:
+ None, reason: None
+2025-10-14 00:36:25,650 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4HfxDJ0uLHTLe0fZrx0MbQ,7f1UEGMBMuXfLBP5XANfrW,7AgMX97ljLm9BzszyyXEYZ,5YTM7OgQDt9EJAYcfHLniJ,2MAaiV0bbeq4FpSwPe2rR8,6GAemDMWAXa8wZOBkO1gar,0301nLjG0ti26rx5ZmfqtP,4tEaytMs86hIaOSsiGoLcP,7KwZNVEaqikRSBSpyhXK2j,2g8HN35AnVGIk7B8yMucww,5ByAIlEEnxYdvpnezg7HTX,4INDiWSKvqSKDEu7mh8HFz,19FsxX4RthRMZGfXkImdCb,5mqPg2dyqb1gBNyg9ycGcT,4GIsskMpViPkt0uzPJTJSp,2DnXXNkr3YQICQqdg9NH9F,2KFg8kjYy0rYjWsXGhEQHN,3PA9dH8cT0wR5UW4XkC44Y,3ia3dJETSOllPsv3LJkE35,0Z2J91b2iTGLVTZC4fKgxf,4VQNCzfZ3MdHEwwErNXpBo,5g9lS8deSIxItFBmZRC4vN,4AE7Lj39VnSZNOmGH2iZaq,1ofhfV90EnYhEr7Un2fWiv,6LwrEZNkvFTOypNwSLjuaJ,2zoobJFEB9h15fjYjRd6oP,2S2x5N5VJNn7vqYukvoFFC,0XRbYXQUymj9SJkrr8YK5B,2Hh3ETdQKrmSI3QS0hme7g,4lH6nENd1y81jp7Yt9lTBX,7EiZI6JVHllARrX9PUvAdX,0VgkVdmE4gld66l8iyGjgx,1K5KBOgreBi5fkEHvg5ap3,0vjeOZ3Ft5jvAi9SBFJm1j,52NGJPcLUzQq5w7uv4e5gf,03JZr55j9bIj1d2RQJ7Yq9,02BcXEH1zJYbXSabPtNlKf,3DarAbFujv6eYNliUTyqtz,6Uj1ctrBOjOas8xZXGqKk4,60ynsPSSKe6O3sfwRnIBRf,56y1jOTK0XSvJzVv9vHQBK,5PyDJG7SQRgWXefgexqIge,5T0mnzMsyHtmWB7Kou51Ph,7KNmIjcmGJIBrhP2s5Vioe,1VJwtWR6z7SpZRwipI12be with Params: {} returned 403 due to None
+2025-10-14 00:36:25,655 | ERROR | [Spotify] audio_features batch error (100:150): http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4HfxDJ0uLHTLe0fZrx0MbQ,7f1UEGMBMuXfLBP5XANfrW,7AgMX97ljLm9BzszyyXEYZ,5YTM7OgQDt9EJAYcfHLniJ,2MAaiV0bbeq4FpSwPe2rR8,6GAemDMWAXa8wZOBkO1gar,0301nLjG0ti26rx5ZmfqtP,4tEaytMs86hIaOSsiGoLcP,7KwZNVEaqikRSBSpyhXK2j,2g8HN35AnVGIk7B8yMucww,5ByAIlEEnxYdvpnezg7HTX,4INDiWSKvqSKDEu7mh8HFz,19FsxX4RthRMZGfXkImdCb,5mqPg2dyqb1gBNyg9ycGcT,4GIsskMpViPkt0uzPJTJSp,2DnXXNkr3YQICQqdg9NH9F,2KFg8kjYy0rYjWsXGhEQHN,3PA9dH8cT0wR5UW4XkC44Y,3ia3dJETSOllPsv3LJkE35,0Z2J91b2iTGLVTZC4fKgxf,4VQNCzfZ3MdHEwwErNXpBo,5g9lS8deSIxItFBmZRC4vN,4AE7Lj39VnSZNOmGH2iZaq,1ofhfV90EnYhEr7Un2fWiv,6LwrEZNkvFTOypNwSLjuaJ,2zoobJFEB9h15fjYjRd6oP,2S2x5N5VJNn7vqYukvoFFC,0XRbYXQUymj9SJkrr8YK5B,2Hh3ETdQKrmSI3QS0hme7g,4lH6nENd1y81jp7Yt9lTBX,7EiZI6JVHllARrX9PUvAdX,0VgkVdmE4gld66l8iyGjgx,1K5KBOgreBi5fkEHvg5ap3,0vjeOZ3Ft5jvAi9SBFJm1j,52NGJPcLUzQq5w7uv4e5gf,03JZr55j9bIj1d2RQJ7Yq9,02BcXEH1zJYbXSabPtNlKf,3DarAbFujv6eYNliUTyqtz,6Uj1ctrBOjOas8xZXGqKk4,60ynsPSSKe6O3sfwRnIBRf,56y1jOTK0XSvJzVv9vHQBK,5PyDJG7SQRgWXefgexqIge,5T0mnzMsyHtmWB7Kou51Ph,7KNmIjcmGJIBrhP2s5Vioe,1VJwtWR6z7SpZRwipI12be:
+ None, reason: None
+2025-10-14 00:36:25,722 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4HfxDJ0uLHTLe0fZrx0MbQ with Params: {} returned 403 due to None
+2025-10-14 00:36:25,722 | ERROR | [Spotify] audio_features single error for 4HfxDJ0uLHTLe0fZrx0MbQ: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4HfxDJ0uLHTLe0fZrx0MbQ:
+ None, reason: None
+2025-10-14 00:36:25,789 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7f1UEGMBMuXfLBP5XANfrW with Params: {} returned 403 due to None
+2025-10-14 00:36:25,789 | ERROR | [Spotify] audio_features single error for 7f1UEGMBMuXfLBP5XANfrW: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7f1UEGMBMuXfLBP5XANfrW:
+ None, reason: None
+2025-10-14 00:36:25,886 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7AgMX97ljLm9BzszyyXEYZ with Params: {} returned 403 due to None
+2025-10-14 00:36:25,886 | ERROR | [Spotify] audio_features single error for 7AgMX97ljLm9BzszyyXEYZ: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7AgMX97ljLm9BzszyyXEYZ:
+ None, reason: None
+2025-10-14 00:36:25,949 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5YTM7OgQDt9EJAYcfHLniJ with Params: {} returned 403 due to None
+2025-10-14 00:36:25,949 | ERROR | [Spotify] audio_features single error for 5YTM7OgQDt9EJAYcfHLniJ: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5YTM7OgQDt9EJAYcfHLniJ:
+ None, reason: None
+2025-10-14 00:36:26,031 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2MAaiV0bbeq4FpSwPe2rR8 with Params: {} returned 403 due to None
+2025-10-14 00:36:26,031 | ERROR | [Spotify] audio_features single error for 2MAaiV0bbeq4FpSwPe2rR8: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2MAaiV0bbeq4FpSwPe2rR8:
+ None, reason: None
+2025-10-14 00:36:26,099 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6GAemDMWAXa8wZOBkO1gar with Params: {} returned 403 due to None
+2025-10-14 00:36:26,099 | ERROR | [Spotify] audio_features single error for 6GAemDMWAXa8wZOBkO1gar: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6GAemDMWAXa8wZOBkO1gar:
+ None, reason: None
+2025-10-14 00:36:26,169 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0301nLjG0ti26rx5ZmfqtP with Params: {} returned 403 due to None
+2025-10-14 00:36:26,169 | ERROR | [Spotify] audio_features single error for 0301nLjG0ti26rx5ZmfqtP: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0301nLjG0ti26rx5ZmfqtP:
+ None, reason: None
+2025-10-14 00:36:26,229 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4tEaytMs86hIaOSsiGoLcP with Params: {} returned 403 due to None
+2025-10-14 00:36:26,238 | ERROR | [Spotify] audio_features single error for 4tEaytMs86hIaOSsiGoLcP: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4tEaytMs86hIaOSsiGoLcP:
+ None, reason: None
+2025-10-14 00:36:26,305 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7KwZNVEaqikRSBSpyhXK2j with Params: {} returned 403 due to None
+2025-10-14 00:36:26,305 | ERROR | [Spotify] audio_features single error for 7KwZNVEaqikRSBSpyhXK2j: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7KwZNVEaqikRSBSpyhXK2j:
+ None, reason: None
+2025-10-14 00:36:26,369 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2g8HN35AnVGIk7B8yMucww with Params: {} returned 403 due to None
+2025-10-14 00:36:26,374 | ERROR | [Spotify] audio_features single error for 2g8HN35AnVGIk7B8yMucww: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2g8HN35AnVGIk7B8yMucww:
+ None, reason: None
+2025-10-14 00:36:26,439 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5ByAIlEEnxYdvpnezg7HTX with Params: {} returned 403 due to None
+2025-10-14 00:36:26,439 | ERROR | [Spotify] audio_features single error for 5ByAIlEEnxYdvpnezg7HTX: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5ByAIlEEnxYdvpnezg7HTX:
+ None, reason: None
+2025-10-14 00:36:26,509 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4INDiWSKvqSKDEu7mh8HFz with Params: {} returned 403 due to None
+2025-10-14 00:36:26,511 | ERROR | [Spotify] audio_features single error for 4INDiWSKvqSKDEu7mh8HFz: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4INDiWSKvqSKDEu7mh8HFz:
+ None, reason: None
+2025-10-14 00:36:26,579 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=19FsxX4RthRMZGfXkImdCb with Params: {} returned 403 due to None
+2025-10-14 00:36:26,579 | ERROR | [Spotify] audio_features single error for 19FsxX4RthRMZGfXkImdCb: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=19FsxX4RthRMZGfXkImdCb:
+ None, reason: None
+2025-10-14 00:36:26,644 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5mqPg2dyqb1gBNyg9ycGcT with Params: {} returned 403 due to None
+2025-10-14 00:36:26,644 | ERROR | [Spotify] audio_features single error for 5mqPg2dyqb1gBNyg9ycGcT: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5mqPg2dyqb1gBNyg9ycGcT:
+ None, reason: None
+2025-10-14 00:36:26,713 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4GIsskMpViPkt0uzPJTJSp with Params: {} returned 403 due to None
+2025-10-14 00:36:26,715 | ERROR | [Spotify] audio_features single error for 4GIsskMpViPkt0uzPJTJSp: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4GIsskMpViPkt0uzPJTJSp:
+ None, reason: None
+2025-10-14 00:36:26,780 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2DnXXNkr3YQICQqdg9NH9F with Params: {} returned 403 due to None
+2025-10-14 00:36:26,784 | ERROR | [Spotify] audio_features single error for 2DnXXNkr3YQICQqdg9NH9F: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2DnXXNkr3YQICQqdg9NH9F:
+ None, reason: None
+2025-10-14 00:36:26,853 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2KFg8kjYy0rYjWsXGhEQHN with Params: {} returned 403 due to None
+2025-10-14 00:36:26,855 | ERROR | [Spotify] audio_features single error for 2KFg8kjYy0rYjWsXGhEQHN: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2KFg8kjYy0rYjWsXGhEQHN:
+ None, reason: None
+2025-10-14 00:36:26,925 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3PA9dH8cT0wR5UW4XkC44Y with Params: {} returned 403 due to None
+2025-10-14 00:36:26,925 | ERROR | [Spotify] audio_features single error for 3PA9dH8cT0wR5UW4XkC44Y: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3PA9dH8cT0wR5UW4XkC44Y:
+ None, reason: None
+2025-10-14 00:36:26,993 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3ia3dJETSOllPsv3LJkE35 with Params: {} returned 403 due to None
+2025-10-14 00:36:26,993 | ERROR | [Spotify] audio_features single error for 3ia3dJETSOllPsv3LJkE35: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3ia3dJETSOllPsv3LJkE35:
+ None, reason: None
+2025-10-14 00:36:27,060 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0Z2J91b2iTGLVTZC4fKgxf with Params: {} returned 403 due to None
+2025-10-14 00:36:27,060 | ERROR | [Spotify] audio_features single error for 0Z2J91b2iTGLVTZC4fKgxf: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0Z2J91b2iTGLVTZC4fKgxf:
+ None, reason: None
+2025-10-14 00:36:27,120 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4VQNCzfZ3MdHEwwErNXpBo with Params: {} returned 403 due to None
+2025-10-14 00:36:27,120 | ERROR | [Spotify] audio_features single error for 4VQNCzfZ3MdHEwwErNXpBo: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4VQNCzfZ3MdHEwwErNXpBo:
+ None, reason: None
+2025-10-14 00:36:27,189 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5g9lS8deSIxItFBmZRC4vN with Params: {} returned 403 due to None
+2025-10-14 00:36:27,189 | ERROR | [Spotify] audio_features single error for 5g9lS8deSIxItFBmZRC4vN: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5g9lS8deSIxItFBmZRC4vN:
+ None, reason: None
+2025-10-14 00:36:27,259 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4AE7Lj39VnSZNOmGH2iZaq with Params: {} returned 403 due to None
+2025-10-14 00:36:27,259 | ERROR | [Spotify] audio_features single error for 4AE7Lj39VnSZNOmGH2iZaq: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4AE7Lj39VnSZNOmGH2iZaq:
+ None, reason: None
+2025-10-14 00:36:27,329 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1ofhfV90EnYhEr7Un2fWiv with Params: {} returned 403 due to None
+2025-10-14 00:36:27,329 | ERROR | [Spotify] audio_features single error for 1ofhfV90EnYhEr7Un2fWiv: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1ofhfV90EnYhEr7Un2fWiv:
+ None, reason: None
+2025-10-14 00:36:27,397 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6LwrEZNkvFTOypNwSLjuaJ with Params: {} returned 403 due to None
+2025-10-14 00:36:27,399 | ERROR | [Spotify] audio_features single error for 6LwrEZNkvFTOypNwSLjuaJ: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6LwrEZNkvFTOypNwSLjuaJ:
+ None, reason: None
+2025-10-14 00:36:27,460 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2zoobJFEB9h15fjYjRd6oP with Params: {} returned 403 due to None
+2025-10-14 00:36:27,460 | ERROR | [Spotify] audio_features single error for 2zoobJFEB9h15fjYjRd6oP: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2zoobJFEB9h15fjYjRd6oP:
+ None, reason: None
+2025-10-14 00:36:27,529 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2S2x5N5VJNn7vqYukvoFFC with Params: {} returned 403 due to None
+2025-10-14 00:36:27,529 | ERROR | [Spotify] audio_features single error for 2S2x5N5VJNn7vqYukvoFFC: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2S2x5N5VJNn7vqYukvoFFC:
+ None, reason: None
+2025-10-14 00:36:27,594 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0XRbYXQUymj9SJkrr8YK5B with Params: {} returned 403 due to None
+2025-10-14 00:36:27,599 | ERROR | [Spotify] audio_features single error for 0XRbYXQUymj9SJkrr8YK5B: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0XRbYXQUymj9SJkrr8YK5B:
+ None, reason: None
+2025-10-14 00:36:27,666 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2Hh3ETdQKrmSI3QS0hme7g with Params: {} returned 403 due to None
+2025-10-14 00:36:27,666 | ERROR | [Spotify] audio_features single error for 2Hh3ETdQKrmSI3QS0hme7g: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2Hh3ETdQKrmSI3QS0hme7g:
+ None, reason: None
+2025-10-14 00:36:27,731 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4lH6nENd1y81jp7Yt9lTBX with Params: {} returned 403 due to None
+2025-10-14 00:36:27,731 | ERROR | [Spotify] audio_features single error for 4lH6nENd1y81jp7Yt9lTBX: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4lH6nENd1y81jp7Yt9lTBX:
+ None, reason: None
+2025-10-14 00:36:27,793 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7EiZI6JVHllARrX9PUvAdX with Params: {} returned 403 due to None
+2025-10-14 00:36:27,798 | ERROR | [Spotify] audio_features single error for 7EiZI6JVHllARrX9PUvAdX: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7EiZI6JVHllARrX9PUvAdX:
+ None, reason: None
+2025-10-14 00:36:27,863 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0VgkVdmE4gld66l8iyGjgx with Params: {} returned 403 due to None
+2025-10-14 00:36:27,863 | ERROR | [Spotify] audio_features single error for 0VgkVdmE4gld66l8iyGjgx: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0VgkVdmE4gld66l8iyGjgx:
+ None, reason: None
+2025-10-14 00:36:27,931 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1K5KBOgreBi5fkEHvg5ap3 with Params: {} returned 403 due to None
+2025-10-14 00:36:27,931 | ERROR | [Spotify] audio_features single error for 1K5KBOgreBi5fkEHvg5ap3: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1K5KBOgreBi5fkEHvg5ap3:
+ None, reason: None
+2025-10-14 00:36:27,989 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0vjeOZ3Ft5jvAi9SBFJm1j with Params: {} returned 403 due to None
+2025-10-14 00:36:27,989 | ERROR | [Spotify] audio_features single error for 0vjeOZ3Ft5jvAi9SBFJm1j: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0vjeOZ3Ft5jvAi9SBFJm1j:
+ None, reason: None
+2025-10-14 00:36:28,069 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=52NGJPcLUzQq5w7uv4e5gf with Params: {} returned 403 due to None
+2025-10-14 00:36:28,069 | ERROR | [Spotify] audio_features single error for 52NGJPcLUzQq5w7uv4e5gf: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=52NGJPcLUzQq5w7uv4e5gf:
+ None, reason: None
+2025-10-14 00:36:28,133 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=03JZr55j9bIj1d2RQJ7Yq9 with Params: {} returned 403 due to None
+2025-10-14 00:36:28,133 | ERROR | [Spotify] audio_features single error for 03JZr55j9bIj1d2RQJ7Yq9: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=03JZr55j9bIj1d2RQJ7Yq9:
+ None, reason: None
+2025-10-14 00:36:28,193 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=02BcXEH1zJYbXSabPtNlKf with Params: {} returned 403 due to None
+2025-10-14 00:36:28,193 | ERROR | [Spotify] audio_features single error for 02BcXEH1zJYbXSabPtNlKf: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=02BcXEH1zJYbXSabPtNlKf:
+ None, reason: None
+2025-10-14 00:36:28,259 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3DarAbFujv6eYNliUTyqtz with Params: {} returned 403 due to None
+2025-10-14 00:36:28,259 | ERROR | [Spotify] audio_features single error for 3DarAbFujv6eYNliUTyqtz: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3DarAbFujv6eYNliUTyqtz:
+ None, reason: None
+2025-10-14 00:36:28,322 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6Uj1ctrBOjOas8xZXGqKk4 with Params: {} returned 403 due to None
+2025-10-14 00:36:28,322 | ERROR | [Spotify] audio_features single error for 6Uj1ctrBOjOas8xZXGqKk4: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6Uj1ctrBOjOas8xZXGqKk4:
+ None, reason: None
+2025-10-14 00:36:28,379 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=60ynsPSSKe6O3sfwRnIBRf with Params: {} returned 403 due to None
+2025-10-14 00:36:28,379 | ERROR | [Spotify] audio_features single error for 60ynsPSSKe6O3sfwRnIBRf: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=60ynsPSSKe6O3sfwRnIBRf:
+ None, reason: None
+2025-10-14 00:36:28,447 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=56y1jOTK0XSvJzVv9vHQBK with Params: {} returned 403 due to None
+2025-10-14 00:36:28,459 | ERROR | [Spotify] audio_features single error for 56y1jOTK0XSvJzVv9vHQBK: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=56y1jOTK0XSvJzVv9vHQBK:
+ None, reason: None
+2025-10-14 00:36:28,522 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5PyDJG7SQRgWXefgexqIge with Params: {} returned 403 due to None
+2025-10-14 00:36:28,529 | ERROR | [Spotify] audio_features single error for 5PyDJG7SQRgWXefgexqIge: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5PyDJG7SQRgWXefgexqIge:
+ None, reason: None
+2025-10-14 00:36:28,589 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5T0mnzMsyHtmWB7Kou51Ph with Params: {} returned 403 due to None
+2025-10-14 00:36:28,589 | ERROR | [Spotify] audio_features single error for 5T0mnzMsyHtmWB7Kou51Ph: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5T0mnzMsyHtmWB7Kou51Ph:
+ None, reason: None
+2025-10-14 00:36:28,659 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7KNmIjcmGJIBrhP2s5Vioe with Params: {} returned 403 due to None
+2025-10-14 00:36:28,659 | ERROR | [Spotify] audio_features single error for 7KNmIjcmGJIBrhP2s5Vioe: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7KNmIjcmGJIBrhP2s5Vioe:
+ None, reason: None
+2025-10-14 00:36:28,729 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1VJwtWR6z7SpZRwipI12be with Params: {} returned 403 due to None
+2025-10-14 00:36:28,729 | ERROR | [Spotify] audio_features single error for 1VJwtWR6z7SpZRwipI12be: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1VJwtWR6z7SpZRwipI12be:
+ None, reason: None
+2025-10-14 00:36:28,729 | WARNING | [Spotify] No audio features returned; columns will be NaN.
+2025-10-14 00:40:14,278 | INFO | [Spotify] Top tracks for: Jay-Z
+2025-10-14 00:40:15,329 | INFO | [Spotify] Top tracks for: Nas
+2025-10-14 00:40:16,112 | INFO | [Spotify] Top tracks for: Kanye West
+2025-10-14 00:40:16,866 | INFO | [Spotify] Top tracks for: Drake
+2025-10-14 00:40:17,590 | INFO | [Spotify] Top tracks for: Kendrick Lamar
+2025-10-14 00:40:18,289 | INFO | [Spotify] Top tracks for: Nicki Minaj
+2025-10-14 00:40:18,934 | INFO | [Spotify] Top tracks for: J. Cole
+2025-10-14 00:40:19,704 | INFO | [Spotify] Top tracks for: Lil Wayne
+2025-10-14 00:40:20,705 | INFO | [Spotify] Top tracks for: Outkast
+2025-10-14 00:40:21,487 | INFO | [Spotify] Top tracks for: Travis Scott
+2025-10-14 00:40:22,511 | INFO | [Spotify] Top tracks for: A Tribe Called Quest
+2025-10-14 00:40:23,144 | INFO | [Spotify] Top tracks for: The Notorious B.I.G.
+2025-10-14 00:40:23,866 | INFO | [Spotify] Top tracks for: 2Pac
+2025-10-14 00:40:24,534 | INFO | [Spotify] Top tracks for: Future
+2025-10-14 00:40:25,315 | INFO | [Spotify] Top tracks for: Doja Cat
+2025-10-14 00:40:26,009 | INFO | Collected 145 unique tracks across 15 artists.
+2025-10-14 00:40:26,078 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2igwFfvr1OAGX9SKDCPBwO,1auxYwYrFRqZP7t3s7w4um,5sNESr6pQfIhL3krM8CtZn,7LR85XLWw2yXqKBSI5brbG,7r6PigmGzlB3YPB7wvBBbi,5ljCWsDlSyJ41kwqym2ORw,1gT5TGwbkkkUliNzHRIGi1,14I61w6cyYUHiV2n28IYdP,4VCbgIdr8ptegWeJpqLVHH,4bDPr2VAjcfgUDmN9dGOC3,3joBAxXdN3HFkvvbkxJEwl,5WsE374LpBomAkCRSOcjWo,0b1kU7KgZSnH7n7TBy921o,4srUSbTEbA2aJhEgcw0rqx,6ziKNQ7vKSpbt25yU1GjFS,79ntN2kMAg1JFyYh8Uq2Oa,6XkLdAGky28Ju6Rmr1gZBA,2M4lp7MTlaoGryo8rr5lsY,4n3kD4h1k57h0obdRBChZL,29KC2wCnYtZRLKbdplpx0B,5TRPicyLGbAF2LGBFbHGvO,4EWCNWgDS8707fNSZ1oaA5,3DK6m7It6Pw857FcQftMds,5SkRLpaGtvYPhw02vZhQQ9,7rbECVPkY5UODxoOUVKZnA,0mEdbdeRFQwBhN4xfyIeUM,0j2T0R9dR9qdJYsB7ciXhf,3sNVsP50132BTNlImLx70i,4iz9lGMjU1lXS51oPmUmTe,1zi7xx7UVEFkmKfv06H8x0,2u9S9JJ6hTZS3Vf22HOZKg,6LxSe8YmdPxy095Ux6znaQ,5mCPDVBb16L4XQwDdbRUpz,5FMyXeZ0reYloRTiCkPprT,6DCZcSspjsKoFjzjrWoCdn,3Q4gttWQ6hxqWOa3tHoTNi,0b4M7hd7mzLTm99MrMeZsp,59nOXPmaKlBfGMDeOVGrIK,0NUqi0ps17YpLUC3kgsZq0,3GCdLUSnKSMJhs4Tj6CV3s,2CGNAOSuO1MEFCbBRgUzjd,6AI3ezQ4o3HUoP6Dhudph3,2HbKqm4o0w5wEeEFXm2sD4,0aB0v4027ukVziUGwVGYpG,7KXjTSCq5nL1LoYtL7XAwS,6REbwUNlppTfcnV4d4ZoZi,6PGoSes0D9eUDeeAafB2As,2tudvzsrR56uom6smgOcSf,6IZvVAP7VPPnsGX6bvgkqg,1oHNvJVbFkexQc0BpQp7Y4 with Params: {} returned 403 due to None
+2025-10-14 00:40:26,078 | ERROR | [Spotify] audio_features batch error (0:50): http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2igwFfvr1OAGX9SKDCPBwO,1auxYwYrFRqZP7t3s7w4um,5sNESr6pQfIhL3krM8CtZn,7LR85XLWw2yXqKBSI5brbG,7r6PigmGzlB3YPB7wvBBbi,5ljCWsDlSyJ41kwqym2ORw,1gT5TGwbkkkUliNzHRIGi1,14I61w6cyYUHiV2n28IYdP,4VCbgIdr8ptegWeJpqLVHH,4bDPr2VAjcfgUDmN9dGOC3,3joBAxXdN3HFkvvbkxJEwl,5WsE374LpBomAkCRSOcjWo,0b1kU7KgZSnH7n7TBy921o,4srUSbTEbA2aJhEgcw0rqx,6ziKNQ7vKSpbt25yU1GjFS,79ntN2kMAg1JFyYh8Uq2Oa,6XkLdAGky28Ju6Rmr1gZBA,2M4lp7MTlaoGryo8rr5lsY,4n3kD4h1k57h0obdRBChZL,29KC2wCnYtZRLKbdplpx0B,5TRPicyLGbAF2LGBFbHGvO,4EWCNWgDS8707fNSZ1oaA5,3DK6m7It6Pw857FcQftMds,5SkRLpaGtvYPhw02vZhQQ9,7rbECVPkY5UODxoOUVKZnA,0mEdbdeRFQwBhN4xfyIeUM,0j2T0R9dR9qdJYsB7ciXhf,3sNVsP50132BTNlImLx70i,4iz9lGMjU1lXS51oPmUmTe,1zi7xx7UVEFkmKfv06H8x0,2u9S9JJ6hTZS3Vf22HOZKg,6LxSe8YmdPxy095Ux6znaQ,5mCPDVBb16L4XQwDdbRUpz,5FMyXeZ0reYloRTiCkPprT,6DCZcSspjsKoFjzjrWoCdn,3Q4gttWQ6hxqWOa3tHoTNi,0b4M7hd7mzLTm99MrMeZsp,59nOXPmaKlBfGMDeOVGrIK,0NUqi0ps17YpLUC3kgsZq0,3GCdLUSnKSMJhs4Tj6CV3s,2CGNAOSuO1MEFCbBRgUzjd,6AI3ezQ4o3HUoP6Dhudph3,2HbKqm4o0w5wEeEFXm2sD4,0aB0v4027ukVziUGwVGYpG,7KXjTSCq5nL1LoYtL7XAwS,6REbwUNlppTfcnV4d4ZoZi,6PGoSes0D9eUDeeAafB2As,2tudvzsrR56uom6smgOcSf,6IZvVAP7VPPnsGX6bvgkqg,1oHNvJVbFkexQc0BpQp7Y4:
+ None, reason: None
+2025-10-14 00:40:26,146 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2igwFfvr1OAGX9SKDCPBwO with Params: {} returned 403 due to None
+2025-10-14 00:40:26,146 | ERROR | [Spotify] audio_features single error for 2igwFfvr1OAGX9SKDCPBwO: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2igwFfvr1OAGX9SKDCPBwO:
+ None, reason: None
+2025-10-14 00:40:26,210 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1auxYwYrFRqZP7t3s7w4um with Params: {} returned 403 due to None
+2025-10-14 00:40:26,210 | ERROR | [Spotify] audio_features single error for 1auxYwYrFRqZP7t3s7w4um: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1auxYwYrFRqZP7t3s7w4um:
+ None, reason: None
+2025-10-14 00:40:26,273 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5sNESr6pQfIhL3krM8CtZn with Params: {} returned 403 due to None
+2025-10-14 00:40:26,273 | ERROR | [Spotify] audio_features single error for 5sNESr6pQfIhL3krM8CtZn: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5sNESr6pQfIhL3krM8CtZn:
+ None, reason: None
+2025-10-14 00:40:26,338 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7LR85XLWw2yXqKBSI5brbG with Params: {} returned 403 due to None
+2025-10-14 00:40:26,338 | ERROR | [Spotify] audio_features single error for 7LR85XLWw2yXqKBSI5brbG: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7LR85XLWw2yXqKBSI5brbG:
+ None, reason: None
+2025-10-14 00:40:26,401 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7r6PigmGzlB3YPB7wvBBbi with Params: {} returned 403 due to None
+2025-10-14 00:40:26,408 | ERROR | [Spotify] audio_features single error for 7r6PigmGzlB3YPB7wvBBbi: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7r6PigmGzlB3YPB7wvBBbi:
+ None, reason: None
+2025-10-14 00:40:26,468 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5ljCWsDlSyJ41kwqym2ORw with Params: {} returned 403 due to None
+2025-10-14 00:40:26,468 | ERROR | [Spotify] audio_features single error for 5ljCWsDlSyJ41kwqym2ORw: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5ljCWsDlSyJ41kwqym2ORw:
+ None, reason: None
+2025-10-14 00:40:26,535 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1gT5TGwbkkkUliNzHRIGi1 with Params: {} returned 403 due to None
+2025-10-14 00:40:26,539 | ERROR | [Spotify] audio_features single error for 1gT5TGwbkkkUliNzHRIGi1: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1gT5TGwbkkkUliNzHRIGi1:
+ None, reason: None
+2025-10-14 00:40:26,598 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=14I61w6cyYUHiV2n28IYdP with Params: {} returned 403 due to None
+2025-10-14 00:40:26,621 | ERROR | [Spotify] audio_features single error for 14I61w6cyYUHiV2n28IYdP: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=14I61w6cyYUHiV2n28IYdP:
+ None, reason: None
+2025-10-14 00:40:26,684 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4VCbgIdr8ptegWeJpqLVHH with Params: {} returned 403 due to None
+2025-10-14 00:40:26,688 | ERROR | [Spotify] audio_features single error for 4VCbgIdr8ptegWeJpqLVHH: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4VCbgIdr8ptegWeJpqLVHH:
+ None, reason: None
+2025-10-14 00:40:26,748 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4bDPr2VAjcfgUDmN9dGOC3 with Params: {} returned 403 due to None
+2025-10-14 00:40:26,748 | ERROR | [Spotify] audio_features single error for 4bDPr2VAjcfgUDmN9dGOC3: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4bDPr2VAjcfgUDmN9dGOC3:
+ None, reason: None
+2025-10-14 00:40:26,818 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3joBAxXdN3HFkvvbkxJEwl with Params: {} returned 403 due to None
+2025-10-14 00:40:26,818 | ERROR | [Spotify] audio_features single error for 3joBAxXdN3HFkvvbkxJEwl: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3joBAxXdN3HFkvvbkxJEwl:
+ None, reason: None
+2025-10-14 00:40:26,883 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5WsE374LpBomAkCRSOcjWo with Params: {} returned 403 due to None
+2025-10-14 00:40:26,883 | ERROR | [Spotify] audio_features single error for 5WsE374LpBomAkCRSOcjWo: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5WsE374LpBomAkCRSOcjWo:
+ None, reason: None
+2025-10-14 00:40:26,948 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0b1kU7KgZSnH7n7TBy921o with Params: {} returned 403 due to None
+2025-10-14 00:40:26,950 | ERROR | [Spotify] audio_features single error for 0b1kU7KgZSnH7n7TBy921o: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0b1kU7KgZSnH7n7TBy921o:
+ None, reason: None
+2025-10-14 00:40:27,008 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4srUSbTEbA2aJhEgcw0rqx with Params: {} returned 403 due to None
+2025-10-14 00:40:27,008 | ERROR | [Spotify] audio_features single error for 4srUSbTEbA2aJhEgcw0rqx: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4srUSbTEbA2aJhEgcw0rqx:
+ None, reason: None
+2025-10-14 00:40:27,078 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6ziKNQ7vKSpbt25yU1GjFS with Params: {} returned 403 due to None
+2025-10-14 00:40:27,078 | ERROR | [Spotify] audio_features single error for 6ziKNQ7vKSpbt25yU1GjFS: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6ziKNQ7vKSpbt25yU1GjFS:
+ None, reason: None
+2025-10-14 00:40:27,138 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=79ntN2kMAg1JFyYh8Uq2Oa with Params: {} returned 403 due to None
+2025-10-14 00:40:27,138 | ERROR | [Spotify] audio_features single error for 79ntN2kMAg1JFyYh8Uq2Oa: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=79ntN2kMAg1JFyYh8Uq2Oa:
+ None, reason: None
+2025-10-14 00:40:27,198 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6XkLdAGky28Ju6Rmr1gZBA with Params: {} returned 403 due to None
+2025-10-14 00:40:27,198 | ERROR | [Spotify] audio_features single error for 6XkLdAGky28Ju6Rmr1gZBA: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6XkLdAGky28Ju6Rmr1gZBA:
+ None, reason: None
+2025-10-14 00:40:27,268 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2M4lp7MTlaoGryo8rr5lsY with Params: {} returned 403 due to None
+2025-10-14 00:40:27,268 | ERROR | [Spotify] audio_features single error for 2M4lp7MTlaoGryo8rr5lsY: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2M4lp7MTlaoGryo8rr5lsY:
+ None, reason: None
+2025-10-14 00:40:27,336 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4n3kD4h1k57h0obdRBChZL with Params: {} returned 403 due to None
+2025-10-14 00:40:27,337 | ERROR | [Spotify] audio_features single error for 4n3kD4h1k57h0obdRBChZL: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4n3kD4h1k57h0obdRBChZL:
+ None, reason: None
+2025-10-14 00:40:27,401 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=29KC2wCnYtZRLKbdplpx0B with Params: {} returned 403 due to None
+2025-10-14 00:40:27,401 | ERROR | [Spotify] audio_features single error for 29KC2wCnYtZRLKbdplpx0B: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=29KC2wCnYtZRLKbdplpx0B:
+ None, reason: None
+2025-10-14 00:40:27,464 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5TRPicyLGbAF2LGBFbHGvO with Params: {} returned 403 due to None
+2025-10-14 00:40:27,464 | ERROR | [Spotify] audio_features single error for 5TRPicyLGbAF2LGBFbHGvO: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5TRPicyLGbAF2LGBFbHGvO:
+ None, reason: None
+2025-10-14 00:40:27,528 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4EWCNWgDS8707fNSZ1oaA5 with Params: {} returned 403 due to None
+2025-10-14 00:40:27,531 | ERROR | [Spotify] audio_features single error for 4EWCNWgDS8707fNSZ1oaA5: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4EWCNWgDS8707fNSZ1oaA5:
+ None, reason: None
+2025-10-14 00:40:27,592 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3DK6m7It6Pw857FcQftMds with Params: {} returned 403 due to None
+2025-10-14 00:40:27,592 | ERROR | [Spotify] audio_features single error for 3DK6m7It6Pw857FcQftMds: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3DK6m7It6Pw857FcQftMds:
+ None, reason: None
+2025-10-14 00:40:27,654 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5SkRLpaGtvYPhw02vZhQQ9 with Params: {} returned 403 due to None
+2025-10-14 00:40:27,654 | ERROR | [Spotify] audio_features single error for 5SkRLpaGtvYPhw02vZhQQ9: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5SkRLpaGtvYPhw02vZhQQ9:
+ None, reason: None
+2025-10-14 00:40:27,719 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7rbECVPkY5UODxoOUVKZnA with Params: {} returned 403 due to None
+2025-10-14 00:40:27,719 | ERROR | [Spotify] audio_features single error for 7rbECVPkY5UODxoOUVKZnA: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7rbECVPkY5UODxoOUVKZnA:
+ None, reason: None
+2025-10-14 00:40:27,782 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0mEdbdeRFQwBhN4xfyIeUM with Params: {} returned 403 due to None
+2025-10-14 00:40:27,782 | ERROR | [Spotify] audio_features single error for 0mEdbdeRFQwBhN4xfyIeUM: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0mEdbdeRFQwBhN4xfyIeUM:
+ None, reason: None
+2025-10-14 00:40:27,848 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0j2T0R9dR9qdJYsB7ciXhf with Params: {} returned 403 due to None
+2025-10-14 00:40:27,848 | ERROR | [Spotify] audio_features single error for 0j2T0R9dR9qdJYsB7ciXhf: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0j2T0R9dR9qdJYsB7ciXhf:
+ None, reason: None
+2025-10-14 00:40:27,918 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3sNVsP50132BTNlImLx70i with Params: {} returned 403 due to None
+2025-10-14 00:40:27,918 | ERROR | [Spotify] audio_features single error for 3sNVsP50132BTNlImLx70i: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3sNVsP50132BTNlImLx70i:
+ None, reason: None
+2025-10-14 00:40:27,978 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4iz9lGMjU1lXS51oPmUmTe with Params: {} returned 403 due to None
+2025-10-14 00:40:27,978 | ERROR | [Spotify] audio_features single error for 4iz9lGMjU1lXS51oPmUmTe: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4iz9lGMjU1lXS51oPmUmTe:
+ None, reason: None
+2025-10-14 00:40:28,048 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1zi7xx7UVEFkmKfv06H8x0 with Params: {} returned 403 due to None
+2025-10-14 00:40:28,048 | ERROR | [Spotify] audio_features single error for 1zi7xx7UVEFkmKfv06H8x0: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1zi7xx7UVEFkmKfv06H8x0:
+ None, reason: None
+2025-10-14 00:40:28,108 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2u9S9JJ6hTZS3Vf22HOZKg with Params: {} returned 403 due to None
+2025-10-14 00:40:28,108 | ERROR | [Spotify] audio_features single error for 2u9S9JJ6hTZS3Vf22HOZKg: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2u9S9JJ6hTZS3Vf22HOZKg:
+ None, reason: None
+2025-10-14 00:40:28,168 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6LxSe8YmdPxy095Ux6znaQ with Params: {} returned 403 due to None
+2025-10-14 00:40:28,178 | ERROR | [Spotify] audio_features single error for 6LxSe8YmdPxy095Ux6znaQ: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6LxSe8YmdPxy095Ux6znaQ:
+ None, reason: None
+2025-10-14 00:40:28,238 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5mCPDVBb16L4XQwDdbRUpz with Params: {} returned 403 due to None
+2025-10-14 00:40:28,238 | ERROR | [Spotify] audio_features single error for 5mCPDVBb16L4XQwDdbRUpz: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5mCPDVBb16L4XQwDdbRUpz:
+ None, reason: None
+2025-10-14 00:40:28,298 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5FMyXeZ0reYloRTiCkPprT with Params: {} returned 403 due to None
+2025-10-14 00:40:28,298 | ERROR | [Spotify] audio_features single error for 5FMyXeZ0reYloRTiCkPprT: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5FMyXeZ0reYloRTiCkPprT:
+ None, reason: None
+2025-10-14 00:40:28,364 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6DCZcSspjsKoFjzjrWoCdn with Params: {} returned 403 due to None
+2025-10-14 00:40:28,364 | ERROR | [Spotify] audio_features single error for 6DCZcSspjsKoFjzjrWoCdn: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6DCZcSspjsKoFjzjrWoCdn:
+ None, reason: None
+2025-10-14 00:40:28,426 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3Q4gttWQ6hxqWOa3tHoTNi with Params: {} returned 403 due to None
+2025-10-14 00:40:28,428 | ERROR | [Spotify] audio_features single error for 3Q4gttWQ6hxqWOa3tHoTNi: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3Q4gttWQ6hxqWOa3tHoTNi:
+ None, reason: None
+2025-10-14 00:40:28,488 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0b4M7hd7mzLTm99MrMeZsp with Params: {} returned 403 due to None
+2025-10-14 00:40:28,498 | ERROR | [Spotify] audio_features single error for 0b4M7hd7mzLTm99MrMeZsp: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0b4M7hd7mzLTm99MrMeZsp:
+ None, reason: None
+2025-10-14 00:40:28,562 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=59nOXPmaKlBfGMDeOVGrIK with Params: {} returned 403 due to None
+2025-10-14 00:40:28,562 | ERROR | [Spotify] audio_features single error for 59nOXPmaKlBfGMDeOVGrIK: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=59nOXPmaKlBfGMDeOVGrIK:
+ None, reason: None
+2025-10-14 00:40:28,618 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0NUqi0ps17YpLUC3kgsZq0 with Params: {} returned 403 due to None
+2025-10-14 00:40:28,618 | ERROR | [Spotify] audio_features single error for 0NUqi0ps17YpLUC3kgsZq0: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0NUqi0ps17YpLUC3kgsZq0:
+ None, reason: None
+2025-10-14 00:40:28,688 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3GCdLUSnKSMJhs4Tj6CV3s with Params: {} returned 403 due to None
+2025-10-14 00:40:28,688 | ERROR | [Spotify] audio_features single error for 3GCdLUSnKSMJhs4Tj6CV3s: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3GCdLUSnKSMJhs4Tj6CV3s:
+ None, reason: None
+2025-10-14 00:40:28,748 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2CGNAOSuO1MEFCbBRgUzjd with Params: {} returned 403 due to None
+2025-10-14 00:40:28,748 | ERROR | [Spotify] audio_features single error for 2CGNAOSuO1MEFCbBRgUzjd: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2CGNAOSuO1MEFCbBRgUzjd:
+ None, reason: None
+2025-10-14 00:40:28,808 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6AI3ezQ4o3HUoP6Dhudph3 with Params: {} returned 403 due to None
+2025-10-14 00:40:28,808 | ERROR | [Spotify] audio_features single error for 6AI3ezQ4o3HUoP6Dhudph3: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6AI3ezQ4o3HUoP6Dhudph3:
+ None, reason: None
+2025-10-14 00:40:28,878 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2HbKqm4o0w5wEeEFXm2sD4 with Params: {} returned 403 due to None
+2025-10-14 00:40:28,878 | ERROR | [Spotify] audio_features single error for 2HbKqm4o0w5wEeEFXm2sD4: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2HbKqm4o0w5wEeEFXm2sD4:
+ None, reason: None
+2025-10-14 00:40:28,938 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0aB0v4027ukVziUGwVGYpG with Params: {} returned 403 due to None
+2025-10-14 00:40:28,938 | ERROR | [Spotify] audio_features single error for 0aB0v4027ukVziUGwVGYpG: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0aB0v4027ukVziUGwVGYpG:
+ None, reason: None
+2025-10-14 00:40:29,002 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7KXjTSCq5nL1LoYtL7XAwS with Params: {} returned 403 due to None
+2025-10-14 00:40:29,002 | ERROR | [Spotify] audio_features single error for 7KXjTSCq5nL1LoYtL7XAwS: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7KXjTSCq5nL1LoYtL7XAwS:
+ None, reason: None
+2025-10-14 00:40:29,072 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6REbwUNlppTfcnV4d4ZoZi with Params: {} returned 403 due to None
+2025-10-14 00:40:29,074 | ERROR | [Spotify] audio_features single error for 6REbwUNlppTfcnV4d4ZoZi: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6REbwUNlppTfcnV4d4ZoZi:
+ None, reason: None
+2025-10-14 00:40:29,138 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6PGoSes0D9eUDeeAafB2As with Params: {} returned 403 due to None
+2025-10-14 00:40:29,138 | ERROR | [Spotify] audio_features single error for 6PGoSes0D9eUDeeAafB2As: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6PGoSes0D9eUDeeAafB2As:
+ None, reason: None
+2025-10-14 00:40:29,208 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2tudvzsrR56uom6smgOcSf with Params: {} returned 403 due to None
+2025-10-14 00:40:29,208 | ERROR | [Spotify] audio_features single error for 2tudvzsrR56uom6smgOcSf: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2tudvzsrR56uom6smgOcSf:
+ None, reason: None
+2025-10-14 00:40:29,268 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6IZvVAP7VPPnsGX6bvgkqg with Params: {} returned 403 due to None
+2025-10-14 00:40:29,268 | ERROR | [Spotify] audio_features single error for 6IZvVAP7VPPnsGX6bvgkqg: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6IZvVAP7VPPnsGX6bvgkqg:
+ None, reason: None
+2025-10-14 00:40:29,338 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1oHNvJVbFkexQc0BpQp7Y4 with Params: {} returned 403 due to None
+2025-10-14 00:40:29,338 | ERROR | [Spotify] audio_features single error for 1oHNvJVbFkexQc0BpQp7Y4: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1oHNvJVbFkexQc0BpQp7Y4:
+ None, reason: None
+2025-10-14 00:40:29,398 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0puf9yIluy9W0vpMEUoAnN,3hlksXnvbKogFdPbpO9vel,0dKg2vGC1hFqcK5LGTaKzX,58w5J5yNWeGZ7a4cM1rO7Y,3idU3rXoFCEFhAAbPGbwht,2yjlYDiNiQkdxVqTlaSrlX,4M7aciOBSbGnh1bN3YbuS0,2jATUzETZL49e6SywauZKE,1ia019RqDK2o4QiANR1Dyn,68Dni7IE4VyPkTOH9mRWHr,2wAJTrFhCnQyNSD3oUgTZO,4tqcoej1zPvwePZCzuAjJd,2uwnP6tZVVmTovzX5ELooy,2JvzF1RMd7lE3KmFlsyZD8,2e3Ea0o24lReQFR4FA7yXH,7aqfrAY2p9BUSiupwk3svU,3s4mrPrEFFPF0LmAfutW0n,6T7FXSuXykeGktMLGp8WgE,0Fs9cdPDhptWEDJmiCbkEW,2XHzzp1j4IfTNp1FTn7YFg,3tFed7YsjGnIfxeLEQwx3R,3BUWNzPWz2mDbptZmGEXpB,1pm7lQGl6mvKWDxesZTVFp,1xPW9rS8dkuJP46WBTqU2C,5hUYsaOyMY32yjRXeuQwGj,2sQuds8s3EVbhXJpgVWpO4,4dASQiO1Eoo3RJvt74FtXB,3qjKqmA2YeH0a8DRoKj8iy,2PpruBYCo4H7WOBJ7Q2EwM,0I3q5fE6wg7LIfHGngUTnV,6glsMWIMIxQ4BedzLqGVi4,5z7mYFfhw6N6f23VwrokJD,6bUNEbXT7HovLW6BgPCBsb,2vfvGlqCB7oertO5VLE0sz,0shK5iZQppbHPQYiy60xs9,3WibbMr6canxRJXhNtAvLU,1KQymTxNJfWk6vCD5ywKW2,4GdB5M7GbwLZLouktYocFC,6gBFPUFcJLzWGx4lenP6h2,42VsgItocQwOQC3XWZ8JNA,3eekarcy7kvN4yt5ZFzltW,6koKhrBBcExADvWuOgceNZ,2xLMifQCjDGFmkHkpNLD9h,2cYqizR4lgvp4Qu6IQ3qGN,5wG3HvLhF6Y5KTGlK0IW3J,51EC3I1nQXpec4gDk0mQyP,28drn6tQo95MRvO0jQEo5C,4kjI1gwQZRKNDkw1nI475M,1gSDTZHemEViEBiXysrlo0,0eEXcw3JLVXcRxYrVYMy68 with Params: {} returned 403 due to None
+2025-10-14 00:40:29,398 | ERROR | [Spotify] audio_features batch error (50:100): http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0puf9yIluy9W0vpMEUoAnN,3hlksXnvbKogFdPbpO9vel,0dKg2vGC1hFqcK5LGTaKzX,58w5J5yNWeGZ7a4cM1rO7Y,3idU3rXoFCEFhAAbPGbwht,2yjlYDiNiQkdxVqTlaSrlX,4M7aciOBSbGnh1bN3YbuS0,2jATUzETZL49e6SywauZKE,1ia019RqDK2o4QiANR1Dyn,68Dni7IE4VyPkTOH9mRWHr,2wAJTrFhCnQyNSD3oUgTZO,4tqcoej1zPvwePZCzuAjJd,2uwnP6tZVVmTovzX5ELooy,2JvzF1RMd7lE3KmFlsyZD8,2e3Ea0o24lReQFR4FA7yXH,7aqfrAY2p9BUSiupwk3svU,3s4mrPrEFFPF0LmAfutW0n,6T7FXSuXykeGktMLGp8WgE,0Fs9cdPDhptWEDJmiCbkEW,2XHzzp1j4IfTNp1FTn7YFg,3tFed7YsjGnIfxeLEQwx3R,3BUWNzPWz2mDbptZmGEXpB,1pm7lQGl6mvKWDxesZTVFp,1xPW9rS8dkuJP46WBTqU2C,5hUYsaOyMY32yjRXeuQwGj,2sQuds8s3EVbhXJpgVWpO4,4dASQiO1Eoo3RJvt74FtXB,3qjKqmA2YeH0a8DRoKj8iy,2PpruBYCo4H7WOBJ7Q2EwM,0I3q5fE6wg7LIfHGngUTnV,6glsMWIMIxQ4BedzLqGVi4,5z7mYFfhw6N6f23VwrokJD,6bUNEbXT7HovLW6BgPCBsb,2vfvGlqCB7oertO5VLE0sz,0shK5iZQppbHPQYiy60xs9,3WibbMr6canxRJXhNtAvLU,1KQymTxNJfWk6vCD5ywKW2,4GdB5M7GbwLZLouktYocFC,6gBFPUFcJLzWGx4lenP6h2,42VsgItocQwOQC3XWZ8JNA,3eekarcy7kvN4yt5ZFzltW,6koKhrBBcExADvWuOgceNZ,2xLMifQCjDGFmkHkpNLD9h,2cYqizR4lgvp4Qu6IQ3qGN,5wG3HvLhF6Y5KTGlK0IW3J,51EC3I1nQXpec4gDk0mQyP,28drn6tQo95MRvO0jQEo5C,4kjI1gwQZRKNDkw1nI475M,1gSDTZHemEViEBiXysrlo0,0eEXcw3JLVXcRxYrVYMy68:
+ None, reason: None
+2025-10-14 00:40:29,470 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0puf9yIluy9W0vpMEUoAnN with Params: {} returned 403 due to None
+2025-10-14 00:40:29,470 | ERROR | [Spotify] audio_features single error for 0puf9yIluy9W0vpMEUoAnN: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0puf9yIluy9W0vpMEUoAnN:
+ None, reason: None
+2025-10-14 00:40:29,538 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3hlksXnvbKogFdPbpO9vel with Params: {} returned 403 due to None
+2025-10-14 00:40:29,538 | ERROR | [Spotify] audio_features single error for 3hlksXnvbKogFdPbpO9vel: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3hlksXnvbKogFdPbpO9vel:
+ None, reason: None
+2025-10-14 00:40:29,608 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0dKg2vGC1hFqcK5LGTaKzX with Params: {} returned 403 due to None
+2025-10-14 00:40:29,608 | ERROR | [Spotify] audio_features single error for 0dKg2vGC1hFqcK5LGTaKzX: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0dKg2vGC1hFqcK5LGTaKzX:
+ None, reason: None
+2025-10-14 00:40:29,688 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=58w5J5yNWeGZ7a4cM1rO7Y with Params: {} returned 403 due to None
+2025-10-14 00:40:29,688 | ERROR | [Spotify] audio_features single error for 58w5J5yNWeGZ7a4cM1rO7Y: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=58w5J5yNWeGZ7a4cM1rO7Y:
+ None, reason: None
+2025-10-14 00:40:29,781 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3idU3rXoFCEFhAAbPGbwht with Params: {} returned 403 due to None
+2025-10-14 00:40:29,781 | ERROR | [Spotify] audio_features single error for 3idU3rXoFCEFhAAbPGbwht: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3idU3rXoFCEFhAAbPGbwht:
+ None, reason: None
+2025-10-14 00:40:29,858 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2yjlYDiNiQkdxVqTlaSrlX with Params: {} returned 403 due to None
+2025-10-14 00:40:29,858 | ERROR | [Spotify] audio_features single error for 2yjlYDiNiQkdxVqTlaSrlX: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2yjlYDiNiQkdxVqTlaSrlX:
+ None, reason: None
+2025-10-14 00:40:29,928 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4M7aciOBSbGnh1bN3YbuS0 with Params: {} returned 403 due to None
+2025-10-14 00:40:29,928 | ERROR | [Spotify] audio_features single error for 4M7aciOBSbGnh1bN3YbuS0: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4M7aciOBSbGnh1bN3YbuS0:
+ None, reason: None
+2025-10-14 00:40:29,998 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2jATUzETZL49e6SywauZKE with Params: {} returned 403 due to None
+2025-10-14 00:40:29,998 | ERROR | [Spotify] audio_features single error for 2jATUzETZL49e6SywauZKE: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2jATUzETZL49e6SywauZKE:
+ None, reason: None
+2025-10-14 00:40:30,060 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1ia019RqDK2o4QiANR1Dyn with Params: {} returned 403 due to None
+2025-10-14 00:40:30,060 | ERROR | [Spotify] audio_features single error for 1ia019RqDK2o4QiANR1Dyn: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1ia019RqDK2o4QiANR1Dyn:
+ None, reason: None
+2025-10-14 00:40:30,129 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=68Dni7IE4VyPkTOH9mRWHr with Params: {} returned 403 due to None
+2025-10-14 00:40:30,129 | ERROR | [Spotify] audio_features single error for 68Dni7IE4VyPkTOH9mRWHr: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=68Dni7IE4VyPkTOH9mRWHr:
+ None, reason: None
+2025-10-14 00:40:30,190 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2wAJTrFhCnQyNSD3oUgTZO with Params: {} returned 403 due to None
+2025-10-14 00:40:30,198 | ERROR | [Spotify] audio_features single error for 2wAJTrFhCnQyNSD3oUgTZO: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2wAJTrFhCnQyNSD3oUgTZO:
+ None, reason: None
+2025-10-14 00:40:30,261 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4tqcoej1zPvwePZCzuAjJd with Params: {} returned 403 due to None
+2025-10-14 00:40:30,261 | ERROR | [Spotify] audio_features single error for 4tqcoej1zPvwePZCzuAjJd: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4tqcoej1zPvwePZCzuAjJd:
+ None, reason: None
+2025-10-14 00:40:30,330 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2uwnP6tZVVmTovzX5ELooy with Params: {} returned 403 due to None
+2025-10-14 00:40:30,330 | ERROR | [Spotify] audio_features single error for 2uwnP6tZVVmTovzX5ELooy: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2uwnP6tZVVmTovzX5ELooy:
+ None, reason: None
+2025-10-14 00:40:30,394 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2JvzF1RMd7lE3KmFlsyZD8 with Params: {} returned 403 due to None
+2025-10-14 00:40:30,398 | ERROR | [Spotify] audio_features single error for 2JvzF1RMd7lE3KmFlsyZD8: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2JvzF1RMd7lE3KmFlsyZD8:
+ None, reason: None
+2025-10-14 00:40:30,462 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2e3Ea0o24lReQFR4FA7yXH with Params: {} returned 403 due to None
+2025-10-14 00:40:30,462 | ERROR | [Spotify] audio_features single error for 2e3Ea0o24lReQFR4FA7yXH: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2e3Ea0o24lReQFR4FA7yXH:
+ None, reason: None
+2025-10-14 00:40:30,528 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7aqfrAY2p9BUSiupwk3svU with Params: {} returned 403 due to None
+2025-10-14 00:40:30,558 | ERROR | [Spotify] audio_features single error for 7aqfrAY2p9BUSiupwk3svU: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7aqfrAY2p9BUSiupwk3svU:
+ None, reason: None
+2025-10-14 00:40:30,621 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3s4mrPrEFFPF0LmAfutW0n with Params: {} returned 403 due to None
+2025-10-14 00:40:30,621 | ERROR | [Spotify] audio_features single error for 3s4mrPrEFFPF0LmAfutW0n: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3s4mrPrEFFPF0LmAfutW0n:
+ None, reason: None
+2025-10-14 00:40:30,684 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6T7FXSuXykeGktMLGp8WgE with Params: {} returned 403 due to None
+2025-10-14 00:40:30,686 | ERROR | [Spotify] audio_features single error for 6T7FXSuXykeGktMLGp8WgE: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6T7FXSuXykeGktMLGp8WgE:
+ None, reason: None
+2025-10-14 00:40:30,748 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0Fs9cdPDhptWEDJmiCbkEW with Params: {} returned 403 due to None
+2025-10-14 00:40:30,751 | ERROR | [Spotify] audio_features single error for 0Fs9cdPDhptWEDJmiCbkEW: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0Fs9cdPDhptWEDJmiCbkEW:
+ None, reason: None
+2025-10-14 00:40:30,816 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2XHzzp1j4IfTNp1FTn7YFg with Params: {} returned 403 due to None
+2025-10-14 00:40:30,816 | ERROR | [Spotify] audio_features single error for 2XHzzp1j4IfTNp1FTn7YFg: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2XHzzp1j4IfTNp1FTn7YFg:
+ None, reason: None
+2025-10-14 00:40:30,878 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3tFed7YsjGnIfxeLEQwx3R with Params: {} returned 403 due to None
+2025-10-14 00:40:30,916 | ERROR | [Spotify] audio_features single error for 3tFed7YsjGnIfxeLEQwx3R: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3tFed7YsjGnIfxeLEQwx3R:
+ None, reason: None
+2025-10-14 00:40:30,978 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3BUWNzPWz2mDbptZmGEXpB with Params: {} returned 403 due to None
+2025-10-14 00:40:30,978 | ERROR | [Spotify] audio_features single error for 3BUWNzPWz2mDbptZmGEXpB: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3BUWNzPWz2mDbptZmGEXpB:
+ None, reason: None
+2025-10-14 00:40:31,040 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1pm7lQGl6mvKWDxesZTVFp with Params: {} returned 403 due to None
+2025-10-14 00:40:31,043 | ERROR | [Spotify] audio_features single error for 1pm7lQGl6mvKWDxesZTVFp: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1pm7lQGl6mvKWDxesZTVFp:
+ None, reason: None
+2025-10-14 00:40:31,105 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1xPW9rS8dkuJP46WBTqU2C with Params: {} returned 403 due to None
+2025-10-14 00:40:31,105 | ERROR | [Spotify] audio_features single error for 1xPW9rS8dkuJP46WBTqU2C: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1xPW9rS8dkuJP46WBTqU2C:
+ None, reason: None
+2025-10-14 00:40:31,158 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5hUYsaOyMY32yjRXeuQwGj with Params: {} returned 403 due to None
+2025-10-14 00:40:31,168 | ERROR | [Spotify] audio_features single error for 5hUYsaOyMY32yjRXeuQwGj: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5hUYsaOyMY32yjRXeuQwGj:
+ None, reason: None
+2025-10-14 00:40:31,232 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2sQuds8s3EVbhXJpgVWpO4 with Params: {} returned 403 due to None
+2025-10-14 00:40:31,232 | ERROR | [Spotify] audio_features single error for 2sQuds8s3EVbhXJpgVWpO4: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2sQuds8s3EVbhXJpgVWpO4:
+ None, reason: None
+2025-10-14 00:40:31,299 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4dASQiO1Eoo3RJvt74FtXB with Params: {} returned 403 due to None
+2025-10-14 00:40:31,299 | ERROR | [Spotify] audio_features single error for 4dASQiO1Eoo3RJvt74FtXB: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4dASQiO1Eoo3RJvt74FtXB:
+ None, reason: None
+2025-10-14 00:40:31,364 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3qjKqmA2YeH0a8DRoKj8iy with Params: {} returned 403 due to None
+2025-10-14 00:40:31,364 | ERROR | [Spotify] audio_features single error for 3qjKqmA2YeH0a8DRoKj8iy: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3qjKqmA2YeH0a8DRoKj8iy:
+ None, reason: None
+2025-10-14 00:40:31,438 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2PpruBYCo4H7WOBJ7Q2EwM with Params: {} returned 403 due to None
+2025-10-14 00:40:31,438 | ERROR | [Spotify] audio_features single error for 2PpruBYCo4H7WOBJ7Q2EwM: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2PpruBYCo4H7WOBJ7Q2EwM:
+ None, reason: None
+2025-10-14 00:40:31,498 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0I3q5fE6wg7LIfHGngUTnV with Params: {} returned 403 due to None
+2025-10-14 00:40:31,498 | ERROR | [Spotify] audio_features single error for 0I3q5fE6wg7LIfHGngUTnV: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0I3q5fE6wg7LIfHGngUTnV:
+ None, reason: None
+2025-10-14 00:40:31,566 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6glsMWIMIxQ4BedzLqGVi4 with Params: {} returned 403 due to None
+2025-10-14 00:40:31,566 | ERROR | [Spotify] audio_features single error for 6glsMWIMIxQ4BedzLqGVi4: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6glsMWIMIxQ4BedzLqGVi4:
+ None, reason: None
+2025-10-14 00:40:31,630 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5z7mYFfhw6N6f23VwrokJD with Params: {} returned 403 due to None
+2025-10-14 00:40:31,632 | ERROR | [Spotify] audio_features single error for 5z7mYFfhw6N6f23VwrokJD: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5z7mYFfhw6N6f23VwrokJD:
+ None, reason: None
+2025-10-14 00:40:31,692 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6bUNEbXT7HovLW6BgPCBsb with Params: {} returned 403 due to None
+2025-10-14 00:40:31,714 | ERROR | [Spotify] audio_features single error for 6bUNEbXT7HovLW6BgPCBsb: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6bUNEbXT7HovLW6BgPCBsb:
+ None, reason: None
+2025-10-14 00:40:31,778 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2vfvGlqCB7oertO5VLE0sz with Params: {} returned 403 due to None
+2025-10-14 00:40:31,778 | ERROR | [Spotify] audio_features single error for 2vfvGlqCB7oertO5VLE0sz: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2vfvGlqCB7oertO5VLE0sz:
+ None, reason: None
+2025-10-14 00:40:31,840 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0shK5iZQppbHPQYiy60xs9 with Params: {} returned 403 due to None
+2025-10-14 00:40:31,840 | ERROR | [Spotify] audio_features single error for 0shK5iZQppbHPQYiy60xs9: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0shK5iZQppbHPQYiy60xs9:
+ None, reason: None
+2025-10-14 00:40:31,904 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3WibbMr6canxRJXhNtAvLU with Params: {} returned 403 due to None
+2025-10-14 00:40:31,904 | ERROR | [Spotify] audio_features single error for 3WibbMr6canxRJXhNtAvLU: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3WibbMr6canxRJXhNtAvLU:
+ None, reason: None
+2025-10-14 00:40:31,960 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1KQymTxNJfWk6vCD5ywKW2 with Params: {} returned 403 due to None
+2025-10-14 00:40:31,960 | ERROR | [Spotify] audio_features single error for 1KQymTxNJfWk6vCD5ywKW2: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1KQymTxNJfWk6vCD5ywKW2:
+ None, reason: None
+2025-10-14 00:40:32,028 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4GdB5M7GbwLZLouktYocFC with Params: {} returned 403 due to None
+2025-10-14 00:40:32,030 | ERROR | [Spotify] audio_features single error for 4GdB5M7GbwLZLouktYocFC: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4GdB5M7GbwLZLouktYocFC:
+ None, reason: None
+2025-10-14 00:40:32,090 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6gBFPUFcJLzWGx4lenP6h2 with Params: {} returned 403 due to None
+2025-10-14 00:40:32,090 | ERROR | [Spotify] audio_features single error for 6gBFPUFcJLzWGx4lenP6h2: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6gBFPUFcJLzWGx4lenP6h2:
+ None, reason: None
+2025-10-14 00:40:32,152 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=42VsgItocQwOQC3XWZ8JNA with Params: {} returned 403 due to None
+2025-10-14 00:40:32,152 | ERROR | [Spotify] audio_features single error for 42VsgItocQwOQC3XWZ8JNA: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=42VsgItocQwOQC3XWZ8JNA:
+ None, reason: None
+2025-10-14 00:40:32,218 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3eekarcy7kvN4yt5ZFzltW with Params: {} returned 403 due to None
+2025-10-14 00:40:32,221 | ERROR | [Spotify] audio_features single error for 3eekarcy7kvN4yt5ZFzltW: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3eekarcy7kvN4yt5ZFzltW:
+ None, reason: None
+2025-10-14 00:40:32,284 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6koKhrBBcExADvWuOgceNZ with Params: {} returned 403 due to None
+2025-10-14 00:40:32,286 | ERROR | [Spotify] audio_features single error for 6koKhrBBcExADvWuOgceNZ: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6koKhrBBcExADvWuOgceNZ:
+ None, reason: None
+2025-10-14 00:40:32,349 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2xLMifQCjDGFmkHkpNLD9h with Params: {} returned 403 due to None
+2025-10-14 00:40:32,349 | ERROR | [Spotify] audio_features single error for 2xLMifQCjDGFmkHkpNLD9h: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2xLMifQCjDGFmkHkpNLD9h:
+ None, reason: None
+2025-10-14 00:40:32,417 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2cYqizR4lgvp4Qu6IQ3qGN with Params: {} returned 403 due to None
+2025-10-14 00:40:32,418 | ERROR | [Spotify] audio_features single error for 2cYqizR4lgvp4Qu6IQ3qGN: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2cYqizR4lgvp4Qu6IQ3qGN:
+ None, reason: None
+2025-10-14 00:40:32,478 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5wG3HvLhF6Y5KTGlK0IW3J with Params: {} returned 403 due to None
+2025-10-14 00:40:32,478 | ERROR | [Spotify] audio_features single error for 5wG3HvLhF6Y5KTGlK0IW3J: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5wG3HvLhF6Y5KTGlK0IW3J:
+ None, reason: None
+2025-10-14 00:40:32,538 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=51EC3I1nQXpec4gDk0mQyP with Params: {} returned 403 due to None
+2025-10-14 00:40:32,538 | ERROR | [Spotify] audio_features single error for 51EC3I1nQXpec4gDk0mQyP: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=51EC3I1nQXpec4gDk0mQyP:
+ None, reason: None
+2025-10-14 00:40:32,609 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=28drn6tQo95MRvO0jQEo5C with Params: {} returned 403 due to None
+2025-10-14 00:40:32,609 | ERROR | [Spotify] audio_features single error for 28drn6tQo95MRvO0jQEo5C: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=28drn6tQo95MRvO0jQEo5C:
+ None, reason: None
+2025-10-14 00:40:32,668 | WARNING | Your application has reached a rate/request limit. Retry will occur after: 2
+2025-10-14 00:40:34,729 | WARNING | Your application has reached a rate/request limit. Retry will occur after: 1
+2025-10-14 00:40:35,798 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4kjI1gwQZRKNDkw1nI475M with Params: {} returned 403 due to None
+2025-10-14 00:40:35,798 | ERROR | [Spotify] audio_features single error for 4kjI1gwQZRKNDkw1nI475M: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4kjI1gwQZRKNDkw1nI475M:
+ None, reason: None
+2025-10-14 00:40:35,863 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1gSDTZHemEViEBiXysrlo0 with Params: {} returned 403 due to None
+2025-10-14 00:40:35,863 | ERROR | [Spotify] audio_features single error for 1gSDTZHemEViEBiXysrlo0: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1gSDTZHemEViEBiXysrlo0:
+ None, reason: None
+2025-10-14 00:40:35,928 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0eEXcw3JLVXcRxYrVYMy68 with Params: {} returned 403 due to None
+2025-10-14 00:40:35,928 | ERROR | [Spotify] audio_features single error for 0eEXcw3JLVXcRxYrVYMy68: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0eEXcw3JLVXcRxYrVYMy68:
+ None, reason: None
+2025-10-14 00:40:35,998 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4HfxDJ0uLHTLe0fZrx0MbQ,7f1UEGMBMuXfLBP5XANfrW,7AgMX97ljLm9BzszyyXEYZ,5YTM7OgQDt9EJAYcfHLniJ,2MAaiV0bbeq4FpSwPe2rR8,6GAemDMWAXa8wZOBkO1gar,0301nLjG0ti26rx5ZmfqtP,4tEaytMs86hIaOSsiGoLcP,7KwZNVEaqikRSBSpyhXK2j,2g8HN35AnVGIk7B8yMucww,5ByAIlEEnxYdvpnezg7HTX,4INDiWSKvqSKDEu7mh8HFz,19FsxX4RthRMZGfXkImdCb,5mqPg2dyqb1gBNyg9ycGcT,4GIsskMpViPkt0uzPJTJSp,2DnXXNkr3YQICQqdg9NH9F,2KFg8kjYy0rYjWsXGhEQHN,3PA9dH8cT0wR5UW4XkC44Y,3ia3dJETSOllPsv3LJkE35,0Z2J91b2iTGLVTZC4fKgxf,4VQNCzfZ3MdHEwwErNXpBo,5g9lS8deSIxItFBmZRC4vN,4AE7Lj39VnSZNOmGH2iZaq,1ofhfV90EnYhEr7Un2fWiv,6LwrEZNkvFTOypNwSLjuaJ,2zoobJFEB9h15fjYjRd6oP,2S2x5N5VJNn7vqYukvoFFC,0XRbYXQUymj9SJkrr8YK5B,2Hh3ETdQKrmSI3QS0hme7g,4lH6nENd1y81jp7Yt9lTBX,7EiZI6JVHllARrX9PUvAdX,0VgkVdmE4gld66l8iyGjgx,1K5KBOgreBi5fkEHvg5ap3,0vjeOZ3Ft5jvAi9SBFJm1j,52NGJPcLUzQq5w7uv4e5gf,03JZr55j9bIj1d2RQJ7Yq9,02BcXEH1zJYbXSabPtNlKf,3DarAbFujv6eYNliUTyqtz,6Uj1ctrBOjOas8xZXGqKk4,60ynsPSSKe6O3sfwRnIBRf,56y1jOTK0XSvJzVv9vHQBK,5PyDJG7SQRgWXefgexqIge,5T0mnzMsyHtmWB7Kou51Ph,7KNmIjcmGJIBrhP2s5Vioe,1VJwtWR6z7SpZRwipI12be with Params: {} returned 403 due to None
+2025-10-14 00:40:35,998 | ERROR | [Spotify] audio_features batch error (100:150): http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4HfxDJ0uLHTLe0fZrx0MbQ,7f1UEGMBMuXfLBP5XANfrW,7AgMX97ljLm9BzszyyXEYZ,5YTM7OgQDt9EJAYcfHLniJ,2MAaiV0bbeq4FpSwPe2rR8,6GAemDMWAXa8wZOBkO1gar,0301nLjG0ti26rx5ZmfqtP,4tEaytMs86hIaOSsiGoLcP,7KwZNVEaqikRSBSpyhXK2j,2g8HN35AnVGIk7B8yMucww,5ByAIlEEnxYdvpnezg7HTX,4INDiWSKvqSKDEu7mh8HFz,19FsxX4RthRMZGfXkImdCb,5mqPg2dyqb1gBNyg9ycGcT,4GIsskMpViPkt0uzPJTJSp,2DnXXNkr3YQICQqdg9NH9F,2KFg8kjYy0rYjWsXGhEQHN,3PA9dH8cT0wR5UW4XkC44Y,3ia3dJETSOllPsv3LJkE35,0Z2J91b2iTGLVTZC4fKgxf,4VQNCzfZ3MdHEwwErNXpBo,5g9lS8deSIxItFBmZRC4vN,4AE7Lj39VnSZNOmGH2iZaq,1ofhfV90EnYhEr7Un2fWiv,6LwrEZNkvFTOypNwSLjuaJ,2zoobJFEB9h15fjYjRd6oP,2S2x5N5VJNn7vqYukvoFFC,0XRbYXQUymj9SJkrr8YK5B,2Hh3ETdQKrmSI3QS0hme7g,4lH6nENd1y81jp7Yt9lTBX,7EiZI6JVHllARrX9PUvAdX,0VgkVdmE4gld66l8iyGjgx,1K5KBOgreBi5fkEHvg5ap3,0vjeOZ3Ft5jvAi9SBFJm1j,52NGJPcLUzQq5w7uv4e5gf,03JZr55j9bIj1d2RQJ7Yq9,02BcXEH1zJYbXSabPtNlKf,3DarAbFujv6eYNliUTyqtz,6Uj1ctrBOjOas8xZXGqKk4,60ynsPSSKe6O3sfwRnIBRf,56y1jOTK0XSvJzVv9vHQBK,5PyDJG7SQRgWXefgexqIge,5T0mnzMsyHtmWB7Kou51Ph,7KNmIjcmGJIBrhP2s5Vioe,1VJwtWR6z7SpZRwipI12be:
+ None, reason: None
+2025-10-14 00:40:36,066 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4HfxDJ0uLHTLe0fZrx0MbQ with Params: {} returned 403 due to None
+2025-10-14 00:40:36,068 | ERROR | [Spotify] audio_features single error for 4HfxDJ0uLHTLe0fZrx0MbQ: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4HfxDJ0uLHTLe0fZrx0MbQ:
+ None, reason: None
+2025-10-14 00:40:36,129 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7f1UEGMBMuXfLBP5XANfrW with Params: {} returned 403 due to None
+2025-10-14 00:40:36,132 | ERROR | [Spotify] audio_features single error for 7f1UEGMBMuXfLBP5XANfrW: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7f1UEGMBMuXfLBP5XANfrW:
+ None, reason: None
+2025-10-14 00:40:36,190 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7AgMX97ljLm9BzszyyXEYZ with Params: {} returned 403 due to None
+2025-10-14 00:40:36,198 | ERROR | [Spotify] audio_features single error for 7AgMX97ljLm9BzszyyXEYZ: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7AgMX97ljLm9BzszyyXEYZ:
+ None, reason: None
+2025-10-14 00:40:36,259 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5YTM7OgQDt9EJAYcfHLniJ with Params: {} returned 403 due to None
+2025-10-14 00:40:36,262 | ERROR | [Spotify] audio_features single error for 5YTM7OgQDt9EJAYcfHLniJ: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5YTM7OgQDt9EJAYcfHLniJ:
+ None, reason: None
+2025-10-14 00:40:36,334 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2MAaiV0bbeq4FpSwPe2rR8 with Params: {} returned 403 due to None
+2025-10-14 00:40:36,334 | ERROR | [Spotify] audio_features single error for 2MAaiV0bbeq4FpSwPe2rR8: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2MAaiV0bbeq4FpSwPe2rR8:
+ None, reason: None
+2025-10-14 00:40:36,398 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6GAemDMWAXa8wZOBkO1gar with Params: {} returned 403 due to None
+2025-10-14 00:40:36,403 | ERROR | [Spotify] audio_features single error for 6GAemDMWAXa8wZOBkO1gar: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6GAemDMWAXa8wZOBkO1gar:
+ None, reason: None
+2025-10-14 00:40:36,470 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0301nLjG0ti26rx5ZmfqtP with Params: {} returned 403 due to None
+2025-10-14 00:40:36,470 | ERROR | [Spotify] audio_features single error for 0301nLjG0ti26rx5ZmfqtP: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0301nLjG0ti26rx5ZmfqtP:
+ None, reason: None
+2025-10-14 00:40:36,538 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4tEaytMs86hIaOSsiGoLcP with Params: {} returned 403 due to None
+2025-10-14 00:40:36,540 | ERROR | [Spotify] audio_features single error for 4tEaytMs86hIaOSsiGoLcP: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4tEaytMs86hIaOSsiGoLcP:
+ None, reason: None
+2025-10-14 00:40:36,598 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7KwZNVEaqikRSBSpyhXK2j with Params: {} returned 403 due to None
+2025-10-14 00:40:36,608 | ERROR | [Spotify] audio_features single error for 7KwZNVEaqikRSBSpyhXK2j: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7KwZNVEaqikRSBSpyhXK2j:
+ None, reason: None
+2025-10-14 00:40:36,671 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2g8HN35AnVGIk7B8yMucww with Params: {} returned 403 due to None
+2025-10-14 00:40:36,671 | ERROR | [Spotify] audio_features single error for 2g8HN35AnVGIk7B8yMucww: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2g8HN35AnVGIk7B8yMucww:
+ None, reason: None
+2025-10-14 00:40:36,738 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5ByAIlEEnxYdvpnezg7HTX with Params: {} returned 403 due to None
+2025-10-14 00:40:36,738 | ERROR | [Spotify] audio_features single error for 5ByAIlEEnxYdvpnezg7HTX: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5ByAIlEEnxYdvpnezg7HTX:
+ None, reason: None
+2025-10-14 00:40:36,798 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4INDiWSKvqSKDEu7mh8HFz with Params: {} returned 403 due to None
+2025-10-14 00:40:36,808 | ERROR | [Spotify] audio_features single error for 4INDiWSKvqSKDEu7mh8HFz: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4INDiWSKvqSKDEu7mh8HFz:
+ None, reason: None
+2025-10-14 00:40:36,868 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=19FsxX4RthRMZGfXkImdCb with Params: {} returned 403 due to None
+2025-10-14 00:40:36,868 | ERROR | [Spotify] audio_features single error for 19FsxX4RthRMZGfXkImdCb: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=19FsxX4RthRMZGfXkImdCb:
+ None, reason: None
+2025-10-14 00:40:36,928 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5mqPg2dyqb1gBNyg9ycGcT with Params: {} returned 403 due to None
+2025-10-14 00:40:36,928 | ERROR | [Spotify] audio_features single error for 5mqPg2dyqb1gBNyg9ycGcT: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5mqPg2dyqb1gBNyg9ycGcT:
+ None, reason: None
+2025-10-14 00:40:36,989 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4GIsskMpViPkt0uzPJTJSp with Params: {} returned 403 due to None
+2025-10-14 00:40:36,989 | ERROR | [Spotify] audio_features single error for 4GIsskMpViPkt0uzPJTJSp: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4GIsskMpViPkt0uzPJTJSp:
+ None, reason: None
+2025-10-14 00:40:37,058 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2DnXXNkr3YQICQqdg9NH9F with Params: {} returned 403 due to None
+2025-10-14 00:40:37,078 | ERROR | [Spotify] audio_features single error for 2DnXXNkr3YQICQqdg9NH9F: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2DnXXNkr3YQICQqdg9NH9F:
+ None, reason: None
+2025-10-14 00:40:37,148 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2KFg8kjYy0rYjWsXGhEQHN with Params: {} returned 403 due to None
+2025-10-14 00:40:37,148 | ERROR | [Spotify] audio_features single error for 2KFg8kjYy0rYjWsXGhEQHN: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2KFg8kjYy0rYjWsXGhEQHN:
+ None, reason: None
+2025-10-14 00:40:37,212 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3PA9dH8cT0wR5UW4XkC44Y with Params: {} returned 403 due to None
+2025-10-14 00:40:37,212 | ERROR | [Spotify] audio_features single error for 3PA9dH8cT0wR5UW4XkC44Y: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3PA9dH8cT0wR5UW4XkC44Y:
+ None, reason: None
+2025-10-14 00:40:37,273 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3ia3dJETSOllPsv3LJkE35 with Params: {} returned 403 due to None
+2025-10-14 00:40:37,273 | ERROR | [Spotify] audio_features single error for 3ia3dJETSOllPsv3LJkE35: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3ia3dJETSOllPsv3LJkE35:
+ None, reason: None
+2025-10-14 00:40:37,340 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0Z2J91b2iTGLVTZC4fKgxf with Params: {} returned 403 due to None
+2025-10-14 00:40:37,342 | ERROR | [Spotify] audio_features single error for 0Z2J91b2iTGLVTZC4fKgxf: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0Z2J91b2iTGLVTZC4fKgxf:
+ None, reason: None
+2025-10-14 00:40:37,400 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4VQNCzfZ3MdHEwwErNXpBo with Params: {} returned 403 due to None
+2025-10-14 00:40:37,400 | ERROR | [Spotify] audio_features single error for 4VQNCzfZ3MdHEwwErNXpBo: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4VQNCzfZ3MdHEwwErNXpBo:
+ None, reason: None
+2025-10-14 00:40:37,468 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5g9lS8deSIxItFBmZRC4vN with Params: {} returned 403 due to None
+2025-10-14 00:40:37,468 | ERROR | [Spotify] audio_features single error for 5g9lS8deSIxItFBmZRC4vN: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5g9lS8deSIxItFBmZRC4vN:
+ None, reason: None
+2025-10-14 00:40:37,528 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4AE7Lj39VnSZNOmGH2iZaq with Params: {} returned 403 due to None
+2025-10-14 00:40:37,528 | ERROR | [Spotify] audio_features single error for 4AE7Lj39VnSZNOmGH2iZaq: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4AE7Lj39VnSZNOmGH2iZaq:
+ None, reason: None
+2025-10-14 00:40:37,588 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1ofhfV90EnYhEr7Un2fWiv with Params: {} returned 403 due to None
+2025-10-14 00:40:37,591 | ERROR | [Spotify] audio_features single error for 1ofhfV90EnYhEr7Un2fWiv: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1ofhfV90EnYhEr7Un2fWiv:
+ None, reason: None
+2025-10-14 00:40:37,648 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6LwrEZNkvFTOypNwSLjuaJ with Params: {} returned 403 due to None
+2025-10-14 00:40:37,648 | ERROR | [Spotify] audio_features single error for 6LwrEZNkvFTOypNwSLjuaJ: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6LwrEZNkvFTOypNwSLjuaJ:
+ None, reason: None
+2025-10-14 00:40:37,718 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2zoobJFEB9h15fjYjRd6oP with Params: {} returned 403 due to None
+2025-10-14 00:40:37,718 | ERROR | [Spotify] audio_features single error for 2zoobJFEB9h15fjYjRd6oP: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2zoobJFEB9h15fjYjRd6oP:
+ None, reason: None
+2025-10-14 00:40:37,786 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2S2x5N5VJNn7vqYukvoFFC with Params: {} returned 403 due to None
+2025-10-14 00:40:37,786 | ERROR | [Spotify] audio_features single error for 2S2x5N5VJNn7vqYukvoFFC: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2S2x5N5VJNn7vqYukvoFFC:
+ None, reason: None
+2025-10-14 00:40:37,858 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0XRbYXQUymj9SJkrr8YK5B with Params: {} returned 403 due to None
+2025-10-14 00:40:37,858 | ERROR | [Spotify] audio_features single error for 0XRbYXQUymj9SJkrr8YK5B: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0XRbYXQUymj9SJkrr8YK5B:
+ None, reason: None
+2025-10-14 00:40:37,918 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2Hh3ETdQKrmSI3QS0hme7g with Params: {} returned 403 due to None
+2025-10-14 00:40:37,918 | ERROR | [Spotify] audio_features single error for 2Hh3ETdQKrmSI3QS0hme7g: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2Hh3ETdQKrmSI3QS0hme7g:
+ None, reason: None
+2025-10-14 00:40:37,978 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=4lH6nENd1y81jp7Yt9lTBX with Params: {} returned 403 due to None
+2025-10-14 00:40:37,986 | ERROR | [Spotify] audio_features single error for 4lH6nENd1y81jp7Yt9lTBX: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=4lH6nENd1y81jp7Yt9lTBX:
+ None, reason: None
+2025-10-14 00:40:38,058 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7EiZI6JVHllARrX9PUvAdX with Params: {} returned 403 due to None
+2025-10-14 00:40:38,058 | ERROR | [Spotify] audio_features single error for 7EiZI6JVHllARrX9PUvAdX: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7EiZI6JVHllARrX9PUvAdX:
+ None, reason: None
+2025-10-14 00:40:38,128 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0VgkVdmE4gld66l8iyGjgx with Params: {} returned 403 due to None
+2025-10-14 00:40:38,128 | ERROR | [Spotify] audio_features single error for 0VgkVdmE4gld66l8iyGjgx: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0VgkVdmE4gld66l8iyGjgx:
+ None, reason: None
+2025-10-14 00:40:38,198 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1K5KBOgreBi5fkEHvg5ap3 with Params: {} returned 403 due to None
+2025-10-14 00:40:38,198 | ERROR | [Spotify] audio_features single error for 1K5KBOgreBi5fkEHvg5ap3: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1K5KBOgreBi5fkEHvg5ap3:
+ None, reason: None
+2025-10-14 00:40:38,258 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0vjeOZ3Ft5jvAi9SBFJm1j with Params: {} returned 403 due to None
+2025-10-14 00:40:38,258 | ERROR | [Spotify] audio_features single error for 0vjeOZ3Ft5jvAi9SBFJm1j: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0vjeOZ3Ft5jvAi9SBFJm1j:
+ None, reason: None
+2025-10-14 00:40:38,321 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=52NGJPcLUzQq5w7uv4e5gf with Params: {} returned 403 due to None
+2025-10-14 00:40:38,321 | ERROR | [Spotify] audio_features single error for 52NGJPcLUzQq5w7uv4e5gf: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=52NGJPcLUzQq5w7uv4e5gf:
+ None, reason: None
+2025-10-14 00:40:38,388 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=03JZr55j9bIj1d2RQJ7Yq9 with Params: {} returned 403 due to None
+2025-10-14 00:40:38,388 | ERROR | [Spotify] audio_features single error for 03JZr55j9bIj1d2RQJ7Yq9: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=03JZr55j9bIj1d2RQJ7Yq9:
+ None, reason: None
+2025-10-14 00:40:38,448 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=02BcXEH1zJYbXSabPtNlKf with Params: {} returned 403 due to None
+2025-10-14 00:40:38,448 | ERROR | [Spotify] audio_features single error for 02BcXEH1zJYbXSabPtNlKf: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=02BcXEH1zJYbXSabPtNlKf:
+ None, reason: None
+2025-10-14 00:40:38,518 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3DarAbFujv6eYNliUTyqtz with Params: {} returned 403 due to None
+2025-10-14 00:40:38,518 | ERROR | [Spotify] audio_features single error for 3DarAbFujv6eYNliUTyqtz: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3DarAbFujv6eYNliUTyqtz:
+ None, reason: None
+2025-10-14 00:40:38,579 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6Uj1ctrBOjOas8xZXGqKk4 with Params: {} returned 403 due to None
+2025-10-14 00:40:38,579 | ERROR | [Spotify] audio_features single error for 6Uj1ctrBOjOas8xZXGqKk4: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6Uj1ctrBOjOas8xZXGqKk4:
+ None, reason: None
+2025-10-14 00:40:38,638 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=60ynsPSSKe6O3sfwRnIBRf with Params: {} returned 403 due to None
+2025-10-14 00:40:38,648 | ERROR | [Spotify] audio_features single error for 60ynsPSSKe6O3sfwRnIBRf: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=60ynsPSSKe6O3sfwRnIBRf:
+ None, reason: None
+2025-10-14 00:40:38,708 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=56y1jOTK0XSvJzVv9vHQBK with Params: {} returned 403 due to None
+2025-10-14 00:40:38,708 | ERROR | [Spotify] audio_features single error for 56y1jOTK0XSvJzVv9vHQBK: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=56y1jOTK0XSvJzVv9vHQBK:
+ None, reason: None
+2025-10-14 00:40:38,768 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5PyDJG7SQRgWXefgexqIge with Params: {} returned 403 due to None
+2025-10-14 00:40:38,768 | ERROR | [Spotify] audio_features single error for 5PyDJG7SQRgWXefgexqIge: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5PyDJG7SQRgWXefgexqIge:
+ None, reason: None
+2025-10-14 00:40:38,838 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5T0mnzMsyHtmWB7Kou51Ph with Params: {} returned 403 due to None
+2025-10-14 00:40:38,838 | ERROR | [Spotify] audio_features single error for 5T0mnzMsyHtmWB7Kou51Ph: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5T0mnzMsyHtmWB7Kou51Ph:
+ None, reason: None
+2025-10-14 00:40:38,898 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=7KNmIjcmGJIBrhP2s5Vioe with Params: {} returned 403 due to None
+2025-10-14 00:40:38,898 | ERROR | [Spotify] audio_features single error for 7KNmIjcmGJIBrhP2s5Vioe: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=7KNmIjcmGJIBrhP2s5Vioe:
+ None, reason: None
+2025-10-14 00:40:38,968 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1VJwtWR6z7SpZRwipI12be with Params: {} returned 403 due to None
+2025-10-14 00:40:38,970 | ERROR | [Spotify] audio_features single error for 1VJwtWR6z7SpZRwipI12be: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1VJwtWR6z7SpZRwipI12be:
+ None, reason: None
+2025-10-14 00:40:38,972 | WARNING | [Spotify] No audio features returned; columns will be NaN.
+2025-10-14 00:41:14,091 | INFO | [Genius] No acceptable lyrics for: JAY-Z - Love All (with JAY-Z) (query='Love All (with JAY')
+2025-10-14 00:44:12,210 | INFO | [Genius] No acceptable lyrics for: Kendrick Lamar - LOVE. FEAT. ZACARI. (query='LOVE. FEAT. ZACARI.')
+2025-10-14 00:47:13,172 | INFO | [Genius] No acceptable lyrics for: Outkast - Da Art of Storytellin' (Pt. 1) (query='Da Art of Storytellin' (Pt. 1)')
+2025-10-14 00:49:19,623 | INFO | [Genius] No acceptable lyrics for: The Notorious B.I.G. - Mo Money Mo Problems (feat. Puff Daddy & Mase) - 2014 Remaster (query='Mo Money Mo Problems')
+2025-10-14 00:49:43,133 | INFO | [Genius] No acceptable lyrics for: The Notorious B.I.G. - Get Money (feat. Junior M.A.F.I.A.) - 2007 Remaster (query='Get Money')
+2025-10-14 00:49:55,483 | INFO | [Genius] No acceptable lyrics for: 2Pac - All Eyez On Me (ft. Big Syke) (query='All Eyez On Me (ft. Big Syke)')
+2025-10-14 00:51:51,725 | INFO | Saved curated parquet -> C:\Users\kkbua\OneDrive\Documents\GitHub\flowtrendz\data\curated\songs_curated.parquet
+2025-10-14 01:16:56,450 | INFO | [Spotify] Top tracks for: Drake
+2025-10-14 01:16:57,536 | INFO | [Spotify] Top tracks for: Kendrick Lamar
+2025-10-14 01:16:58,426 | INFO | Collected 10 unique tracks across 2 artists.
+2025-10-14 01:16:58,428 | INFO | [Spotify] Skipping audio features (--skip-audio).
+2025-10-14 01:17:52,019 | INFO | Saved curated parquet -> C:\Users\kkbua\OneDrive\Documents\GitHub\flowtrendz\data\curated\songs_curated.parquet
+2025-10-14 01:23:04,427 | INFO | [Spotify] Top tracks for: Drake
+2025-10-14 01:23:05,696 | INFO | [Spotify] Top tracks for: Kendrick Lamar
+2025-10-14 01:23:06,387 | INFO | Collected 10 unique tracks across 2 artists.
+2025-10-14 01:23:06,459 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1zi7xx7UVEFkmKfv06H8x0,2u9S9JJ6hTZS3Vf22HOZKg,6LxSe8YmdPxy095Ux6znaQ,5mCPDVBb16L4XQwDdbRUpz,5FMyXeZ0reYloRTiCkPprT,3GCdLUSnKSMJhs4Tj6CV3s,2CGNAOSuO1MEFCbBRgUzjd,6AI3ezQ4o3HUoP6Dhudph3,2HbKqm4o0w5wEeEFXm2sD4,0aB0v4027ukVziUGwVGYpG with Params: {} returned 403 due to None
+2025-10-14 01:23:06,460 | ERROR | [Spotify] audio_features batch error (0:50): http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1zi7xx7UVEFkmKfv06H8x0,2u9S9JJ6hTZS3Vf22HOZKg,6LxSe8YmdPxy095Ux6znaQ,5mCPDVBb16L4XQwDdbRUpz,5FMyXeZ0reYloRTiCkPprT,3GCdLUSnKSMJhs4Tj6CV3s,2CGNAOSuO1MEFCbBRgUzjd,6AI3ezQ4o3HUoP6Dhudph3,2HbKqm4o0w5wEeEFXm2sD4,0aB0v4027ukVziUGwVGYpG:
+ None, reason: None
+2025-10-14 01:23:06,523 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=1zi7xx7UVEFkmKfv06H8x0 with Params: {} returned 403 due to None
+2025-10-14 01:23:06,524 | ERROR | [Spotify] audio_features single error for 1zi7xx7UVEFkmKfv06H8x0: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=1zi7xx7UVEFkmKfv06H8x0:
+ None, reason: None
+2025-10-14 01:23:06,587 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2u9S9JJ6hTZS3Vf22HOZKg with Params: {} returned 403 due to None
+2025-10-14 01:23:06,590 | ERROR | [Spotify] audio_features single error for 2u9S9JJ6hTZS3Vf22HOZKg: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2u9S9JJ6hTZS3Vf22HOZKg:
+ None, reason: None
+2025-10-14 01:23:06,658 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6LxSe8YmdPxy095Ux6znaQ with Params: {} returned 403 due to None
+2025-10-14 01:23:06,659 | ERROR | [Spotify] audio_features single error for 6LxSe8YmdPxy095Ux6znaQ: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6LxSe8YmdPxy095Ux6znaQ:
+ None, reason: None
+2025-10-14 01:23:06,718 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5mCPDVBb16L4XQwDdbRUpz with Params: {} returned 403 due to None
+2025-10-14 01:23:06,718 | ERROR | [Spotify] audio_features single error for 5mCPDVBb16L4XQwDdbRUpz: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5mCPDVBb16L4XQwDdbRUpz:
+ None, reason: None
+2025-10-14 01:23:06,790 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=5FMyXeZ0reYloRTiCkPprT with Params: {} returned 403 due to None
+2025-10-14 01:23:06,791 | ERROR | [Spotify] audio_features single error for 5FMyXeZ0reYloRTiCkPprT: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=5FMyXeZ0reYloRTiCkPprT:
+ None, reason: None
+2025-10-14 01:23:06,856 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=3GCdLUSnKSMJhs4Tj6CV3s with Params: {} returned 403 due to None
+2025-10-14 01:23:06,856 | ERROR | [Spotify] audio_features single error for 3GCdLUSnKSMJhs4Tj6CV3s: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=3GCdLUSnKSMJhs4Tj6CV3s:
+ None, reason: None
+2025-10-14 01:23:06,917 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2CGNAOSuO1MEFCbBRgUzjd with Params: {} returned 403 due to None
+2025-10-14 01:23:06,917 | ERROR | [Spotify] audio_features single error for 2CGNAOSuO1MEFCbBRgUzjd: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2CGNAOSuO1MEFCbBRgUzjd:
+ None, reason: None
+2025-10-14 01:23:06,981 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=6AI3ezQ4o3HUoP6Dhudph3 with Params: {} returned 403 due to None
+2025-10-14 01:23:06,988 | ERROR | [Spotify] audio_features single error for 6AI3ezQ4o3HUoP6Dhudph3: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=6AI3ezQ4o3HUoP6Dhudph3:
+ None, reason: None
+2025-10-14 01:23:07,047 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=2HbKqm4o0w5wEeEFXm2sD4 with Params: {} returned 403 due to None
+2025-10-14 01:23:07,047 | ERROR | [Spotify] audio_features single error for 2HbKqm4o0w5wEeEFXm2sD4: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=2HbKqm4o0w5wEeEFXm2sD4:
+ None, reason: None
+2025-10-14 01:23:07,118 | ERROR | HTTP Error for GET to https://api.spotify.com/v1/audio-features/?ids=0aB0v4027ukVziUGwVGYpG with Params: {} returned 403 due to None
+2025-10-14 01:23:07,119 | ERROR | [Spotify] audio_features single error for 0aB0v4027ukVziUGwVGYpG: http status: 403, code: -1 - https://api.spotify.com/v1/audio-features/?ids=0aB0v4027ukVziUGwVGYpG:
+ None, reason: None
+2025-10-14 01:23:07,120 | WARNING | [Spotify] No audio features returned; columns will be NaN.
+2025-10-14 01:24:04,124 | INFO | Use pytorch device_name: cpu
+2025-10-14 01:24:04,124 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-14 01:24:18,192 | WARNING | [Topics] Could not compute UMAP coords: 'BERTopic' object has no attribute 'reduce_dimensionality'
+2025-10-14 01:24:18,207 | INFO | Saved curated parquet -> C:\Users\kkbua\OneDrive\Documents\GitHub\flowtrendz\data\curated\songs_curated.parquet
+2025-10-14 02:03:53,388 | INFO | [Spotify] Top tracks for: Drake
+2025-10-14 02:03:54,958 | INFO | [Spotify] Top tracks for: Kendrick Lamar
+2025-10-14 02:03:55,704 | INFO | Collected 20 unique tracks across 2 artists.
+2025-10-14 02:03:55,704 | INFO | [Spotify] Skipping audio features (--skip-audio).
+2025-10-14 02:05:09,625 | INFO | [Genius] No acceptable lyrics for: Kendrick Lamar - LOVE. FEAT. ZACARI. (query='LOVE. FEAT. ZACARI.')
+2025-10-14 02:05:33,155 | INFO | Use pytorch device_name: cpu
+2025-10-14 02:05:33,155 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-14 02:05:47,760 | WARNING | [Topics] Could not compute UMAP coords: 'BERTopic' object has no attribute 'reduce_dimensionality'
+2025-10-14 02:05:47,770 | INFO | Saved curated parquet -> C:\Users\kkbua\OneDrive\Documents\GitHub\flowtrendz\data\curated\songs_curated.parquet
+2025-10-14 02:09:05,699 | INFO | [Spotify] Top tracks for: Drake
+2025-10-14 02:09:06,885 | INFO | [Spotify] Top tracks for: Kendrick Lamar
+2025-10-14 02:09:07,566 | INFO | Collected 20 unique tracks across 2 artists.
+2025-10-14 02:09:07,567 | INFO | [Spotify] Skipping audio features (--skip-audio).
+2025-10-14 02:10:17,881 | INFO | [Genius] No acceptable lyrics for: Kendrick Lamar - LOVE. FEAT. ZACARI. (query='LOVE. FEAT. ZACARI.')
+2025-10-14 02:10:41,195 | INFO | Use pytorch device_name: cpu
+2025-10-14 02:10:41,195 | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-14 02:10:56,420 | INFO | Saved curated parquet -> C:\Users\kkbua\OneDrive\Documents\GitHub\flowtrendz\data\curated\songs_curated.parquet
+2025-10-14 20:56:42,306 | INFO | [Spotify] Top tracks for: Jay-Z
+2025-10-14 20:56:44,328 | INFO | [Spotify] Top tracks for: Nas
+2025-10-14 20:56:45,252 | INFO | [Spotify] Top tracks for: Kanye West
+2025-10-14 20:56:46,075 | INFO | [Spotify] Top tracks for: Drake
+2025-10-14 20:56:46,992 | INFO | [Spotify] Top tracks for: Kendrick Lamar
+2025-10-14 20:56:47,816 | INFO | [Spotify] Top tracks for: Nicki Minaj
+2025-10-14 20:56:48,937 | INFO | [Spotify] Top tracks for: J. Cole
+2025-10-14 20:56:49,964 | INFO | [Spotify] Top tracks for: Lil Wayne
+2025-10-14 20:56:50,882 | INFO | [Spotify] Top tracks for: Outkast
+2025-10-14 20:56:51,908 | INFO | [Spotify] Top tracks for: Travis Scott
+2025-10-14 20:56:52,731 | INFO | [Spotify] Top tracks for: A Tribe Called Quest
+2025-10-14 20:56:53,546 | INFO | [Spotify] Top tracks for: The Notorious B.I.G.
+2025-10-14 20:56:54,465 | INFO | [Spotify] Top tracks for: 2Pac
+2025-10-14 20:56:55,594 | INFO | [Spotify] Top tracks for: Future
+2025-10-14 20:56:56,718 | INFO | [Spotify] Top tracks for: Doja CatYeat
+2025-10-14 20:56:57,331 | INFO | [Spotify] Top tracks for: Juice WRLD
+2025-10-14 20:56:58,153 | INFO | [Spotify] Top tracks for: Gunna
+2025-10-14 20:56:59,072 | INFO | [Spotify] Top tracks for: Cardi B
+2025-10-14 20:57:00,098 | INFO | [Spotify] Top tracks for: Rapsody
+2025-10-14 20:57:01,020 | INFO | [Spotify] Top tracks for: Latto
+2025-10-14 20:57:01,837 | INFO | [Spotify] Top tracks for: Megan Thee Stallion
+2025-10-14 20:57:02,610 | INFO | Collected 194 unique tracks across 21 artists.
+2025-10-14 20:57:02,613 | INFO | [Spotify] Skipping audio features (--skip-audio).
+2025-10-14 21:00:34,620 | INFO | [Spotify] Top tracks for: Jay-Z
+2025-10-14 21:00:36,374 | INFO | [Spotify] Top tracks for: Nas
+2025-10-14 21:00:37,556 | INFO | [Spotify] Top tracks for: Kanye West
+2025-10-14 21:00:38,723 | INFO | [Spotify] Top tracks for: Drake
+2025-10-14 21:00:39,542 | INFO | [Spotify] Top tracks for: Kendrick Lamar
+2025-10-14 21:00:40,564 | INFO | [Spotify] Top tracks for: Nicki Minaj
+2025-10-14 21:00:41,493 | INFO | [Spotify] Top tracks for: J. Cole
+2025-10-14 21:00:42,409 | INFO | [Spotify] Top tracks for: Lil Wayne
+2025-10-14 21:00:43,332 | INFO | [Spotify] Top tracks for: Outkast
+2025-10-14 21:00:44,257 | INFO | [Spotify] Top tracks for: Travis Scott
+2025-10-14 21:00:45,276 | INFO | [Spotify] Top tracks for: A Tribe Called Quest
+2025-10-14 21:00:46,405 | INFO | [Spotify] Top tracks for: The Notorious B.I.G.
+2025-10-14 21:00:47,223 | INFO | [Spotify] Top tracks for: 2Pac
+2025-10-14 21:00:48,350 | INFO | [Spotify] Top tracks for: Future
+2025-10-14 21:00:49,475 | INFO | [Spotify] Top tracks for: Doja Cat
+2025-10-14 21:00:50,393 | INFO | [Spotify] Top tracks for: Yeat
+2025-10-14 21:00:51,523 | INFO | [Spotify] Top tracks for: Juice WRLD
+2025-10-14 21:00:52,339 | INFO | [Spotify] Top tracks for: Gunna
+2025-10-14 21:00:53,272 | INFO | [Spotify] Top tracks for: Cardi B
+2025-10-14 21:00:54,084 | INFO | [Spotify] Top tracks for: Rapsody
+2025-10-14 21:00:55,207 | INFO | [Spotify] Top tracks for: Latto
+2025-10-14 21:00:56,132 | INFO | [Spotify] Top tracks for: Megan Thee Stallion
+2025-10-14 21:00:56,853 | INFO | Collected 214 unique tracks across 22 artists.
+2025-10-14 21:00:56,854 | INFO | [Spotify] Skipping audio features (--skip-audio).
+2025-10-14 21:01:28,574 | INFO | [Genius] No acceptable lyrics for: JAY-Z - Love All (with JAY-Z) (query='Love All (with JAY')
+2025-10-14 21:03:53,411 | INFO | [Genius] No acceptable lyrics for: Kendrick Lamar - LOVE. FEAT. ZACARI. (query='LOVE. FEAT. ZACARI.')
+2025-10-14 21:06:30,145 | INFO | [Genius] No acceptable lyrics for: Outkast - Da Art of Storytellin' (Pt. 1) (query='Da Art of Storytellin' (Pt. 1)')
+2025-10-14 21:08:14,638 | INFO | [Genius] No acceptable lyrics for: The Notorious B.I.G. - Mo Money Mo Problems (feat. Puff Daddy & Mase) - 2014 Remaster (query='Mo Money Mo Problems')
+2025-10-14 21:08:41,642 | INFO | [Genius] No acceptable lyrics for: The Notorious B.I.G. - Get Money (feat. Junior M.A.F.I.A.) - 2007 Remaster (query='Get Money')
+2025-10-14 21:08:57,391 | INFO | [Genius] No acceptable lyrics for: 2Pac - All Eyez On Me (ft. Big Syke) (query='All Eyez On Me (ft. Big Syke)')
+2025-10-14 21:11:54,476 | INFO | [Genius] No acceptable lyrics for: Gunna - Drip Too Hard (Lil Baby & Gunna) (query='Drip Too Hard (Lil Baby & Gunna)')
+2025-10-14 21:12:50,977 | INFO | [Genius] No acceptable lyrics for: Cardi B - Finesse - Remix; feat. Cardi B (query='Finesse')
+2025-10-14 21:13:40,551 | INFO | [Genius] No acceptable lyrics for: Latto - ErrTime (feat. Latto) [Remix] (query='ErrTime')
+2025-10-14 21:14:24,675 | INFO | [Genius] No acceptable lyrics for: Megan Thee Stallion - On Me - Remix (query='On Me')
+2025-10-14 21:14:37,783 | INFO | Saved curated parquet -> C:\Users\kkbua\OneDrive\Documents\GitHub\flowtrendz\data\curated\songs_curated.parquet
