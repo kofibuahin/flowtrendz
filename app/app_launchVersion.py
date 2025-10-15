@@ -20,10 +20,18 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+import streamlit.components.v1 as components
+import os, hashlib, textwrap, datetime as dt
+# If you’re using the official OpenAI client (Python >= 1.0):
+try:
+    from openai import OpenAI
+except Exception:
+    OpenAI = None  # we’ll error nicely if the lib isn’t installed
 
 # -----------------------------
 # Page + global settings
 # -----------------------------
+
 st.set_page_config(page_title="FlowTrendz — Hip‑Hop Lyrics Explorer", layout="wide", page_icon="🎧")
 
 # Light CSS polish
@@ -47,6 +55,8 @@ st.markdown(
 
 DATA_CURATED = Path("data/curated/songs_curated.parquet")
 EMO_LABELS = ["anger","disgust","fear","joy","neutral","sadness","surprise"]
+# --- Parse an ID from a Spotify track URL or URI ---
+_SPOTIFY_TRACK_RE = re.compile(r"(?:https?://open\.spotify\.com/track/|spotify:track:)([A-Za-z0-9]+)")
 
 @st.cache_data(show_spinner=False)
 def load_curated() -> pd.DataFrame:
@@ -82,6 +92,133 @@ def scorecards(df: pd.DataFrame):
     cols[1].markdown('<div class="metric"><h4>Artists</h4><div>👤 ' + f"{artists:,}" + '</div></div>', unsafe_allow_html=True)
     cols[2].markdown('<div class="metric"><h4>Tracks with lyrics</h4><div>✍️ ' + (f"{with_lyrics:,}" if not np.isnan(with_lyrics) else "—") + '</div></div>', unsafe_allow_html=True)
     cols[3].markdown('<div class="metric"><h4>Avg sentiment (compound)</h4><div>🧠 ' + (f"{mean_comp:.2f}" if pd.notnull(mean_comp) else "—") + '</div></div>', unsafe_allow_html=True)
+
+def _get_openai_key():
+    # Try env first (works for non-Streamlit contexts too), then st.secrets
+    key = os.getenv("OPENAI_API_KEY")
+    if not key:
+        try:
+            key = st.secrets.get("OPENAI_API_KEY", None)  # type: ignore[attr-defined]
+        except Exception:
+            key = None
+    return key
+
+@st.cache_data(show_spinner=False, ttl=60*60*24)  # cache for 24h
+def _cached_artist_summary(artist: str, lyrics_blob_hash: str, model: str, temperature: float) -> str:
+    # This function runs only on cache misses.
+    api_key = _get_openai_key()
+    if not api_key:
+        raise RuntimeError(
+            "OPENAI_API_KEY is missing. Add it to `.streamlit/secrets.toml` or your environment variables."
+        )
+    if OpenAI is None:
+        raise RuntimeError("The `openai` Python package is not installed. `pip install openai` and retry.")
+
+    client = OpenAI(api_key=api_key)
+
+    prompt = f"""
+You are a music analyst. Read the following lyrics excerpts for **{artist}** (hip-hop/rap).
+Provide:
+
+1) A concise **overall summary** of themes & motifs (4–6 sentences).
+2) A short **style profile label** (3–6 words), e.g., “confessional luxury braggadocio”.
+3) 3–5 **recurring motifs** as bullet points.
+4) 3 **notable lines** (quote briefly; if duplicates/noisy, say “(line omitted)”).
+
+Write for non-technical readers. Avoid over-indexing on any one song; capture trends across the set.
+
+Lyrics excerpts (may be partial, normalized, or noisy):
+---
+{{LYRICS}}
+---
+"""
+
+    # call the API (responses.create for 1.x client)
+    resp = client.responses.create(
+        model=model,
+        temperature=temperature,
+        max_output_tokens=600,
+        input=[{"role": "user", "content": prompt}],
+    )
+
+    # Pull text (works with current responses API)
+    out = ""
+    try:
+        out = "".join([p.text for msg in resp.output for p in getattr(msg, "content", []) if hasattr(p, "text")])  # type: ignore
+    except Exception:
+        # fallback for older/newer shapes
+        out = str(resp)
+
+    stamp = dt.datetime.now().strftime("%Y-%m-%d %H:%M")
+    header = f"**Music summary for {artist}** (model: `{model}`, temp: {temperature:.1f}) — _generated {stamp}_\n\n"
+    return header + out.strip()
+
+def _make_lyrics_blob(df_artist, max_songs=12, max_chars_per_song=1200):
+    """Concatenate a subset of lyrics for cost/speed control."""
+    texts = []
+    if "lyrics" not in df_artist.columns:
+        return ""
+    # Prefer the most “typical” songs (middle sentiment), fall back to head
+    d = df_artist.dropna(subset=["lyrics"]).copy()
+    if d.empty:
+        return ""
+    if "compound" in d.columns:
+        d["__dist"] = (d["compound"] - d["compound"].median()).abs()
+        d = d.sort_values("__dist").head(max_songs)
+    else:
+        d = d.head(max_songs)
+    for _, r in d.iterrows():
+        t = str(r["lyrics"])[:max_chars_per_song]
+        name = r.get("track_name", "Unknown")
+        year = r.get("year", "")
+        texts.append(f"[{year}] {name}\n{t}")
+    blob = "\n\n---\n\n".join(texts)
+    return blob
+
+# --- helpers: stat "tile" + tiny CSS to make the selectbox stretch ---
+def stat_card(label: str, value: str, emoji: str = "📊"):
+    st.markdown(
+        f"""
+        <div style="
+            background: #F8FAFF; border: 1px solid #EEF2FF;
+            border-radius: 12px; padding: 18px 20px; box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+        ">
+          <div style="font-size:14px;color:#475569;margin-bottom:6px;">{label}</div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="font-size:28px;line-height:1;">{emoji}</span>
+            <span style="font-size:28px;font-weight:700;color:#111827;">{value}</span>
+          </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+def extract_spotify_track_id(url: str) -> str | None:
+    if not url:
+        return None
+    m = _SPOTIFY_TRACK_RE.search(str(url))
+    return m.group(1) if m else None
+
+def spotify_track_embed_html(track_id: str, height: int = 80) -> str:
+    # Compact embed for a single track
+    src = f"https://open.spotify.com/embed/track/{track_id}?utm_source=generator"
+    return (
+        f'<iframe style="border-radius:12px" '
+        f'src="{src}" width="100%" height="{height}" frameBorder="0" '
+        f'allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" '
+        f'loading="lazy"></iframe>'
+    )
+
+# (Optional) nudge selectbox to fill its container
+st.markdown(
+    """
+    <style>
+      /* makes the select container use all available width */
+      div[data-baseweb="select"]{ min-width: 100% !important; }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 
 # -----------------------------
 # Intro tab
@@ -127,48 +264,244 @@ with intro:
 # -----------------------------
 with overview:
     st.header("Artist Overview")
+
     if songs.empty:
         st.info("No data yet.")
     else:
-        left, right = st.columns([1.2, 1])
-        with left:
+        # --- full-width artist picker ---
+        with st.container():
             artists = sorted(songs["artist"].dropna().unique().tolist())
-            artist = st.selectbox("Artist (pick one)", artists, index=0, help="Choose the artist to analyze throughout this page.")
-            df_a = songs[songs["artist"] == artist].copy()
-            howto("You can switch artists anytime; the charts and stats will refresh.")
-            
-            # Time trend of sentiment
-            if "year" in df_a.columns:
-                ts = df_a.dropna(subset=["year"]).groupby("year")["compound"].mean().reset_index()
-                fig = px.line(ts, x="year", y="compound", title="Average sentiment over time (VADER compound)",
-                              template="plotly_white", markers=True)
-                st.plotly_chart(fig, use_container_width=True)
-                explain("**Line chart**: average VADER compound by release year for the selected artist (−1=negative, +1=positive).")
-            
-            # Distribution
-            if "compound" in df_a.columns:
-                fig = px.box(df_a, x="artist", y="compound", title="Song‑level sentiment distribution",
-                             points="outliers", template="plotly_white")
-                st.plotly_chart(fig, use_container_width=True)
-                explain("**Box plot**: spread of per‑song sentiment for the selected artist.")
+            artist = st.selectbox(
+                "Artist (pick one)",
+                artists,
+                index=0,
+                help="Choose the artist to analyze throughout this page."
+            )
+            st.caption("You can switch artists anytime; the charts and stats will refresh.")
+        df_a = songs[songs["artist"] == artist].copy()
+
+        # --- scorecards row (tiles) ---
+        col_a, col_b, col_c, col_d = st.columns(4)
+
+        # Tracks
+        tracks_n = len(df_a)
+        with col_a:
+            stat_card("Tracks Analyzed", f"{tracks_n:,}", "🎵")
+
+        # Lines of Lyrics
+        if "lyrics" in df_a.columns:
+            lines_total = int(
+                df_a["lyrics"]
+                .dropna()
+                .astype(str)
+                .apply(lambda s: s.count("\n") + 1)
+                .sum()
+            )
+        else:
+            lines_total = 0
+        with col_b:
+            stat_card("Lines of Lyrics Analyzed", f"{lines_total:,}", "✍️")
+
+        # Avg sentiment
+        avg_sent = float(df_a["compound"].mean()) if "compound" in df_a.columns else float("nan")
+        with col_c:
+            stat_card("Average Sentiment", f"{avg_sent:.2f}" if avg_sent == avg_sent else "—", "🧠")
+
+        # Dominant emotion (name)
+        emo_cols = [c for c in df_a.columns if c.startswith("emotion_")]
+        if emo_cols:
+            emo_means = df_a[emo_cols].mean(numeric_only=True)
+            dom_emo = emo_means.idxmax().replace("emotion_", "")
+            dom_val = emo_means.max()
+            dom_label = f"{dom_emo} ({dom_val:.2f})"
+        else:
+            dom_label = "—"
+
+        with col_d:
+            stat_card("Dominant Emotion", dom_label, "💫")
+
+        st.markdown("")  # small spacer
+
         
-        with right:
-            # Emotion mix
+        # === TOP ROW ===  Avg emotion mix (LEFT)  |  AI summary (RIGHT)
+        top_left, top_right = st.columns([1, 1])
+
+        with top_left:
             emo_cols = [c for c in df_a.columns if c.startswith("emotion_")]
             if emo_cols:
-                avg = df_a[emo_cols].mean(numeric_only=True).rename(lambda x: x.replace("emotion_","")).reset_index()
-                avg.columns = ["emotion","score"]
-                fig = px.bar(avg.sort_values("score", ascending=False), x="score", y="emotion",
-                             orientation="h", title="Average emotion mix", template="plotly_white")
+                avg = (
+                    df_a[emo_cols]
+                    .mean(numeric_only=True)
+                    .rename(lambda x: x.replace("emotion_", ""))
+                    .reset_index()
+                )
+                avg.columns = ["emotion", "score"]
+                fig = px.bar(
+                    avg.sort_values("score", ascending=False),
+                    x="score",
+                    y="emotion",
+                    orientation="h",
+                    title="Average emotion mix",
+                    template="plotly_white",
+                )
                 st.plotly_chart(fig, use_container_width=True)
-                explain("**Bar chart**: average predicted emotion scores across the artist’s songs.")
+                explain(
+                    "**Bar chart**: average predicted emotion scores across the artist’s songs."
+                )
+            else:
+                st.info("No emotion columns found.")
+
+        with top_right:
+            # --- AI Artist Summary panel (unchanged logic; just moved up) ---
+            st.subheader("🧠 Artist Summary")
+            st.caption(
+                "Click to generate a concise summary of themes, motifs, and a style label for this artist. "
+                "Powered by OpenAI and cached for 24h."
+            )
+
+            default_model = None
+            try:
+                default_model = st.secrets.get("OPENAI_MODEL", None)  # type: ignore[attr-defined]
+            except Exception:
+                default_model = None
+            model = st.selectbox(
+                "Model",
+                options=[default_model or "gpt-4o-mini", "gpt-4o", "gpt-4.1-mini", "gpt-4.1"],
+                index=0,
+            )
+            temperature = st.slider("Creativity (temperature)", 0.0, 1.2, 0.6, 0.1)
+
+            lyrics_blob = _make_lyrics_blob(df_a, max_songs=12, max_chars_per_song=1200)
+            if not lyrics_blob:
+                st.info("No lyrics available for this artist in the current dataset.")
+            else:
+                blob_hash = hashlib.md5(lyrics_blob.encode("utf-8")).hexdigest()
+                gen = st.button("✨ Generate summary", type="primary", use_container_width=True)
+                if gen:
+                    try:
+                        payload = _cached_artist_summary(
+                            artist, blob_hash, model, temperature
+                        ).replace(
+                            "{ {LYRICS} }",
+                            textwrap.shorten(lyrics_blob, width=18000, placeholder="…"),
+                        )
+                        st.markdown(payload)
+                        st.download_button(
+                            "Download summary (Markdown)",
+                            payload.encode("utf-8"),
+                            file_name=f"{artist}_ai_summary.md",
+                            mime="text/markdown",
+                            use_container_width=True,
+                        )
+                    except RuntimeError as e:
+                        st.error(str(e))
+                    except Exception as e:
+                        st.exception(e)
+                else:
+                    st.caption(
+                        "The model isn’t called until you press the button. "
+                        "Summaries are cached for 24 hours per artist + dataset."
+                    )
+
+        # === SECOND ROW ===  Sentiment over time (LEFT)  |  Distribution (RIGHT)
+        bot_left, bot_right = st.columns([1, 1])
+
+        with bot_left:
+            if "year" in df_a.columns and "compound" in df_a.columns:
+                ts = df_a.dropna(subset=["year"]).groupby("year")["compound"].mean().reset_index()
+                fig = px.line(
+                    ts,
+                    x="year",
+                    y="compound",
+                    title="Average sentiment over time (VADER compound)",
+                    template="plotly_white",
+                    markers=True,
+                )
+                st.plotly_chart(fig, use_container_width=True)
+                explain(
+                    "**Line chart**: average VADER compound by release year for the selected artist "
+                    "(−1=negative, +1=positive)."
+                )
+
+        with bot_right:
+            if "compound" in df_a.columns:
+                fig = px.box(
+                    df_a,
+                    x="artist",
+                    y="compound",
+                    title="Song-level sentiment distribution",
+                    points="outliers",
+                    template="plotly_white",
+                )
+                st.plotly_chart(fig, use_container_width=True)
+                explain("**Box plot**: spread of per-song sentiment for the selected artist.")
+
+         # --- Spotify Artist iFrame ---
+        st.subheader("🎵 Listen on Spotify - Artist's Top Songs")
+        artist_spotify_id = df_a["artist_id"].dropna().unique()[0] if "artist_id" in df_a.columns else None
+
+        if artist_spotify_id:
+            embed_html = f"""
+                <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/artist/{artist_spotify_id}"
+                        width="100%" height="200" frameBorder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+            """
+            components.html(embed_html, height=220)
+        else:
+            st.info("No Spotify artist ID available for this artist.")
         
-        # Songs table
-        cols = ["artist","track_name","year","compound","spotify_url","genius_url"]
-        present = [c for c in cols if c in df_a.columns]
+        # --- Embedded Spotify players for this artist ---
+        st.subheader("🎧 Listen to songs used for analysis!")
+
+        ids = []
+        if "spotify_url" in df_a.columns:
+            ids = [
+                extract_spotify_track_id(u)
+                for u in df_a["spotify_url"].dropna().unique().tolist()
+            ]
+            ids = [i for i in ids if i]  # keep only valid IDs
+
+        # Limit and display as a small grid of players
+        max_players = 20  # tweak as you like
+        ids = ids[:max_players]
+
+        if not ids:
+            st.info("No Spotify links available for this artist.")
+        else:
+            ncols = 2  # 2 columns looks nice; try 3 if you have lots of space
+            cols = st.columns(ncols)
+            for i, tid in enumerate(ids):
+                with cols[i % ncols]:
+                    html = spotify_track_embed_html(tid, height=80)
+                    components.html(html, height=100)  # a touch taller to avoid clipping
+
+
+        # --- Songs table (clickable links) ---
         st.subheader("Songs for selected artist")
-        st.dataframe(df_a[present].sort_values("compound", ascending=False), use_container_width=True)
+        cols = ["artist", "track_name", "year", "compound", "spotify_url", "genius_url"]
+        present = [c for c in cols if c in df_a.columns]
+
+        # Use Streamlit's LinkColumn to make URLs clickable
+        column_cfg = {}
+        if "spotify_url" in present:
+            column_cfg["spotify_url"] = st.column_config.LinkColumn(
+                "Spotify", display_text="Open"
+            )
+        if "genius_url" in present:
+            column_cfg["genius_url"] = st.column_config.LinkColumn(
+                "Genius", display_text="Open"
+            )
+
+        st.dataframe(
+            df_a[present].sort_values("compound", ascending=False),
+            use_container_width=True,
+            column_config=column_cfg,
+            hide_index=True,
+        )
         st.caption("Click Spotify/Genius links to open the track pages.")
+
         
 # -----------------------------
 # Emotion Explorer
