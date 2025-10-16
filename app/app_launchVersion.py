@@ -12,7 +12,8 @@ and (optionally) BERTopic artifacts in data/topics/ (wired later).
 """
 from __future__ import annotations
 
-import re
+import re, html as html_lib, itertools, math, random, tempfile
+
 from pathlib import Path
 from typing import List, Dict
 
@@ -20,8 +21,23 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+import networkx as nx
+from pyvis.network import Network
 import streamlit.components.v1 as components
-import os, hashlib, textwrap, datetime as dt
+import os, hashlib, textwrap, json, datetime as dt
+from sklearn.metrics.pairwise import cosine_similarity
+from typing import Dict, Tuple
+from collections import Counter, defaultdict
+from textwrap import shorten
+
+
+# Sentencetransformers for embeddings
+try:
+    from sentence_transformers import SentenceTransformer
+except Exception:
+    SentenceTransformer = None
+
+
 # If you’re using the official OpenAI client (Python >= 1.0):
 try:
     from openai import OpenAI
@@ -57,6 +73,30 @@ DATA_CURATED = Path("data/curated/songs_curated.parquet")
 EMO_LABELS = ["anger","disgust","fear","joy","neutral","sadness","surprise"]
 # --- Parse an ID from a Spotify track URL or URI ---
 _SPOTIFY_TRACK_RE = re.compile(r"(?:https?://open\.spotify\.com/track/|spotify:track:)([A-Za-z0-9]+)")
+_WORD_RE = re.compile(r"[a-zA-Z']+")
+WORD_RE = re.compile(r"\b[\w']+\b", flags=re.IGNORECASE)
+
+
+EMOTION_COLS = ["emotion_joy","emotion_sadness","emotion_anger","emotion_fear","emotion_disgust","emotion_surprise","emotion_neutral"]
+EMO_LABELS = {
+    "emotion_joy": "joy",
+    "emotion_sadness": "sadness",
+    "emotion_anger": "anger",
+    "emotion_fear": "fear",
+    "emotion_disgust": "disgust",
+    "emotion_surprise": "surprise",
+    "emotion_neutral": "neutral",
+}
+# A pleasant, distinct palette (adjust if you like)
+EMO_COLORS = {
+    "joy":        "#4CAF50",
+    "sadness":    "#5DADE2",
+    "anger":      "#E74C3C",
+    "fear":       "#AF7AC5",
+    "disgust":    "#27AE60",
+    "surprise":   "#F4D03F",
+    "neutral":    "#95A5A6",
+}
 
 @st.cache_data(show_spinner=False)
 def load_curated() -> pd.DataFrame:
@@ -208,6 +248,419 @@ def spotify_track_embed_html(track_id: str, height: int = 80) -> str:
         f'loading="lazy"></iframe>'
     )
 
+# --------------------------------------------
+# V3 Embedding & Similarity Helpers (cached)
+# --------------------------------------------
+
+@st.cache_resource(show_spinner=False)
+def _load_embedder(model_name: str = "all-MiniLM-L6-v2"):
+    """
+    Load SentenceTransformer once per session.
+    """
+    if SentenceTransformer is None:
+        raise RuntimeError(
+            "sentence-transformers is not installed. "
+            "Add `sentence-transformers` to requirements.txt"
+        )
+    return SentenceTransformer(model_name)
+
+@st.cache_data(show_spinner=False)
+def _song_embeddings(df_songs: pd.DataFrame, model_name: str = "all-MiniLM-L6-v2") -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """
+    Compute embeddings for all songs with lyrics (cached).
+    Returns: (embeddings, idx_rows, mask_has_lyrics)
+      - embeddings: shape [N_with_lyrics, 384]
+      - idx_rows: integer index positions mapping back to df_songs
+      - mask_has_lyrics: boolean mask over df_songs rows
+    """
+    if df_songs.empty:
+        return np.zeros((0, 384)), np.array([], dtype=int), np.array([], dtype=bool)
+
+    mask = df_songs["lyrics"].fillna("").str.strip().ne("")
+    if mask.sum() == 0:
+        return np.zeros((0, 384)), np.where(mask)[0], mask.values
+
+    mdl = _load_embedder(model_name)
+    texts = df_songs.loc[mask, "lyrics"].fillna("").astype(str).tolist()
+    embs = mdl.encode(texts, show_progress_bar=False, normalize_embeddings=True)
+    return np.asarray(embs), np.where(mask)[0], mask.values
+
+@st.cache_data(show_spinner=False)
+def _artist_centroids(df_songs: pd.DataFrame, model_name: str = "all-MiniLM-L6-v2") -> Tuple[pd.DataFrame, Dict[str, np.ndarray]]:
+    """
+    Compute a mean embedding per artist.
+    Returns (df_stats, centroid_map)
+      - df_stats: per-artist counts and availability
+      - centroid_map: dict {artist -> 384-dim vector}
+    """
+    embs, idx_rows, mask = _song_embeddings(df_songs, model_name=model_name)
+    centroid_map: Dict[str, np.ndarray] = {}
+    if embs.shape[0] == 0:
+        # No lyrics
+        stats = (df_songs[["artist"]]
+                 .dropna()
+                 .value_counts()
+                 .rename("track_count")
+                 .reset_index())
+        return stats, centroid_map
+
+    sub = df_songs.iloc[idx_rows]
+    # compute mean embedding per artist
+    for a, block in sub.groupby("artist"):
+        if block.empty: 
+            continue
+        # rows in sub for a
+        rows = block.index
+        # map to positions in embs by aligning indices
+        pos = [np.where(idx_rows == r)[0][0] for r in rows if r in idx_rows]
+        if len(pos) == 0: 
+            continue
+        centroid_map[a] = embs[pos].mean(axis=0)
+
+    stats = (df_songs.groupby("artist")
+             .size().rename("track_count")
+             .reset_index())
+    stats["has_centroid"] = stats["artist"].isin(centroid_map.keys())
+    return stats, centroid_map
+
+def _similar_artists(artist: str, centroid_map: Dict[str, np.ndarray], top_k: int = 8) -> pd.DataFrame:
+    """
+    Cosine similarity from chosen artist to others.
+    """
+    if artist not in centroid_map:
+        return pd.DataFrame(columns=["artist", "similarity"])
+
+    anchor = centroid_map[artist].reshape(1, -1)
+    names, mats = [], []
+    for a, v in centroid_map.items():
+        if a == artist:
+            continue
+        names.append(a)
+        mats.append(v.reshape(1, -1))
+    if not names:
+        return pd.DataFrame(columns=["artist", "similarity"])
+
+    others = np.vstack([m for m in mats])
+    sims = cosine_similarity(anchor, others).ravel()
+    out = pd.DataFrame({"artist": names, "similarity": sims}).sort_values("similarity", ascending=False)
+    return out.head(top_k)
+
+# ------------- AI Critic (OpenAI) -------------
+@st.cache_data(show_spinner=False, ttl=60*60*24)  # cache 24h per pair
+def _cached_ai_critic(pair_key: str, content: str, model: str, temperature: float) -> str:
+    """
+    Call OpenAI once per (pair_key, content hash, model, temp).
+    """
+    from openai import OpenAI
+    api_key = os.getenv("OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY", None)  # type: ignore[attr-defined]
+    if not api_key:
+        raise RuntimeError("OPENAI_API_KEY is missing. Add it to .streamlit/secrets.toml or env.")
+    client = OpenAI(api_key=api_key)
+
+    sys = (
+        "You are a concise hip-hop critic. Compare the two artists using the provided"
+        " metrics and lyric excerpts. Be specific but compact. Structure as:\n"
+        "1) Overall contrast\n2) Lyrical themes & motifs\n3) Emotional tone"
+        "\n4) Flow/Delivery observations\n5) Who each artist appeals to\n"
+        "Limit to ~180-220 words total."
+    )
+    resp = client.chat.completions.create(
+        model=model,
+        temperature=temperature,
+        messages=[
+            {"role": "system", "content": sys},
+            {"role": "user", "content": content},
+        ],
+    )
+    return resp.choices[0].message.content.strip()
+
+
+# ------------- Lyric DNA Helpers -------------
+@st.cache_data(show_spinner=False)
+def _tokenize_lines(lyrics_list):
+    """Split lyrics into lines and tokenize to simple word tokens."""
+    lines = []
+    for lyr in lyrics_list:
+        if not isinstance(lyr, str) or not lyr.strip():
+            continue
+        for ln in lyr.splitlines():
+            toks = [t.lower() for t in _WORD_RE.findall(ln)]
+            if toks:
+                lines.append(toks)
+    return lines
+
+def _build_cooccurrence(lines, window=8, stopwords=None):
+    """Return unigram counts and pair counts from tokenized lines."""
+    stop = set(stopwords or [])
+    unigram = Counter()
+    pair = Counter()
+
+    for toks in lines:
+        toks = [t for t in toks if t not in stop]
+        if not toks: 
+            continue
+        # local window co-occurrence
+        for i, w in enumerate(toks):
+            unigram[w] += 1
+            start = max(0, i - window)
+            end   = min(len(toks), i + window + 1)
+            for j in range(start, end):
+                if j <= i:
+                    continue
+                v = toks[j]
+                if v == w: 
+                    continue
+                if v in stop:
+                    continue
+                a, b = (w, v) if w < v else (v, w)
+                pair[(a, b)] += 1
+
+    return unigram, pair
+
+def _pmi(pair_count, a_count, b_count, total):
+    """PMI-like association score; clipped at 0 to avoid negatives."""
+    # add tiny eps to be safe
+    num = pair_count * total
+    den = a_count * b_count or 1
+    val = math.log2(max(num / den, 1e-12))
+    return max(val, 0.0)
+
+@st.cache_data(show_spinner=False)
+def compute_lyric_network(
+    df, 
+    top_n_terms=80,        # limit nodes by frequency
+    min_pair=6,            # minimum pair co-occurrence
+    min_pmi=0.6,           # association threshold
+    window=8,
+    use_artist=None,       # None => all, else filter
+):
+    """Return (nodes, edges) for PyVis from a lyrics dataframe."""
+    if use_artist:
+        df = df[df["artist"] == use_artist]
+    lyrics_list = df["lyrics"].dropna().tolist()
+    lines = _tokenize_lines(lyrics_list)
+
+    # Simple stoplist (tune as needed)
+    stop = {
+        "the","and","a","to","of","in","i","it","you","my","on","for","is","me","that",
+        "we","be","with","your","this","not","im","all","do","no","so","but","got","ya",
+        "uh","yeah","oh","la","like","just","go","up","out","get","gotta","aint","na"
+    }
+
+    unigram, pair = _build_cooccurrence(lines, window=window, stopwords=stop)
+    if not unigram or not pair:
+        return [], []
+
+    # pick top terms by frequency
+    vocab = [w for w, _ in unigram.most_common(top_n_terms)]
+    vocab_set = set(vocab)
+
+    total = sum(unigram[w] for w in vocab)
+    nodes = []
+    edges = []
+
+    # node sizes by frequency
+    for w in vocab:
+        freq = unigram[w]
+        size = 8 + 22 * (freq / max(1, unigram[vocab[0]]))  # 8..30
+        nodes.append({"id": w, "label": w, "size": size, "title": f"{w}: {freq} occurrences"})
+
+    # edges filtered by thresholds
+    for (a, b), c in pair.items():
+        if a not in vocab_set or b not in vocab_set:
+            continue
+        if c < min_pair:
+            continue
+        pmi = _pmi(c, unigram[a], unigram[b], total)
+        if pmi < min_pmi:
+            continue
+        weight = 1 + 4 * min(1.0, pmi / 3.0)  # stroke width ~ PMI
+        edges.append({"from": a, "to": b, "value": weight, "title": f"co-occurs: {c} | pmi: {pmi:.2f}"})
+
+    return nodes, edges
+
+def render_pyvis_network(nodes, edges, height="680px", physics=True):
+    """Create a PyVis HTML and return it as a string (Streamlit-safe)."""
+    net = Network(height=height, width="100%", bgcolor="#ffffff", font_color="#222")
+    net.toggle_physics(physics)
+    net.barnes_hut(gravity=-20000, central_gravity=0.3,
+                   spring_length=110, spring_strength=0.01, damping=0.8)
+
+    # ⬇️ Pass color/group if present
+    for n in nodes:
+        net.add_node(
+            n["id"],
+            label=n.get("label", n["id"]),
+            size=n.get("size", 10),
+            title=n.get("title", ""),
+            color=n.get("color"),     # <—
+        )
+
+    for e in edges:
+        net.add_edge(
+            e["from"], e["to"],
+            value=e.get("value", 1.0),
+            title=e.get("title", ""),
+            width=e.get("width"),          # << NEW
+            color=e.get("color")           # << NEW
+        )
+
+
+    # Only style edges here; don't set node color in options.
+    options = {
+        "nodes": {"shape": "dot"},
+        "edges": {"color": {"color": "#9aa6b2"}, "smooth": {"type": "dynamic"}},
+        "interaction": {"tooltipDelay": 150, "hover": True},
+        "physics": {"stabilization": {"iterations": 80}},
+    }
+    net.set_options(json.dumps(options))
+
+    tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".html")
+    try:
+        net.write_html(tmp.name, notebook=False, open_browser=False)
+        with open(tmp.name, "r", encoding="utf-8") as f:
+            html_str = f.read()
+
+        # --- Make the vis tooltip render our node titles as HTML, not plain text ---
+        # 1) slightly nicer tooltip styling (optional)
+        inject_css = """
+        <style>
+        .vis-tooltip {
+            white-space: normal !important;
+            max-width: 520px;        /* wrap long lines */
+            font-size: 13px;
+            line-height: 1.25;
+            box-shadow: 0 6px 18px rgba(0,0,0,.12);
+            border-radius: 8px;
+            padding: 10px 12px;
+            background: #fff;
+        }
+        .vis-tooltip b { color: #111; }
+        .vis-tooltip ul { margin: 6px 0 0 18px; color:#111; }
+        .vis-tooltip li { margin: 0 0 2px 0; }
+        </style>
+        """
+
+        # 2) on popup show, convert textContent -> innerHTML so our <br>, <ul>, etc. render
+        inject_js = """
+        <script>
+        (function () {
+          // Wait until vis creates the Network and the tooltip node exists
+          const tryHook = () => {
+            const canvases = document.querySelectorAll('div.vis-network');
+            if (!canvases.length) { requestAnimationFrame(tryHook); return; }
+            // Find the first network container on this page (the component we render)
+            const container = canvases[canvases.length - 1];
+            if (!container || !container.parentNode) { requestAnimationFrame(tryHook); return; }
+
+            // The tooltip node is created by vis-network with class '.vis-tooltip'
+            let tooltip = document.querySelector('.vis-tooltip');
+            if (!tooltip) { requestAnimationFrame(tryHook); return; }
+
+            // Monkey-patch showPopup: rewrite the tooltip's text as HTML
+            const orig = tooltip.__setTextAsHtmlApplied ? null : tooltip;
+            if (orig) {
+              tooltip.__setTextAsHtmlApplied = true;
+              // Use MutationObserver to convert *any* text writes into HTML
+              const mo = new MutationObserver(() => {
+                // If library set textContent, swap to innerHTML
+                if (tooltip.textContent && tooltip.textContent.indexOf('<') !== -1) {
+                  tooltip.innerHTML = tooltip.textContent;
+                }
+              });
+              mo.observe(tooltip, { childList: true, characterData: true, subtree: true });
+            }
+          };
+          tryHook();
+        })();
+        </script>
+        """
+
+        # Inject CSS+JS just before </body> to keep the file valid
+        html_str = html_str.replace("</body>", inject_css + inject_js + "</body>")
+
+        return html_str
+    finally:
+        try:
+            os.unlink(tmp.name)
+        except Exception:
+            pass
+
+
+
+def _dominant_emotion_for_terms(df, terms, min_occurrences=1):
+    """
+    For each term, find songs whose lyrics contain that term, average emotion columns,
+    and pick the dominant emotion. Returns {term: {"label": str, "score": float}}.
+    """
+    out = {}
+    if not set(EMOTION_COLS).issubset(df.columns):
+        return out
+
+    # Pre-ensure we have a fast lowercase lyrics column
+    if "_lyrics_lc" not in df.columns:
+        df["_lyrics_lc"] = df["lyrics"].fillna("").str.lower()
+
+    for t in terms:
+        if not t:
+            continue
+        # whole-word match; tweak if you want stem/lemmatized behavior
+        pat = r"\b" + re.escape(t.lower()) + r"\b"
+        mask = df["_lyrics_lc"].str.contains(pat, regex=True)
+        if mask.sum() < min_occurrences:
+            continue
+
+        emo_means = df.loc[mask, EMOTION_COLS].mean(numeric_only=True)
+        if emo_means.isna().all():
+            continue
+
+        dom_col = emo_means.idxmax()
+        dom_label = EMO_LABELS.get(dom_col, "neutral")
+        dom_score = float(emo_means.max())
+        out[t] = {"label": dom_label, "score": dom_score}
+    return out
+
+
+def _safe_html(s: str) -> str:
+    return html_lib.escape(s, quote=False)
+
+def example_snippets_for_term(df, term: str, max_snippets=3, max_chars=120):
+    """Return a few lyric lines that contain the term (case-insensitive)."""
+    term_lc = term.lower()
+    hits = []
+    for txt in df["lyrics"].dropna().astype(str):
+        for line in txt.splitlines():
+            # token check so 'at' doesn't match 'that'
+            tokens = [t.lower() for t in WORD_RE.findall(line)]
+            if term_lc in tokens:
+                line = line.strip()
+                if line and line not in hits:
+                    hits.append(line)
+    if not hits:
+        return []
+    # de-duplicate and sample
+    random.shuffle(hits)
+    hits = hits[:max_snippets]
+    # shorten + HTML escape for vis-network tooltip
+    return [ _safe_html(shorten(h, width=max_chars, placeholder="…")) for h in hits ]
+
+def scale_edges_for_fade(edges):
+    """Add width + rgba color based on normalized value (strength)."""
+    if not edges:
+        return edges
+    vals = [e.get("value", 1.0) for e in edges]
+    vmin, vmax = min(vals), max(vals)
+    denom = (vmax - vmin) or 1.0
+    for e in edges:
+        v = e.get("value", 1.0)
+        t = (v - vmin) / denom
+        # width 1..4, alpha 0.15..0.95
+        e["width"] = 1.0 + 3.0 * t
+        alpha = 0.15 + 0.80 * t
+        e["color"] = f"rgba(154,166,178,{alpha:.2f})"  # soft gray w/ alpha
+    return edges
+
+
 # (Optional) nudge selectbox to fill its container
 st.markdown(
     """
@@ -223,7 +676,7 @@ st.markdown(
 # -----------------------------
 # Intro tab
 # -----------------------------
-intro, overview, emotions, keywords, search, topics_map, fusion, table, story = st.tabs([
+intro, overview, emotions, keywords, search, topics_map, fusion, table, story, dna, critic_tab = st.tabs([
     "👋 Intro",
     "📊 Artist Overview",
     "😊 Emotion Explorer",
@@ -232,7 +685,10 @@ intro, overview, emotions, keywords, search, topics_map, fusion, table, story = 
     "🗺️ Topics Map",
     "💡 Topic + Emotion",
     "📄 Raw Songs",
-    "🧩 Story Mode"
+    "🧩 Story Mode",
+    "🎯 Lyric DNA", 
+    "🤖 AI Critic"
+
 ])
 
 with intro:
@@ -364,12 +820,17 @@ with overview:
                 default_model = st.secrets.get("OPENAI_MODEL", None)  # type: ignore[attr-defined]
             except Exception:
                 default_model = None
+
             model = st.selectbox(
                 "Model",
-                options=[default_model or "gpt-4o-mini", "gpt-4o", "gpt-4.1-mini", "gpt-4.1"],
+                [default_model or "gpt-4o-mini", "gpt-4o", "gpt-4.1-mini", "gpt-4.1"],
                 index=0,
+                key="ai_summary_model"      # <-- unique key
             )
-            temperature = st.slider("Creativity (temperature)", 0.0, 1.2, 0.6, 0.1)
+            temperature = st.slider(
+                "Creativity (temperature)", 0.0, 1.2, 0.6, 0.1,
+                key="ai_summary_temp"       # <-- unique key
+            )
 
             lyrics_blob = _make_lyrics_blob(df_a, max_songs=12, max_chars_per_song=1200)
             if not lyrics_blob:
@@ -474,9 +935,8 @@ with overview:
             cols = st.columns(ncols)
             for i, tid in enumerate(ids):
                 with cols[i % ncols]:
-                    html = spotify_track_embed_html(tid, height=80)
-                    components.html(html, height=100)  # a touch taller to avoid clipping
-
+                    iframe_html = spotify_track_embed_html(tid, height=80)
+                    components.html(iframe_html, height=100) # a touch taller to avoid clipping
 
         # --- Songs table (clickable links) ---
         st.subheader("Songs for selected artist")
@@ -652,3 +1112,292 @@ with story:
                 parts.append(piece)
             st.markdown(" • " + "\n • ".join(parts))
             explain("**Narrative**: quick takeaways per artist. Expand this section later with more storytelling.")
+
+
+# -----------------------------
+# Lyric DNA (Similarity + PyVis network)
+# -----------------------------
+
+with dna:
+    st.header("Lyric DNA")
+
+    sub_sim, sub_net = st.tabs(["🎯 Similarity", "🕸️ Word Network"])
+
+    with sub_sim:
+        # -- paste everything that was under: with dna_tab: (the embedding/centroid similarity UI) --
+        # keep widget keys unique (e.g., "sim_model", "sim_k") so they don't collide with others
+        st.header("Lyric DNA — Artist Similarity")
+        if songs.empty:
+            st.info("No data yet.")
+        else:
+            # Controls
+            model_name = st.selectbox("Embedding model", ["all-MiniLM-L6-v2"], index=0, help="Used to compute lyric embeddings.")
+            stats, centroids = _artist_centroids(songs, model_name=model_name)
+
+            if len(centroids) == 0:
+                st.warning("No lyrics available to compute embeddings.")
+                st.dataframe(stats, use_container_width=True)
+            else:
+                # Pick artist + k
+                artists_avail = sorted(list(centroids.keys()))
+                colA, colB = st.columns([1, 1])
+                with colA:
+                    artist_pick = st.selectbox("Anchor artist", artists_avail, index=0)
+                with colB:
+                    top_k = st.slider("Top similar artists (k)", 3, 15, 8)
+
+                # Compute neighbors
+                sims = _similar_artists(artist_pick, centroids, top_k=top_k)
+
+                left, right = st.columns([1.25, 1])
+                with left:
+                    st.subheader(f"Most similar to **{artist_pick}**")
+                    if sims.empty:
+                        st.info("Not enough embeddings for similarity.")
+                    else:
+                        fig = px.bar(
+                            sims.sort_values("similarity"),
+                            x="similarity", y="artist",
+                            orientation="h", title="Cosine similarity",
+                            template="plotly_white", range_x=[0, 1]
+                        )
+                        st.plotly_chart(fig, use_container_width=True)
+
+                with right:
+                    st.subheader("Artist coverage")
+                    st.caption("Tracks per artist and whether we computed a centroid.")
+                    st.dataframe(stats.sort_values(["has_centroid", "track_count"], ascending=[False, False]),
+                                use_container_width=True)
+
+                with st.expander("What am I looking at?"):
+                    st.write(
+                        "We embed each song’s lyrics with MiniLM and average per artist to get a **centroid**."
+                        " Cosine similarity between centroids yields the closeness shown here."
+                        " Similarity improves as you add more songs per artist."
+                    )
+    with sub_net:
+        # -- paste everything that was under: with lyric_dna: (the PyVis co-occurrence network UI) --
+        # widget keys already unique: "lydna_*"
+        st.header("Lyric DNA — Word Co-occurrence Network")
+
+        if songs.empty or "lyrics" not in songs.columns:
+            st.info("No lyrics available to build the network.")
+        else:
+            # Controls (unique keys to avoid clashes)
+            scope = st.radio("Scope", ["Selected artist", "All artists"], horizontal=True, key="lydna_scope")
+            window = st.slider("Co-occurrence window (tokens)", 3, 12, 8, 1, key="lydna_window")
+            top_n = st.slider("Max terms (most frequent)", 30, 200, 100, 10, key="lydna_topn")
+            min_pair = st.slider("Min co-occurrences", 2, 15, 6, 1, key="lydna_minpair")
+            min_pmi = st.slider("Min PMI score", 0.0, 2.0, 0.6, 0.05, key="lydna_minpmi")
+            physics = st.checkbox("Enable physics (force simulation)", True, key="lydna_physics")
+            # Focus/spotlight which emotion to emphasize
+            _focus_choices = ["All", "joy", "sadness", "anger", "fear", "disgust", "surprise", "neutral"]
+            focus_emo = st.selectbox("Focus on emotion", _focus_choices, index=0, key="lydna_focus")
+
+
+            # If you already have the currently selected artist from the Overview tab, reuse it.
+            # Otherwise we’ll give a local selector:
+            try:
+                current_artist  # from your overview tab if in same script scope
+                artist = current_artist
+            except NameError:
+                artists = sorted(songs["artist"].dropna().unique().tolist())
+                artist = st.selectbox("Artist", artists, index=0, key="lydna_artist")
+
+            use_artist = None if scope == "All artists" else artist
+
+            with st.spinner("Building network..."):
+                nodes, edges = compute_lyric_network(
+                    songs, 
+                    top_n_terms=top_n,
+                    min_pair=min_pair,
+                    min_pmi=min_pmi,
+                    window=window,
+                    use_artist=use_artist
+                )
+
+            if not nodes or not edges:
+                st.warning("Not enough signal to draw a network with the current thresholds. Try lowering the thresholds or widening the window.")
+            else:
+                # --- NEW: color nodes by dominant emotion ---
+                terms = [n["label"] for n in nodes]  # assuming your node "label" is the term string
+                emo_map = _dominant_emotion_for_terms(songs, terms, min_occurrences=1)
+
+                # Attach color + legend label to each node; fall back to neutral if unknown
+                for n in nodes:
+                    t = n.get("label", "")
+                    emo_info = emo_map.get(t, {"label": "neutral", "score": 0.0})
+                    emo = emo_info["label"]
+                    n["color"] = EMO_COLORS.get(emo, EMO_COLORS["neutral"])
+                    n["title"] = f"{n.get('title','')}" + (f"<br><b>Emotion:</b> {emo} ({emo_info['score']:.2f})" if emo_info["score"] else "")
+                    n["group"] = emo  # (optional) useful for future legends/grouping
+
+                # 1) Fade low-weight edges (sets width + rgba color)
+                edges = scale_edges_for_fade(edges)
+
+                # 2) Add lyric snippet examples into node tooltips
+                _snip_cache = {}
+                for n in nodes:
+                    term = n.get("label", "")
+                    if term:
+                        if term not in _snip_cache:
+                            _snip_cache[term] = example_snippets_for_term(songs, term, max_snippets=3, max_chars=110)
+                        snips = _snip_cache[term]
+                        if snips:
+                            # Append as a small list in the vis-network tooltip (HTML)
+                            n["title"] = f"{n.get('title','')}<br><b>Examples:</b><ul><li>" + "</li><li>".join(snips) + "</li></ul>"
+
+                # 3) Spotlight a single emotion, gently dim the rest
+                if focus_emo != "All":
+                    focused_terms = {n["id"] for n in nodes if n.get("group") == focus_emo}
+                    # Dim node color/size when not focused
+                    for n in nodes:
+                        if n.get("group") != focus_emo:
+                            n["color"] = "#d1d5db"             # light gray
+                            n["size"] = max(6, int(n.get("size", 10) * 0.65))
+
+                    # Soften edges that don't touch a focused node
+                    for e in edges:
+                        if e["from"] not in focused_terms and e["to"] not in focused_terms:
+                            e["width"] = 0.6
+                            # very soft stroke
+                            e["color"] = "rgba(200,200,200,0.25)"
+
+                html_str = render_pyvis_network(nodes, edges, height="720px", physics=physics)
+                components.html(html_str, height=760, scrolling=False)
+
+                # Optional: a tiny legend under the graph
+                legend_cols = st.columns(len(EMO_COLORS))
+                for (emo, col) in zip(EMO_COLORS.keys(), legend_cols):
+                    col.markdown(
+                        f"""<div style="display:flex;align-items:center;gap:8px;">
+                            <div style="width:14px;height:14px;border-radius:3px;background:{EMO_COLORS[emo]};"></div>
+                            <span style="font-size:0.9rem;">{emo.title()}</span>
+                        </div>""",
+                        unsafe_allow_html=True
+            )
+
+                # Small KPIs + download
+                colA, colB, colC = st.columns(3)
+                colA.metric("Nodes", f"{len(nodes)}")
+                colB.metric("Edges", f"{len(edges)}")
+                colC.metric("Scope", "All artists" if use_artist is None else artist)
+
+                st.download_button(
+                    "Download network (HTML)",
+                    data=html_str.encode("utf-8"),
+                    file_name=f"lyric_dna_{('all' if use_artist is None else use_artist)}.html",
+                    mime="text/html",
+                    use_container_width=True
+                )
+
+        with st.expander("What am I looking at?"):
+            st.markdown("""
+    **Lyric DNA** visualizes a word co-occurrence network built from the lyrics.
+    - **Nodes** = frequent words (after removing common stopwords).
+    - **Edges** = words that appear within a token *window* of each other; thicker edges ≈ stronger association (PMI).
+    - Use the sliders to control vocabulary size, window, and thresholds.
+    - Hover nodes/edges for counts; drag to explore; download as a standalone HTML.
+            """)
+
+
+# -----------------------------
+# AI Critic Tab
+# -----------------------------
+
+with critic_tab:
+    st.header("AI Critic — Compare Two Artists")
+    if songs.empty:
+        st.info("No data yet.")
+    else:
+        # Controls
+        artists = sorted(songs["artist"].dropna().unique().tolist())
+        col1, col2 = st.columns([1, 1])
+        with col1:
+            a1 = st.selectbox("Artist A", artists, index=0)
+        with col2:
+            a2 = st.selectbox("Artist B", [a for a in artists if a != a1], index=0)
+
+        # Model controls (reuse your default model secret if available)
+        default_model = None
+        try:
+            default_model = st.secrets.get("OPENAI_MODEL", None)  # type: ignore[attr-defined]
+        except Exception:
+            default_model = None
+        
+        model = st.selectbox(
+            "Model",
+            [default_model or "gpt-4o-mini", "gpt-4o", "gpt-4.1-mini", "gpt-4.1"],
+            index=0,
+            key="critic_model"          # <-- unique key
+        )
+        temperature = st.slider(
+            "Creativity (temperature)", 0.0, 1.0, 0.3, 0.05,
+            key="critic_temp"           # <-- unique key
+        )
+
+
+        # Build compact stats + small lyric excerpts for each artist
+        def pack_artist_blob(name: str) -> Dict[str, object]:
+            df = songs[songs["artist"] == name].copy()
+            out = {
+                "artist": name,
+                "tracks": int(df.shape[0]),
+                "avg_compound": float(df["compound"].mean()) if "compound" in df else None,
+            }
+            # emotion mix
+            emo_cols = [c for c in df.columns if c.startswith("emotion_")]
+            if emo_cols:
+                emo_avg = df[emo_cols].mean(numeric_only=True).to_dict()
+                dom = max(emo_avg.items(), key=lambda kv: kv[1]) if emo_avg else (None, None)
+                out["dominant_emotion"] = {"label": (dom[0] or "").replace("emotion_", ""), "score": float(dom[1] or 0)}
+                # keep top 3 for context
+                top3 = sorted([(k.replace("emotion_", ""), float(v)) for k, v in emo_avg.items()],
+                              key=lambda kv: kv[1], reverse=True)[:3]
+                out["emotion_top3"] = top3
+
+            # few short lyric snippets (kept brief to control tokens)
+            L = []
+            for t, lyr in df[["track_name", "lyrics"]].dropna().head(6).itertuples(index=False, name=None):
+                if not isinstance(lyr, str) or len(lyr.strip()) == 0:
+                    continue
+                # get first ~200 chars (avoid huge payloads)
+                L.append({"track": t, "snippet": textwrap.shorten(lyr.replace("\n", " "), width=200, placeholder="…")})
+            out["snippets"] = L
+            return out
+
+        blobA = pack_artist_blob(a1)
+        blobB = pack_artist_blob(a2)
+
+        # Build a compact JSON payload for GPT
+        content_dict = {
+            "artist_A": blobA,
+            "artist_B": blobB,
+            "instructions": "Compare A vs B using stats and snippets. Keep it balanced and insightful."
+        }
+        content_json = json.dumps(content_dict, ensure_ascii=False)
+        pair_key = hashlib.md5((a1 + "||" + a2 + "||" + str(len(content_json))).encode("utf-8")).hexdigest()
+
+        gen = st.button("✨ Generate AI comparison", type="primary", use_container_width=True)
+        if gen:
+            try:
+                result = _cached_ai_critic(pair_key, content_json, model=model, temperature=temperature)
+                st.markdown(result)
+                st.caption(f"AI comparison for **{a1}** vs **{a2}**  •  model: `{model}`  •  temp: {temperature:.2f}")
+                st.download_button(
+                    "Download comparison (Markdown)",
+                    result.encode("utf-8"),
+                    file_name=f"critic_{a1}_vs_{a2}.md",
+                    mime="text/markdown",
+                    use_container_width=True
+                )
+            except RuntimeError as e:
+                st.error(str(e))
+            except Exception as e:
+                st.exception(e)
+
+        with st.expander("What am I looking at?"):
+            st.write(
+                "AI Critic mixes **quantitative signals** (sentiment, emotions, track counts) with **lyric snippets**"
+                " to produce a concise, human-readable comparison. Results are cached for 24 hours per artist pair."
+            )
