@@ -19,7 +19,6 @@ from typing import List, Dict
 
 import numpy as np
 import pandas as pd
-import plotly.express as px
 import streamlit as st
 import networkx as nx
 from pyvis.network import Network
@@ -29,6 +28,14 @@ from sklearn.metrics.pairwise import cosine_similarity
 from typing import Dict, Tuple
 from collections import Counter, defaultdict
 from textwrap import shorten
+
+try:
+    import plotly.express as px
+except ImportError:
+    import streamlit as st
+    st.error("Plotly is not installed in this environment. "
+             "Add `plotly` to requirements.txt and redeploy.")
+    st.stop()
 
 
 # Sentencetransformers for embeddings
