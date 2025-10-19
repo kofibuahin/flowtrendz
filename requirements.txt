@@ -8,7 +8,6 @@ spotipy
 openai
 lyricsgenius
 nltk
-plotly
 streamlit
 langdetect
 rapidfuzz
@@ -17,7 +16,7 @@ bertopic==0.16.4
 sentence-transformers==3.0.1
 umap-learn>=0.5.6
 hdbscan>=0.8.33
-plotly>=5.0.0
+plotly>=5.20
 cosine_similarity
 pyvis==0.3.2 
 networkx==3.2.1 
