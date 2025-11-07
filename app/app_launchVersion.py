@@ -20,8 +20,6 @@ from typing import List, Dict
 import numpy as np
 import pandas as pd
 import streamlit as st
-import networkx as nx
-from pyvis.network import Network
 import streamlit.components.v1 as components
 import os, hashlib, textwrap, json, datetime as dt
 from sklearn.metrics.pairwise import cosine_similarity
@@ -36,13 +34,6 @@ except ImportError:
     st.error("Plotly is not installed in this environment. "
              "Add `plotly` to requirements.txt and redeploy.")
     st.stop()
-
-
-# Sentencetransformers for embeddings
-try:
-    from sentence_transformers import SentenceTransformer
-except Exception:
-    SentenceTransformer = None
 
 
 # If you’re using the official OpenAI client (Python >= 1.0):
@@ -105,20 +96,26 @@ EMO_COLORS = {
     "neutral":    "#95A5A6",
 }
 
-@st.cache_data(show_spinner=False)
+@st.cache_data(show_spinner=False, ttl=24*60*60, max_entries=8)
 def load_curated() -> pd.DataFrame:
     if not DATA_CURATED.exists():
         return pd.DataFrame()
     df = pd.read_parquet(DATA_CURATED)
-    # Best-effort canonical columns
+
+    # Optional: compact ints to save RAM
+    for c in ["year"]:
+        if c in df.columns:
+            df[c] = pd.to_numeric(df[c], errors="coerce", downcast="integer")
+
     if "release_date" in df.columns and "year" not in df.columns:
         df["year"] = pd.to_datetime(df["release_date"], errors="coerce").dt.year
-    # Primary artist col (backwards-compat with v05)
+
     if "artist_primary" in df.columns:
         df["artist"] = df["artist_primary"]
     elif "artist_name" in df.columns:
         df["artist"] = df["artist_name"]
     return df
+
 
 songs = load_curated()
 
@@ -150,6 +147,15 @@ def _get_openai_key():
             key = None
     return key
 
+@st.cache_resource(show_spinner=False)
+def _get_openai_client():
+    from openai import OpenAI
+    api_key = os.getenv("OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY", None)  # type: ignore[attr-defined]
+    if not api_key:
+        raise RuntimeError("OPENAI_API_KEY is missing. Add it to `.streamlit/secrets.toml` or your environment.")
+    return OpenAI(api_key=api_key)
+
+
 @st.cache_data(show_spinner=False, ttl=60*60*24)  # cache for 24h
 def _cached_artist_summary(artist: str, lyrics_blob_hash: str, model: str, temperature: float) -> str:
     # This function runs only on cache misses.
@@ -161,7 +167,7 @@ def _cached_artist_summary(artist: str, lyrics_blob_hash: str, model: str, tempe
     if OpenAI is None:
         raise RuntimeError("The `openai` Python package is not installed. `pip install openai` and retry.")
 
-    client = OpenAI(api_key=api_key)
+    client = _get_openai_client()
 
     prompt = f"""
 You are a music analyst. Read the following lyrics excerpts for **{artist}** (hip-hop/rap).
@@ -199,6 +205,8 @@ Lyrics excerpts (may be partial, normalized, or noisy):
     stamp = dt.datetime.now().strftime("%Y-%m-%d %H:%M")
     header = f"**Music summary for {artist}** (model: `{model}`, temp: {temperature:.1f}) — _generated {stamp}_\n\n"
     return header + out.strip()
+
+
 
 def _make_lyrics_blob(df_artist, max_songs=12, max_chars_per_song=1200):
     """Concatenate a subset of lyrics for cost/speed control."""
@@ -262,14 +270,19 @@ def spotify_track_embed_html(track_id: str, height: int = 80) -> str:
 @st.cache_resource(show_spinner=False)
 def _load_embedder(model_name: str = "all-MiniLM-L6-v2"):
     """
-    Load SentenceTransformer once per session.
+    Load SentenceTransformer once per session, only when a tab actually needs it.
+    Deferring this import avoids pulling torch/etc during initial app load if
+    users never open the Similarity tab.
     """
-    if SentenceTransformer is None:
+    try:
+        from sentence_transformers import SentenceTransformer
+    except Exception as e:
         raise RuntimeError(
-            "sentence-transformers is not installed. "
-            "Add `sentence-transformers` to requirements.txt"
-        )
+            "sentence-transformers (and its dependencies) are not installed. "
+            "Add `sentence-transformers` to requirements.txt or precompute embeddings offline."
+        ) from e
     return SentenceTransformer(model_name)
+
 
 @st.cache_data(show_spinner=False)
 def _song_embeddings(df_songs: pd.DataFrame, model_name: str = "all-MiniLM-L6-v2") -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
@@ -358,11 +371,7 @@ def _cached_ai_critic(pair_key: str, content: str, model: str, temperature: floa
     """
     Call OpenAI once per (pair_key, content hash, model, temp).
     """
-    from openai import OpenAI
-    api_key = os.getenv("OPENAI_API_KEY") or st.secrets.get("OPENAI_API_KEY", None)  # type: ignore[attr-defined]
-    if not api_key:
-        raise RuntimeError("OPENAI_API_KEY is missing. Add it to .streamlit/secrets.toml or env.")
-    client = OpenAI(api_key=api_key)
+    client = _get_openai_client()
 
     sys = (
         "You are a concise hip-hop critic. Compare the two artists using the provided"
@@ -488,38 +497,44 @@ def compute_lyric_network(
 
 def render_pyvis_network(nodes, edges, height="680px", physics=True):
     """Create a PyVis HTML and return it as a string (Streamlit-safe)."""
+    # Lazy import so the app doesn’t pull pyvis/networkx unless needed
+    try:
+        from pyvis.network import Network
+        import networkx as nx  # (pyvis sometimes imports it; keep here)
+    except Exception as e:
+        raise RuntimeError(
+            "pyvis is not installed. Add `pyvis` to requirements.txt."
+        ) from e
+
     net = Network(height=height, width="100%", bgcolor="#ffffff", font_color="#222")
     net.toggle_physics(physics)
     net.barnes_hut(gravity=-20000, central_gravity=0.3,
                    spring_length=110, spring_strength=0.01, damping=0.8)
 
-    # ⬇️ Pass color/group if present
     for n in nodes:
         net.add_node(
             n["id"],
             label=n.get("label", n["id"]),
             size=n.get("size", 10),
             title=n.get("title", ""),
-            color=n.get("color"),     # <—
+            color=n.get("color"),
         )
-
     for e in edges:
         net.add_edge(
             e["from"], e["to"],
             value=e.get("value", 1.0),
             title=e.get("title", ""),
-            width=e.get("width"),          # << NEW
-            color=e.get("color")           # << NEW
+            width=e.get("width"),
+            color=e.get("color"),
         )
 
-
-    # Only style edges here; don't set node color in options.
     options = {
         "nodes": {"shape": "dot"},
         "edges": {"color": {"color": "#9aa6b2"}, "smooth": {"type": "dynamic"}},
         "interaction": {"tooltipDelay": 150, "hover": True},
         "physics": {"stabilization": {"iterations": 80}},
     }
+    import json, tempfile, os
     net.set_options(json.dumps(options))
 
     tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".html")
@@ -528,49 +543,31 @@ def render_pyvis_network(nodes, edges, height="680px", physics=True):
         with open(tmp.name, "r", encoding="utf-8") as f:
             html_str = f.read()
 
-        # --- Make the vis tooltip render our node titles as HTML, not plain text ---
-        # 1) slightly nicer tooltip styling (optional)
+        # (same CSS/JS injection you already have)
         inject_css = """
         <style>
         .vis-tooltip {
             white-space: normal !important;
-            max-width: 520px;        /* wrap long lines */
-            font-size: 13px;
-            line-height: 1.25;
-            box-shadow: 0 6px 18px rgba(0,0,0,.12);
-            border-radius: 8px;
-            padding: 10px 12px;
-            background: #fff;
+            max-width: 520px; font-size: 13px; line-height: 1.25;
+            box-shadow: 0 6px 18px rgba(0,0,0,.12); border-radius: 8px;
+            padding: 10px 12px; background: #fff;
         }
         .vis-tooltip b { color: #111; }
         .vis-tooltip ul { margin: 6px 0 0 18px; color:#111; }
         .vis-tooltip li { margin: 0 0 2px 0; }
         </style>
         """
-
-        # 2) on popup show, convert textContent -> innerHTML so our <br>, <ul>, etc. render
         inject_js = """
         <script>
         (function () {
-          // Wait until vis creates the Network and the tooltip node exists
           const tryHook = () => {
             const canvases = document.querySelectorAll('div.vis-network');
             if (!canvases.length) { requestAnimationFrame(tryHook); return; }
-            // Find the first network container on this page (the component we render)
-            const container = canvases[canvases.length - 1];
-            if (!container || !container.parentNode) { requestAnimationFrame(tryHook); return; }
-
-            // The tooltip node is created by vis-network with class '.vis-tooltip'
             let tooltip = document.querySelector('.vis-tooltip');
             if (!tooltip) { requestAnimationFrame(tryHook); return; }
-
-            // Monkey-patch showPopup: rewrite the tooltip's text as HTML
-            const orig = tooltip.__setTextAsHtmlApplied ? null : tooltip;
-            if (orig) {
+            if (!tooltip.__setTextAsHtmlApplied) {
               tooltip.__setTextAsHtmlApplied = true;
-              // Use MutationObserver to convert *any* text writes into HTML
               const mo = new MutationObserver(() => {
-                // If library set textContent, swap to innerHTML
                 if (tooltip.textContent && tooltip.textContent.indexOf('<') !== -1) {
                   tooltip.innerHTML = tooltip.textContent;
                 }
@@ -582,16 +579,13 @@ def render_pyvis_network(nodes, edges, height="680px", physics=True):
         })();
         </script>
         """
-
-        # Inject CSS+JS just before </body> to keep the file valid
-        html_str = html_str.replace("</body>", inject_css + inject_js + "</body>")
-
-        return html_str
+        return html_str.replace("</body>", inject_css + inject_js + "</body>")
     finally:
         try:
             os.unlink(tmp.name)
         except Exception:
             pass
+
 
 
 
