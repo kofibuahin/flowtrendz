@@ -11,3 +11,4 @@ langdetect         # language checks, if present
 tenacity           # retry wrapper (e.g., for OpenAI calls)
 openai             # AI Artist Summary
 python-dotenv      # local .env support (dev)
+sklearn.metrics.pairwise
