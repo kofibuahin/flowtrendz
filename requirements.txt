@@ -1,14 +1,16 @@
-streamlit
-pandas
-numpy
-pyarrow            # read_parquet
-plotly>=5.20       # charts
-pyvis==0.3.2       # Lyric DNA network
-networkx==3.2.1    # building the term graph
-nltk               # tokenization/stopwords (used in keywords/phrases)
-rapidfuzz          # any fuzzy term matching/search UI
-langdetect         # language checks, if present
-tenacity           # retry wrapper (e.g., for OpenAI calls)
-openai             # AI Artist Summary
-python-dotenv      # local .env support (dev)
-sklearn.metrics.pairwise
+streamlit==1.51.0
+pandas==2.3.3
+numpy==2.3.4
+pyarrow==22.0.0
+plotly>=5.20
+pyvis==0.3.2
+networkx==3.2.1
+nltk==3.9.2
+langdetect==1.0.9
+rapidfuzz==3.14.3
+openai==2.7.1
+python-dotenv==1.2.1
+tenacity==9.1.2
+spotipy==2.24.0
+lyricsgenius==3.0.1
+scikit-learn==1.5.1
